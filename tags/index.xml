@@ -6,7 +6,16 @@
     <description>Recent content in Tags on 记录生活，记录爱</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 03 Jan 2021 17:25:00 +0800</lastBuildDate><atom:link href="https://crackeer.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 07 Jan 2021 16:06:49 +0800</lastBuildDate><atom:link href="https://crackeer.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>日记</title>
+      <link>https://crackeer.github.io/tags/%E6%97%A5%E8%AE%B0/</link>
+      <pubDate>Thu, 07 Jan 2021 16:06:49 +0800</pubDate>
+      
+      <guid>https://crackeer.github.io/tags/%E6%97%A5%E8%AE%B0/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>电影</title>
       <link>https://crackeer.github.io/tags/%E7%94%B5%E5%BD%B1/</link>
@@ -22,15 +31,6 @@
       <pubDate>Sun, 03 Jan 2021 16:07:55 +0800</pubDate>
       
       <guid>https://crackeer.github.io/tags/%E9%9F%B3%E4%B9%90/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>日记</title>
-      <link>https://crackeer.github.io/tags/%E6%97%A5%E8%AE%B0/</link>
-      <pubDate>Sun, 03 Jan 2021 09:27:25 +0800</pubDate>
-      
-      <guid>https://crackeer.github.io/tags/%E6%97%A5%E8%AE%B0/</guid>
       <description></description>
     </item>
     
