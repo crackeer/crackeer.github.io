@@ -5,13 +5,13 @@
     <description>Recent content in 记录生活，记录爱 on 记录生活，记录爱</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 07 Jan 2021 16:06:49 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 10 Jan 2021 11:35:00 +0800</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Posts</title>
       <link>https://crackeer.github.io/posts/</link>
-      <pubDate>Thu, 07 Jan 2021 16:06:49 +0800</pubDate>
+      <pubDate>Sun, 10 Jan 2021 11:35:00 +0800</pubDate>
       
       <guid>https://crackeer.github.io/posts/</guid>
       <description></description>
@@ -29,6 +29,55 @@
 &lt;blockquote&gt;
 &lt;p&gt;最近喜欢的一首歌是赵雷的《小屋》。&amp;mdash;2021.01.03&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在看《瓦尔登湖》和《项塔兰》两本书。 &amp;mdash;2021.01.09&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>网站</title>
+      <link>https://crackeer.github.io/website/</link>
+      <pubDate>Sun, 13 Dec 2020 10:36:07 +0800</pubDate>
+      
+      <guid>https://crackeer.github.io/website/</guid>
+      <description>&lt;h2 id=&#34;博客分享&#34;&gt;博客·分享&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://paulstamatiou.com/&#34;&gt;一个在twitter工作的设计师的个人站点&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ftqq.com/&#34;&gt;方糖气球&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ruanyifeng.com/blog/&#34;&gt;阮一峰的个人博客&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;社区交流&#34;&gt;社区·交流&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.guanggoo.com/&#34;&gt;光谷社区&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jitaofang.com/&#34;&gt;几套房&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://timepill.net/&#34;&gt;胶囊日记&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ld246.com/&#34;&gt;链滴·黑客派&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://eleduck.com/&#34;&gt;电鸭社区-远程工作&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;使用工具&#34;&gt;使用工具&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://tool.c7sky.com/webcolor/&#34;&gt;网页色彩&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://sendfiles.online/&#34;&gt;网页发送文件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.sojson.com/json/json2go.html&#34;&gt;JSON2Go&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.sojson.com/jsondiff.html&#34;&gt;JSON对比&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.progit.cn/#_getting_started&#34;&gt;Git教程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://imgkr.com/#upload&#34;&gt;免费图床 - 图壳&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;看电影&#34;&gt;看电影&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://585.tv/&#34;&gt;http://585.tv/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.languang.co/&#34;&gt;蓝光电影&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;音乐&#34;&gt;音乐&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.languang.co/music/&#34;&gt;在线音乐&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://listen1.github.io/listen1/&#34;&gt;listen1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;it&#34;&gt;IT&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.gatsbyjs.cn/&#34;&gt;gatsbyjs-react&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
