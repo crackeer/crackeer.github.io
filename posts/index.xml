@@ -6,7 +6,49 @@
     <description>Recent content in Posts on 记录生活，记录爱</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 24 Jan 2021 16:06:29 +0800</lastBuildDate><atom:link href="https://crackeer.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 31 Jan 2021 09:42:08 +0800</lastBuildDate><atom:link href="https://crackeer.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nextjs</title>
+      <link>https://crackeer.github.io/2021/nextjs/</link>
+      <pubDate>Sun, 31 Jan 2021 09:42:08 +0800</pubDate>
+      
+      <guid>https://crackeer.github.io/2021/nextjs/</guid>
+      <description>一个form的组件编写 import React from &amp;#39;react&amp;#39;; import { Form, Input, Button, Checkbox, message } from &amp;#39;antd&amp;#39;; import APIOpen from &amp;#39;../../api/open&amp;#39;; import { Select, Radio, Divider } from &amp;#39;antd&amp;#39;; import JSONEditor from &amp;#39;../../component/JSONEditor&amp;#39;; import { PlusOutlined } from &amp;#39;@ant-design/icons&amp;#39;; import { threadId } from &amp;#39;worker_threads&amp;#39;; const { Option } = Select; const { TextArea } = Input; const layout = { labelCol: { span: 4 }, wrapperCol: { span: 16 }, }; const tailLayout = { wrapperCol: { offset: 11, span: 2 }, }; class FormX extends React.</description>
+    </item>
+    
+    <item>
+      <title>2021 01 31</title>
+      <link>https://crackeer.github.io/2021/2021-01-31/</link>
+      <pubDate>Sun, 31 Jan 2021 09:39:08 +0800</pubDate>
+      
+      <guid>https://crackeer.github.io/2021/2021-01-31/</guid>
+      <description>上午 最近的早晨醒来还是很困的感觉，睡不醒，早上醒来就7点多了。
+早餐是鸡蛋、蓝莓、牛奶和坚果
+10点多的快到11点去清河e购物商业中心，以前叫清河农贸市场，我说在高德地图上怎么也搜索不到。去买了草莓、西红柿和青菜，主要是买草莓的，回来之后就开始做饭，炒鸡蛋和青菜
+下午 午休了一个多小时，2点半的时候起床，然后开始收拾屋子，收拾了一个多小时，扔了不少无用的东西，清爽的感觉很不错
+后面，写代码，疯狂编码：reactjs、nextjs太美妙了
+晚上做的疙瘩汤吃，两大碗，吃的干干净净
+现在是晚上8点，周末接近尾声，1月也接近尾声了，一会儿去洗澡，结束这个周末，好好休息
+这个周末算是一个无尽写nodejs代码的一个周末吧，蛮充实，沉浸在代码的世界里&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>2021 01 30</title>
+      <link>https://crackeer.github.io/2021/2021-01-30/</link>
+      <pubDate>Sat, 30 Jan 2021 09:09:38 +0800</pubDate>
+      
+      <guid>https://crackeer.github.io/2021/2021-01-30/</guid>
+      <description>再有一个星期就放假咯，1月底了
+上周回顾  周二中午遛弯儿    周三早上，路旁已经挂上了红灯笼，有过年那味儿了
+  周五早饭
+  晚上去吃了烤串儿
+上午 早上6点就醒来了，一直在玩手机，起床的时候是8点多，快九点，早饭两个包子和蒸的南瓜，
+饭后，芬芬说我头发长，然后就立马让她给我剪了头发，也很快完成，洗了头，我们去小区里的菜棚买了菜，然后回来做饭吃了
+下午 芬芬快1点出门去接种疫苗了，我一个人在家，洗了碗，之后就一直坐在电脑前，写代码，5点多的时候芬芬回来了，她在多点上买了菜，晚上做意面吃。
+虽然外面太阳很大，但是在家里并不觉得暖和，开着空调也不暖和，到最后，我甚至将羽绒服穿上了，但是腿还是冷飕飕的，后面的气温会越来越高的吧
+晚上 晚饭过后，我还继续写了好久的代码，才睡，睡觉</description>
+    </item>
+    
     <item>
       <title>2021 01 24</title>
       <link>https://crackeer.github.io/2021/2021-01-24/</link>
