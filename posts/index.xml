@@ -6,7 +6,166 @@
     <description>Recent content in Posts on 记录生活，记录爱</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 06 Feb 2021 11:13:38 +0800</lastBuildDate><atom:link href="https://crackeer.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 16 Feb 2021 22:13:45 +0800</lastBuildDate><atom:link href="https://crackeer.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>下载上传到图床的图片</title>
+      <link>https://crackeer.github.io/2021/download-md-image/</link>
+      <pubDate>Tue, 16 Feb 2021 22:13:45 +0800</pubDate>
+      
+      <guid>https://crackeer.github.io/2021/download-md-image/</guid>
+      <description>package main import ( &amp;#34;fmt&amp;#34; &amp;#34;io/ioutil&amp;#34; &amp;#34;net/http&amp;#34; &amp;#34;regexp&amp;#34; &amp;#34;strings&amp;#34; //&amp;#34;io&amp;#34; 	&amp;#34;os&amp;#34; //&amp;#34;sync&amp;#34; ) var downloadDir = &amp;#34;./upload/iloli&amp;#34; func checkDownloadDir() { _, err := os.Stat(downloadDir) if os.IsNotExist(err) { os.MkdirAll(downloadDir, 0777) os.Chmod(downloadDir, 0777) } } func main() { checkDownloadDir() l := getMDList(`./content`) allImages := map[string]bool{} for _, f := range l { images := parseImage(f) for _, i := range images { allImages[i] = true } } /* wg := &amp;amp;sync.WaitGroup{} wg.</description>
+    </item>
+    
+    <item>
+      <title>2021 02 16</title>
+      <link>https://crackeer.github.io/2021/2021-02-16/</link>
+      <pubDate>Tue, 16 Feb 2021 09:48:26 +0800</pubDate>
+      
+      <guid>https://crackeer.github.io/2021/2021-02-16/</guid>
+      <description>上午 醒来就快9点了，睡眠还很不错，起床&amp;ndash;&amp;gt;上厕所&amp;ndash;&amp;gt;蒸粘豆包&amp;ndash;&amp;gt;返回电脑前工作，《唐人街探案3》的豆瓣评分又下降了0.1分，《你好，李焕英》的评分维持在8.3
+票房开始反超了
+中午 坐车去麦当劳吃午饭
+蓝天一点云都没有，但是同时也刮着大风，待到两点半左右我们走去了幸福超市买菜，后天上班，想想就觉得悲伤</description>
+    </item>
+    
+    <item>
+      <title>Golang在windows上运行web程序总是提示防火墙</title>
+      <link>https://crackeer.github.io/2021/golang-web-windows/</link>
+      <pubDate>Mon, 15 Feb 2021 16:51:52 +0800</pubDate>
+      
+      <guid>https://crackeer.github.io/2021/golang-web-windows/</guid>
+      <description>问题描述 每次使用go run main.go的时候，在window上总是会提示是否通过防火墙的提示，我发现如下解决方案
+解决方案 然后就大功告成啦</description>
+    </item>
+    
+    <item>
+      <title>2021 02 15</title>
+      <link>https://crackeer.github.io/2021/2021-02-15/</link>
+      <pubDate>Mon, 15 Feb 2021 15:35:57 +0800</pubDate>
+      
+      <guid>https://crackeer.github.io/2021/2021-02-15/</guid>
+      <description>春节假期余额告警了哦
+上午 早饭吃了粘豆糕，然后在电脑上写昨天的日记，等待着送药的快递员过来，对，你没听错，是紧急避孕药。11点20左右送过来的
+中午 - 下午 12点多的时候，我开始去做饭，炒了鸡蛋，炒了白菜，蒸了米饭，准备吃饭的时候，芬芬说吃药之后的两个小时最好不要吃东西，会影响避孕效果，所以，我们又等待了半个小时到1点20多的时候才开始吃，饭后两点多，我们都睡了会儿。
+三点多的时候我醒来了，然后就起来了，开始干点工作上的事儿，春节算是结束了，要赶快进入工作状态吧。晚上不知道吃啥，想去麦当劳吃，最后天黑之后不愿出门又作罢，在家做了吃。看了电影《发财日记》，亲情喜剧电影，明星挺多，但是结束地太仓促。
+电影结束之后，我们去洗澡，回来之后修建了毛发，11点多的时候才结束躺下睡觉。</description>
+    </item>
+    
+    <item>
+      <title>2021 02 13</title>
+      <link>https://crackeer.github.io/2021/2021-02-13/</link>
+      <pubDate>Sat, 13 Feb 2021 22:51:10 +0800</pubDate>
+      
+      <guid>https://crackeer.github.io/2021/2021-02-13/</guid>
+      <description>上午 9点多起来，老姐打来电话，说是已经在回老家的高速路上了
+我们十点多做饭吃，吃饭的时候看北京卫视的春晚，后来和家人视频，挺热闹的感觉
+下午 12点50多，赶不上走去肖家河华联影城，打了车过去的，然后就是电影时间，看的是《唐人街探案3》，两个
+小时的时间很快过去，电影还不错。
+电影结束后走回来的，一点也不冷，散步散心，今天没有太阳，是个大阴天，太阳藏在层层乌云背后
+晚上 晚上泡面，煮了饺子，8点多发困，睡了不到一个小时，这导致我醒来后很难再睡着，一直到凌晨1点多才睡。</description>
+    </item>
+    
+    <item>
+      <title>2021 02 14</title>
+      <link>https://crackeer.github.io/2021/2021-02-14/</link>
+      <pubDate>Sat, 13 Feb 2021 22:51:10 +0800</pubDate>
+      
+      <guid>https://crackeer.github.io/2021/2021-02-14/</guid>
+      <description>上午 早上很晚才起来的，因为昨晚睡得也晚
+12点多出门去五彩城，寻找一个饭店吃饭，到处排满了人，外婆家甚至不给号了，最后选择了汤城小厨，一个从来没吃过的餐厅，没有等待，我们就直接去了，饭菜的味道还不错
+今天的天气也不是很好，早上下过雨了，地面有些潮湿
+下午 饭后，我们逛游了好久，然后去星巴克买了咖啡，休息聊天，我在桌子上看《项塔兰2》
+咖啡喝完之后回来，等到393路公交汽车，二层第一排视野开阔的位置，一直在录像到最后下车，这是上传到哔哩哔哩的视频地址：https://www.bilibili.com/video/BV1JK4y1Q7JU/
+下车之后，去幸福超市买菜回来，看到云
+晚上 粥啊、蒸贝勒红豆卷，炒了菜花，菜花是真好吃。下午喝的咖啡后劲儿好强，以至于十一点多的时候，我还特别清醒，所以就都没有睡。</description>
+    </item>
+    
+    <item>
+      <title>2021 02 12</title>
+      <link>https://crackeer.github.io/2021/2021-02-12/</link>
+      <pubDate>Sat, 13 Feb 2021 22:51:06 +0800</pubDate>
+      
+      <guid>https://crackeer.github.io/2021/2021-02-12/</guid>
+      <description>上午 大年初一，一觉醒来8点多了，我起床煮了饺子吃，芬芬也起床来，年味好像没了，突然消失了
+中午是想吃火锅的，但是每日优鲜的配送一直没人接单，最后蒸了米饭，炒了青菜，喝了肉汤算是午饭，也是美美的一顿
+下午 饭后我们就出门走走，我带着相机，一路拍，路上的行人不多，天气也很是不错
+其实是想去百望山的，最后走去了菊园，坐公交车又回来了，在家休息了片刻，在每日优鲜上买的菜送到了。
+晚上 晚上当然是涮火锅啦，不到11点多，我们就睡了</description>
+    </item>
+    
+    <item>
+      <title>2021 02 11</title>
+      <link>https://crackeer.github.io/2021/2021-02-11/</link>
+      <pubDate>Sat, 13 Feb 2021 22:51:03 +0800</pubDate>
+      
+      <guid>https://crackeer.github.io/2021/2021-02-11/</guid>
+      <description>春节就来了
+上午 上午去清河农副产品交易中心去买菜，还是有好多人，好多菜都被卖光了，菜市场很有年味了
+菜市场回来，下车之后给家里打了电话
+中午 中午炖了牛腩，两点多才吃饭，吃饭之后贴了福字儿
+去幸福超市买了肉和白萝卜，本来是想用藕来炖肉的，但是藕没了
+晚上 晚上用萝卜炖肉，守在电脑前，看春晚了，一直到零点一刻，我们才去睡。
+听到外面烟花的声音，我们跑去看了下</description>
+    </item>
+    
+    <item>
+      <title>2021 02 10</title>
+      <link>https://crackeer.github.io/2021/2021-02-10/</link>
+      <pubDate>Wed, 10 Feb 2021 16:30:33 +0800</pubDate>
+      
+      <guid>https://crackeer.github.io/2021/2021-02-10/</guid>
+      <description>上午 芬芬在家上班，守在电脑前，外面的天气是真好哦，只留下两张照片
+下午 出门晃悠了，外面的天气很不错
+打了一会儿羽毛球，出了一身汗，回来就去洗澡</description>
+    </item>
+    
+    <item>
+      <title>2021 02 09</title>
+      <link>https://crackeer.github.io/2021/2021-02-09/</link>
+      <pubDate>Wed, 10 Feb 2021 16:30:27 +0800</pubDate>
+      
+      <guid>https://crackeer.github.io/2021/2021-02-09/</guid>
+      <description>上午 干了会儿工作，午饭是炒了上海青，蒸了窝头
+下午 看了一部电影《孤味》</description>
+    </item>
+    
+    <item>
+      <title>2021 02 08</title>
+      <link>https://crackeer.github.io/2021/2021-02-08/</link>
+      <pubDate>Mon, 08 Feb 2021 17:06:39 +0800</pubDate>
+      
+      <guid>https://crackeer.github.io/2021/2021-02-08/</guid>
+      <description>上午 放假第一天，也没有睡到很晚，和平常一样，也是7点多就醒来了，天气暖和的好处就是起床没那么困难了。不上班的日子是真的很轻松啊，起床之后，吃了个红薯，然后给爸打电话，但是他没接，后来他会过来了，他今天回了六斗，然后给老姐打电话，她还没起床，今天是她的生日，所以问候一下
+10点多，我出门去幸福超市买菜，虽然不是周末，但依然是好多人在，我迅速买了回来，到家的时候已经11点多了，开始做我的黄焖鸡，花了一个小时的时间，味道还不错，吃了个肚儿圆。看《欢乐喜剧人第七季》入了神，洗了碗，然后午睡了一个小时，被芬芬的微信消息声音吵醒了，说傅礼玉回家了，大年三十的时候不去和他们一期吃饭了，我也睡差不多了，就起床，整理了下床铺，洗了袜子，收了衣服，然后就坐在电脑前，开始写代码，听《Wonderful U》，这首歌是真不好学啊
+晚上 晚上吃中午没有吃完的黄焖鸡，和米饭一起蒸了，又是美美的一顿</description>
+    </item>
+    
+    <item>
+      <title>Wsl问题</title>
+      <link>https://crackeer.github.io/2021/wsl/</link>
+      <pubDate>Mon, 08 Feb 2021 15:11:34 +0800</pubDate>
+      
+      <guid>https://crackeer.github.io/2021/wsl/</guid>
+      <description>解决使用VPN（Cisco AnyConnect）之后，wsl无法使用网络的问题 github链接：https://github.com/microsoft/WSL/issues/5068
+有用的一招
+Get-NetAdapter | Where-Object {$_.InterfaceDescription -Match &amp;#34;Cisco AnyConnect&amp;#34;} | Set-NetIPInterface -InterfaceMetric 6000 Get-NetIPInterface -InterfaceAlias &amp;#34;vEthernet (WSL)&amp;#34; | Set-NetIPInterface -InterfaceMetric 1 备注：每次VPN启动之后需要设置下
+Get-NetAdapter | Where-Object {$_.InterfaceDescription -Match &amp;ldquo;Cisco AnyConnect&amp;rdquo;} | Set-NetIPInterface -InterfaceMetric 6000
+像是提高VPN 的IP接口的权重值
+VPN关闭之后，ping baidu.com又不好使了
+ 编辑/etc/wsl.conf文件  [network] generateResolvConf = false 编辑/etc/resolv.conf  nameserver 8.8.8.8 ping通了</description>
+    </item>
+    
+    <item>
+      <title>2021 02 07</title>
+      <link>https://crackeer.github.io/2021/2021-02-07/</link>
+      <pubDate>Mon, 08 Feb 2021 09:32:41 +0800</pubDate>
+      
+      <guid>https://crackeer.github.io/2021/2021-02-07/</guid>
+      <description>上午 今天的天气很好，虽然相比昨天有所降温，但是依然是暖和的，太阳很大，吹出来的风也是和煦的，我还是早早去上班，去食堂吃饭，吃了煎饼，到公司的时候，还是好多人没来，我继续办公
+下午 下午的时间，一半时间干活儿，一半时间划水
+晚上 吃完晚饭，去6楼买了可乐就回来了</description>
+    </item>
+    
     <item>
       <title>2021 02 06</title>
       <link>https://crackeer.github.io/2021/2021-02-06/</link>
