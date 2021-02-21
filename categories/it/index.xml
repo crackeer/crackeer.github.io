@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IT on 记录生活，记录爱</title>
+    <link>https://crackeer.github.io/categories/it/</link>
+    <description>Recent content in IT on 记录生活，记录爱</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 21 Feb 2021 08:59:13 +0800</lastBuildDate><atom:link href="https://crackeer.github.io/categories/it/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Golang的正则匹配使用</title>
+      <link>https://crackeer.github.io/2021/golang-regex/</link>
+      <pubDate>Sun, 21 Feb 2021 08:59:13 +0800</pubDate>
+      
+      <guid>https://crackeer.github.io/2021/golang-regex/</guid>
+      <description>preg_match_all </description>
+    </item>
+    
+    <item>
+      <title>Golang Gin创建假的Context</title>
+      <link>https://crackeer.github.io/2021/golang-gin-fake-context/</link>
+      <pubDate>Sun, 21 Feb 2021 08:52:02 +0800</pubDate>
+      
+      <guid>https://crackeer.github.io/2021/golang-gin-fake-context/</guid>
+      <description>urlParameter := &amp;amp;url.Values{} query := map[string]string{ &amp;#34;relation_id&amp;#34;: &amp;#34;1098963&amp;#34;, &amp;#34;source&amp;#34;: &amp;#34;alliance&amp;#34;, &amp;#34;platform&amp;#34;: &amp;#34;shell&amp;#34;, &amp;#34;channel&amp;#34;: &amp;#34;3&amp;#34;, &amp;#34;house_code&amp;#34;: &amp;#34;101104214655&amp;#34;, &amp;#34;work_code&amp;#34;: &amp;#34;vdrj5DR7PGW3q8Oe&amp;#34;, &amp;#34;user_id&amp;#34;: &amp;#34;0&amp;#34;, } for key, value := range query { urlParameter.Set(key, value) } ctx.Request, _ = http.NewRequest(&amp;#34;GET&amp;#34;, &amp;#34;http://localhost:9200/house/card/show.json&amp;#34;, strings.NewReader(urlParameter.Encode())) ctx.Request.Header = http.Header(map[string][]string{ &amp;#34;User-Agent&amp;#34;: {&amp;#34;PostmanRuntime/7.26.8&amp;#34;}, }) </description>
+    </item>
+    
+    <item>
+      <title>golang程序下载图片到本地</title>
+      <link>https://crackeer.github.io/2021/download-md-image/</link>
+      <pubDate>Tue, 16 Feb 2021 22:13:45 +0800</pubDate>
+      
+      <guid>https://crackeer.github.io/2021/download-md-image/</guid>
+      <description>package main import ( &amp;#34;fmt&amp;#34; &amp;#34;io/ioutil&amp;#34; &amp;#34;net/http&amp;#34; &amp;#34;regexp&amp;#34; &amp;#34;strings&amp;#34; //&amp;#34;io&amp;#34; 	&amp;#34;os&amp;#34; //&amp;#34;sync&amp;#34; ) var downloadDir = &amp;#34;./upload/iloli&amp;#34; func checkDownloadDir() { _, err := os.Stat(downloadDir) if os.IsNotExist(err) { os.MkdirAll(downloadDir, 0777) os.Chmod(downloadDir, 0777) } } func main() { checkDownloadDir() l := getMDList(`./content`) allImages := map[string]bool{} for _, f := range l { images := parseImage(f) for _, i := range images { allImages[i] = true } } /* wg := &amp;amp;sync.WaitGroup{} wg.</description>
+    </item>
+    
+  </channel>
+</rss>

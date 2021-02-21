@@ -6,7 +6,43 @@
     <description>Recent content in 日记 on 记录生活，记录爱</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 16 Feb 2021 09:48:26 +0800</lastBuildDate><atom:link href="https://crackeer.github.io/tags/%E6%97%A5%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 Feb 2021 09:00:49 +0800</lastBuildDate><atom:link href="https://crackeer.github.io/tags/%E6%97%A5%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Golang实现一个简单的httpServer</title>
+      <link>https://crackeer.github.io/2021/golang-http-server/</link>
+      <pubDate>Sun, 21 Feb 2021 09:00:49 +0800</pubDate>
+      
+      <guid>https://crackeer.github.io/2021/golang-http-server/</guid>
+      <description>gin package main import ( &amp;#34;net/http&amp;#34; &amp;#34;flag&amp;#34; &amp;#34;github.com/gin-gonic/gin&amp;#34; ) var port *string func main() { port = flag.String(&amp;#34;port&amp;#34;, &amp;#34;9400&amp;#34;, &amp;#34;http port&amp;#34;) flag.Parse() router := gin.Default() staticWorkDir := &amp;#34;./dist/&amp;#34; router.StaticFile(&amp;#34;/&amp;#34;, staticWorkDir+&amp;#34;index.html&amp;#34;) router.StaticFS(&amp;#34;/css&amp;#34;, http.Dir(staticWorkDir+&amp;#34;css&amp;#34;)) router.StaticFS(&amp;#34;/js&amp;#34;, http.Dir(staticWorkDir+&amp;#34;js&amp;#34;)) router.StaticFS(&amp;#34;/img&amp;#34;, http.Dir(staticWorkDir+&amp;#34;img&amp;#34;)) router.StaticFS(&amp;#34;/fonts&amp;#34;, http.Dir(staticWorkDir+&amp;#34;fonts&amp;#34;)) router.StaticFS(&amp;#34;/static&amp;#34;, http.Dir(staticWorkDir+&amp;#34;static&amp;#34;)) router.Run(&amp;#34;:&amp;#34; + *port) } </description>
+    </item>
+    
+    <item>
+      <title>2021 02 21</title>
+      <link>https://crackeer.github.io/2021/2021-02-21/</link>
+      <pubDate>Sun, 21 Feb 2021 08:51:21 +0800</pubDate>
+      
+      <guid>https://crackeer.github.io/2021/2021-02-21/</guid>
+      <description>回顾 上了三天班，然后又放假，假期说过就过去了
+ 周五的晚上    周六上班早上，灯笼还高高挂着
+然后天气也很不错，太阳很好，温度也很好
+早饭出来拍的照片
+  上午 早饭是芬芬从公司那边食堂带回来的包子，一大早多点送菜上门，也带来了豆浆，中午吃火锅，出门去买一点小葱，是周日，天气也是很棒的
+下午 中午吃了火锅，外面太阳很棒，但是太晒，没呆多久就回来了，将冬天的几件衣服拿出去晒了
+晚上 蒸饺、香椿苗拌豆腐豆皮</description>
+    </item>
+    
+    <item>
+      <title>2021 02 17</title>
+      <link>https://crackeer.github.io/2021/2021-02-17/</link>
+      <pubDate>Wed, 17 Feb 2021 11:56:40 +0800</pubDate>
+      
+      <guid>https://crackeer.github.io/2021/2021-02-17/</guid>
+      <description>上午 醒来7点半，厕所回来之后又继续睡了，9点50多起来了，豆汁和画卷为早餐，看了电影《如父如子》
+中午 午饭炖了过年剩下的排骨，米饭，2点多吃完，快3点多午睡了，其实也没怎么睡着，起来之后反而头有些难受，
+就看书啊，也可能是最后一天，明天就要上班了
+晚上 疙瘩汤，春节假期的最后的晚餐</description>
+    </item>
+    
     <item>
       <title>2021 02 16</title>
       <link>https://crackeer.github.io/2021/2021-02-16/</link>
@@ -16,7 +52,8 @@
       <description>上午 醒来就快9点了，睡眠还很不错，起床&amp;ndash;&amp;gt;上厕所&amp;ndash;&amp;gt;蒸粘豆包&amp;ndash;&amp;gt;返回电脑前工作，《唐人街探案3》的豆瓣评分又下降了0.1分，《你好，李焕英》的评分维持在8.3
 票房开始反超了
 中午 坐车去麦当劳吃午饭
-蓝天一点云都没有，但是同时也刮着大风，待到两点半左右我们走去了幸福超市买菜，后天上班，想想就觉得悲伤</description>
+蓝天一点云都没有，但是同时也刮着大风，待到两点半左右我们走去了幸福超市买菜，后天上班，想想就觉得悲伤
+下午 下午的时间，看了一部电影《开心鬼救开心鬼》</description>
     </item>
     
     <item>

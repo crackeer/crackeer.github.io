@@ -6,22 +6,31 @@
     <description>Recent content in Categories on 记录生活，记录爱</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 16 Feb 2021 22:13:45 +0800</lastBuildDate><atom:link href="https://crackeer.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 Feb 2021 09:00:49 +0800</lastBuildDate><atom:link href="https://crackeer.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>技术</title>
-      <link>https://crackeer.github.io/categories/%E6%8A%80%E6%9C%AF/</link>
-      <pubDate>Tue, 16 Feb 2021 22:13:45 +0800</pubDate>
+      <title>生活记录</title>
+      <link>https://crackeer.github.io/categories/%E7%94%9F%E6%B4%BB%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Sun, 21 Feb 2021 09:00:49 +0800</pubDate>
       
-      <guid>https://crackeer.github.io/categories/%E6%8A%80%E6%9C%AF/</guid>
+      <guid>https://crackeer.github.io/categories/%E7%94%9F%E6%B4%BB%E8%AE%B0%E5%BD%95/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>生活记录</title>
-      <link>https://crackeer.github.io/categories/%E7%94%9F%E6%B4%BB%E8%AE%B0%E5%BD%95/</link>
-      <pubDate>Tue, 16 Feb 2021 09:48:26 +0800</pubDate>
+      <title>IT</title>
+      <link>https://crackeer.github.io/categories/it/</link>
+      <pubDate>Sun, 21 Feb 2021 08:59:13 +0800</pubDate>
       
-      <guid>https://crackeer.github.io/categories/%E7%94%9F%E6%B4%BB%E8%AE%B0%E5%BD%95/</guid>
+      <guid>https://crackeer.github.io/categories/it/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>技术</title>
+      <link>https://crackeer.github.io/categories/%E6%8A%80%E6%9C%AF/</link>
+      <pubDate>Sat, 05 Dec 2020 17:27:04 +0800</pubDate>
+      
+      <guid>https://crackeer.github.io/categories/%E6%8A%80%E6%9C%AF/</guid>
       <description></description>
     </item>
     
