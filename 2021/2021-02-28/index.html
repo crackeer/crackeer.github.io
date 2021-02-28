@@ -9,9 +9,9 @@
   
   
   
-  <link rel="prev" href="https://crackeer.github.io/2021/golang-regex/" />
-  <link rel="next" href="https://crackeer.github.io/2021/next-upload-image/" />
-  <link rel="canonical" href="https://crackeer.github.io/2021/golang-http-server/" />
+  <link rel="prev" href="https://crackeer.github.io/2021/2021-02-27/" />
+  <link rel="next" href="https://crackeer.github.io/2021/nextjs-config/" />
+  <link rel="canonical" href="https://crackeer.github.io/2021/2021-02-28/" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -22,10 +22,10 @@
   <title>
        
        
-           Golang实现一个简单的httpServer | 记录生活，记录爱
+           2021 02 28 | 记录生活，记录爱
        
   </title>
-  <meta name="title" content="Golang实现一个简单的httpServer | 记录生活，记录爱">
+  <meta name="title" content="2021 02 28 | 记录生活，记录爱">
     
   
   <link rel="stylesheet" href="/font/iconfont.css">
@@ -44,9 +44,9 @@
          "@id": "https:\/\/crackeer.github.io\/"
     },
     "articleSection" : "posts",
-    "name" : "Golang实现一个简单的httpServer",
-    "headline" : "Golang实现一个简单的httpServer",
-    "description" : "gin package main import ( \u0026#34;net\/http\u0026#34; \u0026#34;flag\u0026#34; \u0026#34;github.com\/gin-gonic\/gin\u0026#34; ) var port *string func main() { port = flag.String(\u0026#34;port\u0026#34;, \u0026#34;9400\u0026#34;, \u0026#34;http port\u0026#34;) flag.Parse() router := gin.Default() staticWorkDir := \u0026#34;.\/dist\/\u0026#34; router.StaticFile(\u0026#34;\/\u0026#34;, staticWorkDir\u002b\u0026#34;index.html\u0026#34;) router.StaticFS(\u0026#34;\/css\u0026#34;, http.Dir(staticWorkDir\u002b\u0026#34;css\u0026#34;)) router.StaticFS(\u0026#34;\/js\u0026#34;, http.Dir(staticWorkDir\u002b\u0026#34;js\u0026#34;)) router.StaticFS(\u0026#34;\/img\u0026#34;, http.Dir(staticWorkDir\u002b\u0026#34;img\u0026#34;)) router.StaticFS(\u0026#34;\/fonts\u0026#34;, http.Dir(staticWorkDir\u002b\u0026#34;fonts\u0026#34;)) router.StaticFS(\u0026#34;\/static\u0026#34;, http.Dir(staticWorkDir\u002b\u0026#34;static\u0026#34;)) router.Run(\u0026#34;:\u0026#34; \u002b *port) } ",
+    "name" : "2021 02 28",
+    "headline" : "2021 02 28",
+    "description" : "上午 昨晚是凌晨1点左右睡，一觉睡到早上9点半起来，我去煎饺和热豆浆，饭后，芬芬给我剪头发，头发修剪之后一身轻松，我开始继续昨天没有完成的代码，芬芬按照昨天的计划在看书。\n早上一直在下雨，外面阴沉沉的，像是\n下午 12点多做饭，过年期间还剩下最后的8块排骨，和昨天买的藕一起炖了，吃饭依然是看下饭剧《赘婿》，饭后我继续我的代码时间。\n三点多的时候，芬芬困了睡着，我关了灯，一直在写着代码，最后差不多完成之后就继续看《赘婿》\n晚饭炒了豆干，煮了米饭，赘婿已经看完了最新的20集，然后又看了辑魂，还不错的电影。",
     "inLanguage" : "zh-cn",
     "author" : "疯子",
     "creator" : "疯子",
@@ -54,10 +54,10 @@
     "accountablePerson" : "疯子",
     "copyrightHolder" : "疯子",
     "copyrightYear" : "2021",
-    "datePublished": "2021-02-21 09:00:49 \u002b0800 CST",
-    "dateModified" : "2021-02-21 09:00:49 \u002b0800 CST",
-    "url" : "https:\/\/crackeer.github.io\/2021\/golang-http-server\/",
-    "wordCount" : "44",
+    "datePublished": "2021-02-28 10:48:17 \u002b0800 CST",
+    "dateModified" : "2021-02-28 10:48:17 \u002b0800 CST",
+    "url" : "https:\/\/crackeer.github.io\/2021\/2021-02-28\/",
+    "wordCount" : "7",
     "keywords" : [ "日记", "记录生活，记录爱"]
 }
 </script>
@@ -120,11 +120,11 @@
       		
 <article class="post-warp" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">Golang实现一个简单的httpServer</h1>
+        <h1 class="post-title" itemprop="name headline">2021 02 28</h1>
         <div class="post-meta">
                 Written by <a itemprop="name" href="https://crackeer.github.io/" rel="author">疯子</a> with ♥ 
                 <span class="post-time">
-                on <time datetime=2021-02-21 itemprop="datePublished">February 21, 2021</time>
+                on <time datetime=2021-02-28 itemprop="datePublished">February 28, 2021</time>
                 </span>
                 in
                 <i class="iconfont icon-folder"></i>
@@ -150,36 +150,14 @@
           
           
 
-          <h3 id="gin">gin</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-golang" data-lang="golang"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+          <h2 id="上午">上午</h2>
+<p>昨晚是凌晨1点左右睡，一觉睡到早上9点半起来，我去煎饺和热豆浆，饭后，芬芬给我剪头发，头发修剪之后一身轻松，我开始继续昨天没有完成的代码，芬芬按照昨天的计划在看书。</p>
+<p>早上一直在下雨，外面阴沉沉的，像是</p>
+<h2 id="下午">下午</h2>
+<p>12点多做饭，过年期间还剩下最后的8块排骨，和昨天买的藕一起炖了，吃饭依然是看下饭剧《赘婿》，饭后我继续我的代码时间。</p>
+<p>三点多的时候，芬芬困了睡着，我关了灯，一直在写着代码，最后差不多完成之后就继续看《赘婿》</p>
+<p>晚饭炒了豆干，煮了米饭，赘婿已经看完了最新的20集，然后又看了辑魂，还不错的电影。</p>
 
-<span style="color:#f92672">import</span> (
-	<span style="color:#e6db74">&#34;net/http&#34;</span>
-
-	<span style="color:#e6db74">&#34;flag&#34;</span>
-
-	<span style="color:#e6db74">&#34;github.com/gin-gonic/gin&#34;</span>
-)
-
-<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">port</span> <span style="color:#f92672">*</span><span style="color:#66d9ef">string</span>
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-
-	<span style="color:#a6e22e">port</span> = <span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">String</span>(<span style="color:#e6db74">&#34;port&#34;</span>, <span style="color:#e6db74">&#34;9400&#34;</span>, <span style="color:#e6db74">&#34;http port&#34;</span>)
-	<span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">Parse</span>()
-
-	<span style="color:#a6e22e">router</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">gin</span>.<span style="color:#a6e22e">Default</span>()
-	<span style="color:#a6e22e">staticWorkDir</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;./dist/&#34;</span>
-	<span style="color:#a6e22e">router</span>.<span style="color:#a6e22e">StaticFile</span>(<span style="color:#e6db74">&#34;/&#34;</span>, <span style="color:#a6e22e">staticWorkDir</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;index.html&#34;</span>)
-	<span style="color:#a6e22e">router</span>.<span style="color:#a6e22e">StaticFS</span>(<span style="color:#e6db74">&#34;/css&#34;</span>, <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Dir</span>(<span style="color:#a6e22e">staticWorkDir</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;css&#34;</span>))
-	<span style="color:#a6e22e">router</span>.<span style="color:#a6e22e">StaticFS</span>(<span style="color:#e6db74">&#34;/js&#34;</span>, <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Dir</span>(<span style="color:#a6e22e">staticWorkDir</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;js&#34;</span>))
-	<span style="color:#a6e22e">router</span>.<span style="color:#a6e22e">StaticFS</span>(<span style="color:#e6db74">&#34;/img&#34;</span>, <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Dir</span>(<span style="color:#a6e22e">staticWorkDir</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;img&#34;</span>))
-	<span style="color:#a6e22e">router</span>.<span style="color:#a6e22e">StaticFS</span>(<span style="color:#e6db74">&#34;/fonts&#34;</span>, <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Dir</span>(<span style="color:#a6e22e">staticWorkDir</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;fonts&#34;</span>))
-	<span style="color:#a6e22e">router</span>.<span style="color:#a6e22e">StaticFS</span>(<span style="color:#e6db74">&#34;/static&#34;</span>, <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Dir</span>(<span style="color:#a6e22e">staticWorkDir</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;static&#34;</span>))
-	<span style="color:#a6e22e">router</span>.<span style="color:#a6e22e">Run</span>(<span style="color:#e6db74">&#34;:&#34;</span> <span style="color:#f92672">+</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">port</span>)
-
-}
-</code></pre></div>
     </div>
 
     <div class="post-copyright" style="display: none;">
@@ -193,7 +171,7 @@
              
             <p class="copyright-item">
                     <span>Link:</span>
-                    <a href=https://crackeer.github.io/2021/golang-http-server/>https://crackeer.github.io/2021/golang-http-server/</span>
+                    <a href=https://crackeer.github.io/2021/2021-02-28/>https://crackeer.github.io/2021/2021-02-28/</span>
             </p>
             
             
@@ -218,10 +196,10 @@
 
     <div class="post-nav">
         
-        <a href="https://crackeer.github.io/2021/golang-regex/" class="prev" rel="prev" title="Golang的正则匹配使用"><i class="iconfont icon-left"></i>&nbsp;Golang的正则匹配使用</a>
+        <a href="https://crackeer.github.io/2021/2021-02-27/" class="prev" rel="prev" title="2021 02 27"><i class="iconfont icon-left"></i>&nbsp;2021 02 27</a>
          
         
-        <a href="https://crackeer.github.io/2021/next-upload-image/" class="next" rel="next" title="NextJS上传图片">NextJS上传图片&nbsp;<i class="iconfont icon-right"></i></a>
+        <a href="https://crackeer.github.io/2021/nextjs-config/" class="next" rel="next" title="Nextjs Config">Nextjs Config&nbsp;<i class="iconfont icon-right"></i></a>
         
     </div>
 

@@ -6,7 +6,63 @@
     <description>Recent content in Posts on 记录生活，记录爱</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 21 Feb 2021 09:00:49 +0800</lastBuildDate><atom:link href="https://crackeer.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 28 Feb 2021 11:00:22 +0800</lastBuildDate><atom:link href="https://crackeer.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nextjs Config</title>
+      <link>https://crackeer.github.io/2021/nextjs-config/</link>
+      <pubDate>Sun, 28 Feb 2021 11:00:22 +0800</pubDate>
+      
+      <guid>https://crackeer.github.io/2021/nextjs-config/</guid>
+      <description>nextjs配置项解析 https://www.shangmayuan.com/a/c0ae307abeaf47b5ba112a83.html
+const withCss = require(&amp;#39;@zeit/next-css&amp;#39;) // 配置说明 const configs = { // 编译文件的输出目录 distDir: &amp;#39;build&amp;#39;, // 是否给每一个路由生成Etag // Etag是用来作缓存验证的，若是路由执行的时候，新的Etag是相同的，那么就会复用当前内容，而无需从新渲染 // 默认状况下，nextJS是会对每一个路由生成Etag的。可是若是咱们部署的时候，ngx已经作了Etag的配置，那么就能够关闭nextJS的Etag，节省性能 generateEtags: true, // （不经常使用）页面内容缓存配置，只针对开发环境 onDemandEntries: { // 内容在内存中缓存的时长（ms） maxInactiveAge: 25 * 1000, // 最多同时缓存多少个页面 pagesBufferLength: 2, }, // 在pages目录下那种后缀的文件会被认为是页面 pageExtensions: [&amp;#39;jsx&amp;#39;, &amp;#39;js&amp;#39;], // （不经常使用）配置buildId，通常用于同一个项目部署多个节点的时候用到 generateBuildId: async () =&amp;gt; { if (process.env.YOUR_BUILD_ID) { return process.env.YOUR_BUILD_ID } // 返回null，使用nextJS默认的unique id return null }, // （重要配置）手动修改webpack config webpack(config, options) { return config }, // （重要配置）修改webpackDevMiddleware配置 webpackDevMiddleware: config =&amp;gt; { return config }, // （重要配置）能够在页面上经过 procsess.</description>
+    </item>
+    
+    <item>
+      <title>2021 02 28</title>
+      <link>https://crackeer.github.io/2021/2021-02-28/</link>
+      <pubDate>Sun, 28 Feb 2021 10:48:17 +0800</pubDate>
+      
+      <guid>https://crackeer.github.io/2021/2021-02-28/</guid>
+      <description>上午 昨晚是凌晨1点左右睡，一觉睡到早上9点半起来，我去煎饺和热豆浆，饭后，芬芬给我剪头发，头发修剪之后一身轻松，我开始继续昨天没有完成的代码，芬芬按照昨天的计划在看书。
+早上一直在下雨，外面阴沉沉的，像是
+下午 12点多做饭，过年期间还剩下最后的8块排骨，和昨天买的藕一起炖了，吃饭依然是看下饭剧《赘婿》，饭后我继续我的代码时间。
+三点多的时候，芬芬困了睡着，我关了灯，一直在写着代码，最后差不多完成之后就继续看《赘婿》
+晚饭炒了豆干，煮了米饭，赘婿已经看完了最新的20集，然后又看了辑魂，还不错的电影。</description>
+    </item>
+    
+    <item>
+      <title>2021 02 27</title>
+      <link>https://crackeer.github.io/2021/2021-02-27/</link>
+      <pubDate>Sun, 28 Feb 2021 10:48:14 +0800</pubDate>
+      
+      <guid>https://crackeer.github.io/2021/2021-02-27/</guid>
+      <description>回顾 周三去打了羽毛球，去的是泰山饭店，结束后坐公交回来的，回来后洗了澡，然后将kindle咪咕版卖出去了
+周四的天气还不错
+周五晚上，7点半左右吃饭，然后就回家了，等了好久公交车没来，我骑车回来的，这个温度已经不冷了，骑车久了反而有些热。途中路过十字路口，能看到有人在放烟花，好不热闹，怎么说也是个元宵节，借着风力，闻到炮仗爆炸燃烧的味道，才有点过节的意思，没看元宵节晚会。看了《赘婿》，有趣搞笑，所以看了好几集，到很晚才睡。
+上午 周六是又来了，元宵节过后，这个春节算是完整地落幕了，路灯上的灯笼还高高悬挂着，下个周应该就会撤下来，等待下一个春节的来临。
+睡到很晚才起来，快11点多我们去幸福超市买菜，中午将最后剩下一把意面煮了，做了吃了，又是接着看《赘婿》，他不是纯粹意义上的穿越剧，轻松诙谐搞笑，没有很多腹黑反转，也没有各种离奇的高能时刻，最适合下饭不过了。
+下午 从三点开始一直到六点多，我都在使用nextjs编程，一直在解决上传图片的问题，在经过3个小时的不断尝试之后，终于做出来了。期间还从芬芬那里听到了一个消息，著名的喜剧演员吴孟达去世了，前几天在新闻上看到他住院的消息，没想到仍然是没有挺过来。在生死这件事儿上，人类算是平等的，不管一个人再出名，也还是逃脱不了死神的眷顾。
+晚上 饭后芬芬邀我一起看一个博主的婚礼vlog，她坚持要和我一起看，我有些不开心，我对视频内容无感，看完之后，我和她讲起她最近刷微博豆瓣太多的事儿，我觉得这样太颓废了，虽然是周末，但是还是要做些有意义的事儿，最后给芬芬制定了一个自我改变的周末计划。</description>
+    </item>
+    
+    <item>
+      <title>Nextjs返回图片</title>
+      <link>https://crackeer.github.io/2021/next-response-image/</link>
+      <pubDate>Sun, 28 Feb 2021 10:47:58 +0800</pubDate>
+      
+      <guid>https://crackeer.github.io/2021/next-response-image/</guid>
+      <description>Show me your code export default async (req, res) =&amp;gt; { const { query: { name }, } = req let fileName = &amp;#39;./data/image/global/&amp;#39; + name console.log(fileName) if (fs.existsSync(fileName)) { res.writeHead(200, { &amp;#39;Content-Type&amp;#39;: &amp;#39;image/png&amp;#39; }); var stream = fs.createReadStream(fileName); var responseData = [];//存储文件流  if (stream) {//判断状态  stream.on(&amp;#39;data&amp;#39;, function (chunk) { responseData.push(chunk); }); stream.on(&amp;#39;end&amp;#39;, function () { var finalData = Buffer.concat(responseData); res.write(finalData); res.end(); }); } return } res.statusCode = 404 res.</description>
+    </item>
+    
+    <item>
+      <title>NextJS上传图片</title>
+      <link>https://crackeer.github.io/2021/next-upload-image/</link>
+      <pubDate>Sat, 27 Feb 2021 18:04:26 +0800</pubDate>
+      
+      <guid>https://crackeer.github.io/2021/next-upload-image/</guid>
+      <description>代码 import { IncomingForm } from &amp;#39;formidable&amp;#39; // you might want to use regular &amp;#39;fs&amp;#39; and not a promise one import { promises as fs } from &amp;#39;fs&amp;#39; // first we need to disable the default body parser export const config = { api: { bodyParser: false, } } export default async (req, res) =&amp;gt; { // parse form with a Promise wrapper  const data = await new Promise((resolve, reject) =&amp;gt; { const form = new IncomingForm() form.</description>
+    </item>
+    
     <item>
       <title>Golang实现一个简单的httpServer</title>
       <link>https://crackeer.github.io/2021/golang-http-server/</link>

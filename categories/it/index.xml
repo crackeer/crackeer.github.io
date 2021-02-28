@@ -6,7 +6,25 @@
     <description>Recent content in IT on 记录生活，记录爱</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 21 Feb 2021 08:59:13 +0800</lastBuildDate><atom:link href="https://crackeer.github.io/categories/it/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 28 Feb 2021 10:47:58 +0800</lastBuildDate><atom:link href="https://crackeer.github.io/categories/it/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nextjs返回图片</title>
+      <link>https://crackeer.github.io/2021/next-response-image/</link>
+      <pubDate>Sun, 28 Feb 2021 10:47:58 +0800</pubDate>
+      
+      <guid>https://crackeer.github.io/2021/next-response-image/</guid>
+      <description>Show me your code export default async (req, res) =&amp;gt; { const { query: { name }, } = req let fileName = &amp;#39;./data/image/global/&amp;#39; + name console.log(fileName) if (fs.existsSync(fileName)) { res.writeHead(200, { &amp;#39;Content-Type&amp;#39;: &amp;#39;image/png&amp;#39; }); var stream = fs.createReadStream(fileName); var responseData = [];//存储文件流  if (stream) {//判断状态  stream.on(&amp;#39;data&amp;#39;, function (chunk) { responseData.push(chunk); }); stream.on(&amp;#39;end&amp;#39;, function () { var finalData = Buffer.concat(responseData); res.write(finalData); res.end(); }); } return } res.statusCode = 404 res.</description>
+    </item>
+    
+    <item>
+      <title>NextJS上传图片</title>
+      <link>https://crackeer.github.io/2021/next-upload-image/</link>
+      <pubDate>Sat, 27 Feb 2021 18:04:26 +0800</pubDate>
+      
+      <guid>https://crackeer.github.io/2021/next-upload-image/</guid>
+      <description>代码 import { IncomingForm } from &amp;#39;formidable&amp;#39; // you might want to use regular &amp;#39;fs&amp;#39; and not a promise one import { promises as fs } from &amp;#39;fs&amp;#39; // first we need to disable the default body parser export const config = { api: { bodyParser: false, } } export default async (req, res) =&amp;gt; { // parse form with a Promise wrapper  const data = await new Promise((resolve, reject) =&amp;gt; { const form = new IncomingForm() form.</description>
+    </item>
+    
     <item>
       <title>Golang的正则匹配使用</title>
       <link>https://crackeer.github.io/2021/golang-regex/</link>

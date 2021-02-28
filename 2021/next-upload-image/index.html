@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="疯子">
+  
+  
+  
+  <link rel="prev" href="https://crackeer.github.io/2021/golang-http-server/" />
+  <link rel="next" href="https://crackeer.github.io/2021/next-response-image/" />
+  <link rel="canonical" href="https://crackeer.github.io/2021/next-upload-image/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           NextJS上传图片 | 记录生活，记录爱
+       
+  </title>
+  <meta name="title" content="NextJS上传图片 | 记录生活，记录爱">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/crackeer.github.io\/"
+    },
+    "articleSection" : "posts",
+    "name" : "NextJS上传图片",
+    "headline" : "NextJS上传图片",
+    "description" : "代码 import { IncomingForm } from \u0026#39;formidable\u0026#39; \/\/ you might want to use regular \u0026#39;fs\u0026#39; and not a promise one import { promises as fs } from \u0026#39;fs\u0026#39; \/\/ first we need to disable the default body parser export const config = { api: { bodyParser: false, } } export default async (req, res) =\u0026gt; { \/\/ parse form with a Promise wrapper  const data = await new Promise((resolve, reject) =\u0026gt; { const form = new IncomingForm() form.",
+    "inLanguage" : "zh-cn",
+    "author" : "疯子",
+    "creator" : "疯子",
+    "publisher": "疯子",
+    "accountablePerson" : "疯子",
+    "copyrightHolder" : "疯子",
+    "copyrightYear" : "2021",
+    "datePublished": "2021-02-27 18:04:26 \u002b0800 CST",
+    "dateModified" : "2021-02-27 18:04:26 \u002b0800 CST",
+    "url" : "https:\/\/crackeer.github.io\/2021\/next-upload-image\/",
+    "wordCount" : "95",
+    "keywords" : [ "代码片段", "记录生活，记录爱"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://crackeer.github.io/">记录生活，记录爱</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">全部</a>
+                
+                <a class="menu-item" href="/tags/" title="">标签</a>
+                
+                <a class="menu-item" href="/website/" title="">好站集</a>
+                
+                <a class="menu-item" href="/recent/" title="">最近</a>
+                
+                <a class="menu-item" href="/about/" title="">我</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://crackeer.github.io/">记录生活，记录爱</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">全部</a>
+                
+                <a class="menu-item" href="/tags/" title="">标签</a>
+                
+                <a class="menu-item" href="/website/" title="">好站集</a>
+                
+                <a class="menu-item" href="/recent/" title="">最近</a>
+                
+                <a class="menu-item" href="/about/" title="">我</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">NextJS上传图片</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://crackeer.github.io/" rel="author">疯子</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2021-02-27 itemprop="datePublished">February 27, 2021</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://crackeer.github.io/categories/it/"> IT </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <h4 id="代码">代码</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">
+<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">IncomingForm</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;formidable&#39;</span>
+<span style="color:#75715e">// you might want to use regular &#39;fs&#39; and not a promise one
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">promises</span> <span style="color:#a6e22e">as</span> <span style="color:#a6e22e">fs</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;fs&#39;</span>
+
+<span style="color:#75715e">// first we need to disable the default body parser
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">config</span> <span style="color:#f92672">=</span> {
+    <span style="color:#a6e22e">api</span><span style="color:#f92672">:</span> {
+        <span style="color:#a6e22e">bodyParser</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
+    }
+}
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">async</span> (<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>) =&gt; {
+    <span style="color:#75715e">// parse form with a Promise wrapper
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#66d9ef">new</span> Promise((<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>) =&gt; {
+        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">form</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">IncomingForm</span>()
+
+        <span style="color:#a6e22e">form</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">req</span>, (<span style="color:#a6e22e">err</span>, <span style="color:#a6e22e">fields</span>, <span style="color:#a6e22e">files</span>) =&gt; {
+            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">err</span>) <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">reject</span>(<span style="color:#a6e22e">err</span>)
+            <span style="color:#a6e22e">resolve</span>({ <span style="color:#a6e22e">fields</span>, <span style="color:#a6e22e">files</span> })
+        })
+    })
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">files</span>.<span style="color:#a6e22e">file</span>)
+}
+</code></pre></div>
+    </div>
+
+    <div class="post-copyright" style="display: none;">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>疯子 </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://crackeer.github.io/2021/next-upload-image/>https://crackeer.github.io/2021/next-upload-image/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags" style="display: none;">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://crackeer.github.io/tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5/">
+                    #代码片段</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://crackeer.github.io/">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://crackeer.github.io/2021/golang-http-server/" class="prev" rel="prev" title="Golang实现一个简单的httpServer"><i class="iconfont icon-left"></i>&nbsp;Golang实现一个简单的httpServer</a>
+         
+        
+        <a href="https://crackeer.github.io/2021/next-response-image/" class="next" rel="next" title="Nextjs返回图片">Nextjs返回图片&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2020 - 2021</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://crackeer.github.io/">疯子</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

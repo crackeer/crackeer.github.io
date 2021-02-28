@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="疯子">
+  
+  
+  
+  <link rel="prev" href="https://crackeer.github.io/2021/2021-02-28/" />
+  
+  <link rel="canonical" href="https://crackeer.github.io/2021/nextjs-config/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Nextjs Config | 记录生活，记录爱
+       
+  </title>
+  <meta name="title" content="Nextjs Config | 记录生活，记录爱">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/crackeer.github.io\/"
+    },
+    "articleSection" : "posts",
+    "name" : "Nextjs Config",
+    "headline" : "Nextjs Config",
+    "description" : "nextjs配置项解析 https:\/\/www.shangmayuan.com\/a\/c0ae307abeaf47b5ba112a83.html\nconst withCss = require(\u0026#39;@zeit\/next-css\u0026#39;) \/\/ 配置说明 const configs = { \/\/ 编译文件的输出目录 distDir: \u0026#39;build\u0026#39;, \/\/ 是否给每一个路由生成Etag \/\/ Etag是用来作缓存验证的，若是路由执行的时候，新的Etag是相同的，那么就会复用当前内容，而无需从新渲染 \/\/ 默认状况下，nextJS是会对每一个路由生成Etag的。可是若是咱们部署的时候，ngx已经作了Etag的配置，那么就能够关闭nextJS的Etag，节省性能 generateEtags: true, \/\/ （不经常使用）页面内容缓存配置，只针对开发环境 onDemandEntries: { \/\/ 内容在内存中缓存的时长（ms） maxInactiveAge: 25 * 1000, \/\/ 最多同时缓存多少个页面 pagesBufferLength: 2, }, \/\/ 在pages目录下那种后缀的文件会被认为是页面 pageExtensions: [\u0026#39;jsx\u0026#39;, \u0026#39;js\u0026#39;], \/\/ （不经常使用）配置buildId，通常用于同一个项目部署多个节点的时候用到 generateBuildId: async () =\u0026gt; { if (process.env.YOUR_BUILD_ID) { return process.env.YOUR_BUILD_ID } \/\/ 返回null，使用nextJS默认的unique id return null }, \/\/ （重要配置）手动修改webpack config webpack(config, options) { return config }, \/\/ （重要配置）修改webpackDevMiddleware配置 webpackDevMiddleware: config =\u0026gt; { return config }, \/\/ （重要配置）能够在页面上经过 procsess.",
+    "inLanguage" : "zh-cn",
+    "author" : "疯子",
+    "creator" : "疯子",
+    "publisher": "疯子",
+    "accountablePerson" : "疯子",
+    "copyrightHolder" : "疯子",
+    "copyrightYear" : "2021",
+    "datePublished": "2021-02-28 11:00:22 \u002b0800 CST",
+    "dateModified" : "2021-02-28 11:00:22 \u002b0800 CST",
+    "url" : "https:\/\/crackeer.github.io\/2021\/nextjs-config\/",
+    "wordCount" : "155",
+    "keywords" : [ "代码片段", "记录生活，记录爱"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://crackeer.github.io/">记录生活，记录爱</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">全部</a>
+                
+                <a class="menu-item" href="/tags/" title="">标签</a>
+                
+                <a class="menu-item" href="/website/" title="">好站集</a>
+                
+                <a class="menu-item" href="/recent/" title="">最近</a>
+                
+                <a class="menu-item" href="/about/" title="">我</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://crackeer.github.io/">记录生活，记录爱</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">全部</a>
+                
+                <a class="menu-item" href="/tags/" title="">标签</a>
+                
+                <a class="menu-item" href="/website/" title="">好站集</a>
+                
+                <a class="menu-item" href="/recent/" title="">最近</a>
+                
+                <a class="menu-item" href="/about/" title="">我</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Nextjs Config</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://crackeer.github.io/" rel="author">疯子</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2021-02-28 itemprop="datePublished">February 28, 2021</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://crackeer.github.io/categories/%E7%94%9F%E6%B4%BB%E8%AE%B0%E5%BD%95/"> 生活记录 </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <h4 id="nextjs配置项解析">nextjs配置项解析</h4>
+<p><a href="https://www.shangmayuan.com/a/c0ae307abeaf47b5ba112a83.html">https://www.shangmayuan.com/a/c0ae307abeaf47b5ba112a83.html</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#960050;background-color:#1e0010">const</span> <span style="color:#960050;background-color:#1e0010">withCss</span> <span style="color:#960050;background-color:#1e0010">=</span> <span style="color:#960050;background-color:#1e0010">require(&#39;@zeit/next-css&#39;)</span>
+
+<span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">配置说明</span>
+<span style="color:#960050;background-color:#1e0010">const</span> <span style="color:#960050;background-color:#1e0010">configs</span> <span style="color:#960050;background-color:#1e0010">=</span> {
+    <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">编译文件的输出目录</span>
+    <span style="color:#960050;background-color:#1e0010">distDir:</span> <span style="color:#960050;background-color:#1e0010">&#39;build&#39;,</span>
+    <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">是否给每一个路由生成Etag</span>
+    <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">Etag是用来作缓存验证的，若是路由执行的时候，新的Etag是相同的，那么就会复用当前内容，而无需从新渲染</span>
+    <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">默认状况下，nextJS是会对每一个路由生成Etag的。可是若是咱们部署的时候，ngx已经作了Etag的配置，那么就能够关闭nextJS的Etag，节省性能</span>
+    <span style="color:#960050;background-color:#1e0010">generateEtags:</span> <span style="color:#960050;background-color:#1e0010">true,</span>
+    <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">（不经常使用）页面内容缓存配置，只针对开发环境</span>
+    <span style="color:#960050;background-color:#1e0010">onDemandEntries:</span> <span style="color:#960050;background-color:#1e0010">{</span>
+        <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">内容在内存中缓存的时长（ms）</span>
+        <span style="color:#960050;background-color:#1e0010">maxInactiveAge:</span> <span style="color:#960050;background-color:#1e0010">25</span> <span style="color:#960050;background-color:#1e0010">*</span> <span style="color:#960050;background-color:#1e0010">1000,</span>
+        <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">最多同时缓存多少个页面</span>
+        <span style="color:#960050;background-color:#1e0010">pagesBufferLength:</span> <span style="color:#960050;background-color:#1e0010">2,</span>
+    }<span style="color:#960050;background-color:#1e0010">,</span>
+    <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">在pages目录下那种后缀的文件会被认为是页面</span>
+    <span style="color:#960050;background-color:#1e0010">pageExtensions:</span> [<span style="color:#960050;background-color:#1e0010">&#39;jsx&#39;</span>, <span style="color:#960050;background-color:#1e0010">&#39;js&#39;</span>]<span style="color:#960050;background-color:#1e0010">,</span>
+    <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">（不经常使用）配置buildId，通常用于同一个项目部署多个节点的时候用到</span>
+    <span style="color:#960050;background-color:#1e0010">generateBuildId:</span> <span style="color:#960050;background-color:#1e0010">async</span> <span style="color:#960050;background-color:#1e0010">()</span> <span style="color:#960050;background-color:#1e0010">=&gt;</span> {
+        <span style="color:#960050;background-color:#1e0010">if</span> <span style="color:#960050;background-color:#1e0010">(process.env.YOUR_BUILD_ID)</span> <span style="color:#960050;background-color:#1e0010">{</span>
+        <span style="color:#960050;background-color:#1e0010">return</span> <span style="color:#960050;background-color:#1e0010">process.env.YOUR_BUILD_ID</span>
+        }
+
+        <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">返回</span><span style="color:#66d9ef">null</span><span style="color:#960050;background-color:#1e0010">，使用nextJS默认的unique</span> <span style="color:#960050;background-color:#1e0010">id</span>
+        <span style="color:#960050;background-color:#1e0010">return</span> <span style="color:#66d9ef">null</span>
+    <span style="color:#960050;background-color:#1e0010">},</span>
+    <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">（重要配置）手动修改webpack</span> <span style="color:#960050;background-color:#1e0010">config</span>
+    <span style="color:#960050;background-color:#1e0010">webpack(config,</span> <span style="color:#960050;background-color:#1e0010">options)</span> {
+        <span style="color:#960050;background-color:#1e0010">return</span> <span style="color:#960050;background-color:#1e0010">config</span>
+    }<span style="color:#960050;background-color:#1e0010">,</span>
+    <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">（重要配置）修改webpackDevMiddleware配置</span>
+    <span style="color:#960050;background-color:#1e0010">webpackDevMiddleware:</span> <span style="color:#960050;background-color:#1e0010">config</span> <span style="color:#960050;background-color:#1e0010">=&gt;</span> {
+        <span style="color:#960050;background-color:#1e0010">return</span> <span style="color:#960050;background-color:#1e0010">config</span>
+    }<span style="color:#960050;background-color:#1e0010">,</span>
+    <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">（重要配置）能够在页面上经过</span> <span style="color:#960050;background-color:#1e0010">procsess.env.customKey</span> <span style="color:#960050;background-color:#1e0010">获取</span> <span style="color:#960050;background-color:#1e0010">value。跟webpack.DefinePlugin实现的一致</span>
+    <span style="color:#960050;background-color:#1e0010">env:</span> {
+        <span style="color:#960050;background-color:#1e0010">customKey:</span> <span style="color:#960050;background-color:#1e0010">&#39;value&#39;,</span>
+    }<span style="color:#960050;background-color:#1e0010">,</span>
+    <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">下面两个要经过</span> <span style="color:#960050;background-color:#1e0010">&#39;next/config&#39;</span> <span style="color:#960050;background-color:#1e0010">来读取</span>
+    <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">只有在服务端渲染时才会获取的配置</span>
+    <span style="color:#960050;background-color:#1e0010">serverRuntimeConfig:</span> {
+        <span style="color:#960050;background-color:#1e0010">mySecret:</span> <span style="color:#960050;background-color:#1e0010">&#39;secret&#39;,</span>
+        <span style="color:#960050;background-color:#1e0010">secondSecret:</span> <span style="color:#960050;background-color:#1e0010">process.env.SECOND_SECRET,</span>
+    }<span style="color:#960050;background-color:#1e0010">,</span>
+    <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">在服务端渲染和客户端渲染均可获取的配置</span>
+    <span style="color:#960050;background-color:#1e0010">publicRuntimeConfig:</span> {
+        <span style="color:#960050;background-color:#1e0010">staticFolder:</span> <span style="color:#960050;background-color:#1e0010">&#39;/static&#39;,</span>
+    }<span style="color:#960050;background-color:#1e0010">,</span>
+    <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">上面这两个配置在组件里使用方式以下：</span>
+    <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">import</span> <span style="color:#960050;background-color:#1e0010">getCofnig</span> <span style="color:#960050;background-color:#1e0010">from</span> <span style="color:#960050;background-color:#1e0010">&#39;next/config&#39;</span>
+    <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">const</span> { <span style="color:#960050;background-color:#1e0010">serverRuntimeConfig,publicRuntimeConfig</span> } <span style="color:#960050;background-color:#1e0010">=</span> <span style="color:#960050;background-color:#1e0010">getCofnig()</span>
+    <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">console.log(</span> <span style="color:#960050;background-color:#1e0010">serverRuntimeConfig,publicRuntimeConfig</span> <span style="color:#960050;background-color:#1e0010">)</span>
+<span style="color:#960050;background-color:#1e0010">}</span>
+
+<span style="color:#960050;background-color:#1e0010">if</span> <span style="color:#960050;background-color:#1e0010">(typeof</span> <span style="color:#960050;background-color:#1e0010">require</span> <span style="color:#960050;background-color:#1e0010">!==</span> <span style="color:#960050;background-color:#1e0010">&#39;undefined&#39;)</span> {
+    <span style="color:#960050;background-color:#1e0010">require.extensions[&#39;.css&#39;]</span> <span style="color:#960050;background-color:#1e0010">=</span> <span style="color:#960050;background-color:#1e0010">file</span> <span style="color:#960050;background-color:#1e0010">=&gt;</span> <span style="color:#960050;background-color:#1e0010">{</span> }
+<span style="color:#960050;background-color:#1e0010">}</span>
+
+<span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">虽然next-css看起来是一个处理样式的插件，实则它是接收的一个对象，能够把传入的其余非css相关的webpack配置一并处理。</span>
+<span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">建议不要直接写一个新的webpack配置，由于next-css里面的webpack的配置是很是全面的，若是被覆盖了，可能会致使报错。</span>
+<span style="color:#960050;background-color:#1e0010">module.exports</span> <span style="color:#960050;background-color:#1e0010">=</span> <span style="color:#960050;background-color:#1e0010">withCss(</span>{
+    <span style="color:#960050;background-color:#1e0010">distDir:</span> <span style="color:#960050;background-color:#1e0010">&#39;build&#39;</span>                                                <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">这里配置了以后才会生效</span>
+}<span style="color:#960050;background-color:#1e0010">)</span>
+
+</code></pre></div>
+    </div>
+
+    <div class="post-copyright" style="display: none;">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>疯子 </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://crackeer.github.io/2021/nextjs-config/>https://crackeer.github.io/2021/nextjs-config/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags" style="display: none;">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://crackeer.github.io/tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5/">
+                    #代码片段</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://crackeer.github.io/">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://crackeer.github.io/2021/2021-02-28/" class="prev" rel="prev" title="2021 02 28"><i class="iconfont icon-left"></i>&nbsp;2021 02 28</a>
+         
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2020 - 2021</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://crackeer.github.io/">疯子</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>
