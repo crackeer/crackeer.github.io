@@ -36,15 +36,6 @@
     </item>
     
     <item>
-      <title>Golang实现一个简单的httpServer</title>
-      <link>https://crackeer.github.io/2021/golang-http-server/</link>
-      <pubDate>Sun, 21 Feb 2021 09:00:49 +0800</pubDate>
-      
-      <guid>https://crackeer.github.io/2021/golang-http-server/</guid>
-      <description>gin package main import ( &amp;#34;net/http&amp;#34; &amp;#34;flag&amp;#34; &amp;#34;github.com/gin-gonic/gin&amp;#34; ) var port *string func main() { port = flag.String(&amp;#34;port&amp;#34;, &amp;#34;9400&amp;#34;, &amp;#34;http port&amp;#34;) flag.Parse() router := gin.Default() staticWorkDir := &amp;#34;./dist/&amp;#34; router.StaticFile(&amp;#34;/&amp;#34;, staticWorkDir+&amp;#34;index.html&amp;#34;) router.StaticFS(&amp;#34;/css&amp;#34;, http.Dir(staticWorkDir+&amp;#34;css&amp;#34;)) router.StaticFS(&amp;#34;/js&amp;#34;, http.Dir(staticWorkDir+&amp;#34;js&amp;#34;)) router.StaticFS(&amp;#34;/img&amp;#34;, http.Dir(staticWorkDir+&amp;#34;img&amp;#34;)) router.StaticFS(&amp;#34;/fonts&amp;#34;, http.Dir(staticWorkDir+&amp;#34;fonts&amp;#34;)) router.StaticFS(&amp;#34;/static&amp;#34;, http.Dir(staticWorkDir+&amp;#34;static&amp;#34;)) router.Run(&amp;#34;:&amp;#34; + *port) } </description>
-    </item>
-    
-    <item>
       <title>2021 02 21</title>
       <link>https://crackeer.github.io/2021/2021-02-21/</link>
       <pubDate>Sun, 21 Feb 2021 08:51:21 +0800</pubDate>
@@ -82,16 +73,6 @@
 中午 坐车去麦当劳吃午饭
 蓝天一点云都没有，但是同时也刮着大风，待到两点半左右我们走去了幸福超市买菜，后天上班，想想就觉得悲伤
 下午 下午的时间，看了一部电影《开心鬼救开心鬼》</description>
-    </item>
-    
-    <item>
-      <title>Golang在windows上运行web程序总是提示防火墙</title>
-      <link>https://crackeer.github.io/2021/golang-web-windows/</link>
-      <pubDate>Mon, 15 Feb 2021 16:51:52 +0800</pubDate>
-      
-      <guid>https://crackeer.github.io/2021/golang-web-windows/</guid>
-      <description>问题描述 每次使用go run main.go的时候，在window上总是会提示是否通过防火墙的提示，我发现如下解决方案
-解决方案 然后就大功告成啦</description>
     </item>
     
     <item>

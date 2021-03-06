@@ -6,17 +6,7 @@
     <description>Recent content in 生活记录 on 记录生活，记录爱</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 28 Feb 2021 11:00:22 +0800</lastBuildDate><atom:link href="https://crackeer.github.io/categories/%E7%94%9F%E6%B4%BB%E8%AE%B0%E5%BD%95/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Nextjs Config</title>
-      <link>https://crackeer.github.io/2021/nextjs-config/</link>
-      <pubDate>Sun, 28 Feb 2021 11:00:22 +0800</pubDate>
-      
-      <guid>https://crackeer.github.io/2021/nextjs-config/</guid>
-      <description>nextjs配置项解析 https://www.shangmayuan.com/a/c0ae307abeaf47b5ba112a83.html
-const withCss = require(&amp;#39;@zeit/next-css&amp;#39;) // 配置说明 const configs = { // 编译文件的输出目录 distDir: &amp;#39;build&amp;#39;, // 是否给每一个路由生成Etag // Etag是用来作缓存验证的，若是路由执行的时候，新的Etag是相同的，那么就会复用当前内容，而无需从新渲染 // 默认状况下，nextJS是会对每一个路由生成Etag的。可是若是咱们部署的时候，ngx已经作了Etag的配置，那么就能够关闭nextJS的Etag，节省性能 generateEtags: true, // （不经常使用）页面内容缓存配置，只针对开发环境 onDemandEntries: { // 内容在内存中缓存的时长（ms） maxInactiveAge: 25 * 1000, // 最多同时缓存多少个页面 pagesBufferLength: 2, }, // 在pages目录下那种后缀的文件会被认为是页面 pageExtensions: [&amp;#39;jsx&amp;#39;, &amp;#39;js&amp;#39;], // （不经常使用）配置buildId，通常用于同一个项目部署多个节点的时候用到 generateBuildId: async () =&amp;gt; { if (process.env.YOUR_BUILD_ID) { return process.env.YOUR_BUILD_ID } // 返回null，使用nextJS默认的unique id return null }, // （重要配置）手动修改webpack config webpack(config, options) { return config }, // （重要配置）修改webpackDevMiddleware配置 webpackDevMiddleware: config =&amp;gt; { return config }, // （重要配置）能够在页面上经过 procsess.</description>
-    </item>
-    
+    <lastBuildDate>Sun, 28 Feb 2021 10:48:17 +0800</lastBuildDate><atom:link href="https://crackeer.github.io/categories/%E7%94%9F%E6%B4%BB%E8%AE%B0%E5%BD%95/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2021 02 28</title>
       <link>https://crackeer.github.io/2021/2021-02-28/</link>
@@ -43,15 +33,6 @@ const withCss = require(&amp;#39;@zeit/next-css&amp;#39;) // 配置说明 const 
 睡到很晚才起来，快11点多我们去幸福超市买菜，中午将最后剩下一把意面煮了，做了吃了，又是接着看《赘婿》，他不是纯粹意义上的穿越剧，轻松诙谐搞笑，没有很多腹黑反转，也没有各种离奇的高能时刻，最适合下饭不过了。
 下午 从三点开始一直到六点多，我都在使用nextjs编程，一直在解决上传图片的问题，在经过3个小时的不断尝试之后，终于做出来了。期间还从芬芬那里听到了一个消息，著名的喜剧演员吴孟达去世了，前几天在新闻上看到他住院的消息，没想到仍然是没有挺过来。在生死这件事儿上，人类算是平等的，不管一个人再出名，也还是逃脱不了死神的眷顾。
 晚上 饭后芬芬邀我一起看一个博主的婚礼vlog，她坚持要和我一起看，我有些不开心，我对视频内容无感，看完之后，我和她讲起她最近刷微博豆瓣太多的事儿，我觉得这样太颓废了，虽然是周末，但是还是要做些有意义的事儿，最后给芬芬制定了一个自我改变的周末计划。</description>
-    </item>
-    
-    <item>
-      <title>Golang实现一个简单的httpServer</title>
-      <link>https://crackeer.github.io/2021/golang-http-server/</link>
-      <pubDate>Sun, 21 Feb 2021 09:00:49 +0800</pubDate>
-      
-      <guid>https://crackeer.github.io/2021/golang-http-server/</guid>
-      <description>gin package main import ( &amp;#34;net/http&amp;#34; &amp;#34;flag&amp;#34; &amp;#34;github.com/gin-gonic/gin&amp;#34; ) var port *string func main() { port = flag.String(&amp;#34;port&amp;#34;, &amp;#34;9400&amp;#34;, &amp;#34;http port&amp;#34;) flag.Parse() router := gin.Default() staticWorkDir := &amp;#34;./dist/&amp;#34; router.StaticFile(&amp;#34;/&amp;#34;, staticWorkDir+&amp;#34;index.html&amp;#34;) router.StaticFS(&amp;#34;/css&amp;#34;, http.Dir(staticWorkDir+&amp;#34;css&amp;#34;)) router.StaticFS(&amp;#34;/js&amp;#34;, http.Dir(staticWorkDir+&amp;#34;js&amp;#34;)) router.StaticFS(&amp;#34;/img&amp;#34;, http.Dir(staticWorkDir+&amp;#34;img&amp;#34;)) router.StaticFS(&amp;#34;/fonts&amp;#34;, http.Dir(staticWorkDir+&amp;#34;fonts&amp;#34;)) router.StaticFS(&amp;#34;/static&amp;#34;, http.Dir(staticWorkDir+&amp;#34;static&amp;#34;)) router.Run(&amp;#34;:&amp;#34; + *port) } </description>
     </item>
     
     <item>
@@ -92,16 +73,6 @@ const withCss = require(&amp;#39;@zeit/next-css&amp;#39;) // 配置说明 const 
 中午 坐车去麦当劳吃午饭
 蓝天一点云都没有，但是同时也刮着大风，待到两点半左右我们走去了幸福超市买菜，后天上班，想想就觉得悲伤
 下午 下午的时间，看了一部电影《开心鬼救开心鬼》</description>
-    </item>
-    
-    <item>
-      <title>Golang在windows上运行web程序总是提示防火墙</title>
-      <link>https://crackeer.github.io/2021/golang-web-windows/</link>
-      <pubDate>Mon, 15 Feb 2021 16:51:52 +0800</pubDate>
-      
-      <guid>https://crackeer.github.io/2021/golang-web-windows/</guid>
-      <description>问题描述 每次使用go run main.go的时候，在window上总是会提示是否通过防火墙的提示，我发现如下解决方案
-解决方案 然后就大功告成啦</description>
     </item>
     
     <item>
