@@ -1,0 +1,9 @@
+* [首页](/)
+* [最近在干啥](/recent.md)
+* [日记](/diary/README.md)
+  - [2020年](/diary/2020/README.md)
+  - [2021年](/diary/2020/README.md)
+* WeWork
+  - [日落](/wework/sunset.md)
+  - [雨天](/wework/rainyday.md)
+
