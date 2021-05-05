@@ -1,5 +1,5 @@
 * [首页](/)
-* [最近在干啥](/recent.md)
+* [最近](/recent.md)
 * [日记](/diary/README.md)
   - [2020年](/diary/2020/README.md)
   - [2021年](/diary/2021/README.md)
