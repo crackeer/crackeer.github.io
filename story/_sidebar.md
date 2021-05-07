@@ -4,9 +4,10 @@
   * [电影收藏](/story/movie.md)
   * [过年电影](/story/过年电影.md)
   * [秋天](/story/秋天.md)
-  
 * 音乐改变生活
   * [是李健啊](/story/是李健啊.md)
   * [是赵雷啊](/story/是赵雷啊.md)
   * [是陈楚生啊](/story/是陈楚生啊.md)
   * [浮生啊](/story/浮生啊.md)
+* 手机
+  - [黑莓手机](/story/blackberry.md)
