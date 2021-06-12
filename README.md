@@ -16,4 +16,4 @@
 
 ## 生活
 
-![image-20201226111100340](https://i.loli.net/2020/12/26/NY7O1VIG8dkLHlf.png)
+![image-20201226111100340](https://gitee.com/seekgo/image/raw/master/NY7O1VIG8dkLHlf.png)

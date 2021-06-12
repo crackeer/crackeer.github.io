@@ -3,7 +3,7 @@
 
 #### 《白日梦想家》[豆瓣链接](https://movie.douban.com/subject/2133323/)
 
-![image-20201227175516380](https://i.loli.net/2020/12/27/2Csml6qZ85W4bEg.png)
+![image-20201227175516380](https://gitee.com/seekgo/image/raw/master/2Csml6qZ85W4bEg.png)
 
 #### 《少年时代》[豆瓣链接](https://movie.douban.com/subject/2209575/)
 
