@@ -25,7 +25,7 @@ func checkDownloadDir() {
 
 func main() {
 	checkDownloadDir()
-	l := getMDList(`./story`)
+	l := getMDList(`./`)
 	allImages := map[string]bool{}
 	for _, f := range l {
 		images := parseImage(f)
@@ -82,7 +82,7 @@ func downloadImage(imgURL string) {
 
 func parseImage(f string) []string {
 	content, _ := ioutil.ReadFile(f)
-	eg, err := regexp.Compile(`https:\/\/i.loli.net\/\d{4}\/\d{2}/\d{2}\/\S+.png`)
+	eg, err := regexp.Compile(`https:\/\/i.loli.net\/\d{4}\/\d{2}/\d{2}\/\S+.jpg`)
 	if err != nil {
 		panic(err)
 	}
