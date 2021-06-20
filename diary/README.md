@@ -1,7 +1,7 @@
 
 ### 2020-12-05，在一个周六的上午
 
-![image-20201205124257435](https://gitee.com/seekgo/image/raw/master/IvGa75kbuSAC9jF.png)
+![image-20201205124257435](image/IvGa75kbuSAC9jF.png)
 
 我要 你在我身旁
 
