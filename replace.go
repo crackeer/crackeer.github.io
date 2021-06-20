@@ -25,8 +25,9 @@ func checkDownloadDir() {
 
 func main() {
 	checkDownloadDir()
-	l := getMDList(`./diary`)
+	l := getMDList(`./story`)
 	for _, f := range l {
+		//findImages(f)
 		replaceImage(f)
 	}
 }
@@ -34,7 +35,7 @@ func main() {
 func replaceImage(f string) {
 
 	content, _ := ioutil.ReadFile(f)
-	eg, err := regexp.Compile(`https:\/\/gitee.com\/seekgo\/image\/raw\/master\/\S+.png`)
+	eg, err := regexp.Compile(`https:\/\/gitee.com\/seekgo\/image\/raw\/master\/\S+.jpg`)
 	if err != nil {
 		panic(err)
 	}
@@ -54,7 +55,7 @@ func findImages(f string) []string {
 	imageDir := fmt.Sprintf("%s/image", dir)
 
 	content, _ := ioutil.ReadFile(f)
-	eg, err := regexp.Compile(`https:\/\/gitee.com\/seekgo\/image\/raw\/master\/\S+.jpg`)
+	eg, err := regexp.Compile(`https:\/\/gitee.com\/seekgo\/image\/raw\/master\/\S+.png`)
 	if err != nil {
 		panic(err)
 	}
