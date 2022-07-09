@@ -1,0 +1,52 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Markdown编辑</title>
+    <link rel="stylesheet" href="https://unpkg.com/bytemd@1.11.0/dist/index.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/github-markdown-css" />
+    <script src="https://polyfill.io/v3/polyfill.min.js"></script>
+    <script
+        src="https://polyfill.io/v3/polyfill.min.js?features=Uint16Array,Array.prototype.find,smoothscroll"></script>
+    <script src="https://unpkg.com/bytemd@1.17.1/dist/index.umd.js"></script>
+    <script src="https://unpkg.com/@bytemd/plugin-gfm@1.17.1/dist/index.umd.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+</head>
+
+<body>
+    <div style="margin:20px auto;width:95%">
+        <ol class="breadcrumb">
+            <li> <a href="/" class="active">首页</a></li>
+            <li>Markdown编辑</li>
+        </ol>
+        <div id="editor"></div>
+    </div>
+    <!-- prettier-ignore -->
+    <script>
+        var plugins = [bytemdPluginGfm()];
+        //console.log(plugins)
+        var value = localStorage.getItem("markdown") || ""
+        var editor = new bytemd.Editor({
+            target: document.getElementById("editor"),
+            props: {
+                value: value
+            },
+            plugins: plugins
+        });
+        console.log(editor)
+        editor.$on('change', function (e) {
+            editor.$set({ value: e.detail.value });
+            localStorage.setItem('markdown', e.detail.value)
+        });
+    </script>
+    <style>
+        .bytemd {
+            height: calc(100vh - 100px);
+        }
+    </style>
+</body>
+
+</html>

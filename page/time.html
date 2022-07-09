@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="Description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>时间</title>
+    <script src="https://unpkg.com/dayjs@1.11.3/dayjs.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <script src="https://unpkg.com/jquery@3.6.0/dist/jquery.js"></script>
+    <script src="https://unpkg.com/vue@next"></script>
+
+
+<body>
+    <div style="margin:20px auto;width:95%">
+        <ol class="breadcrumb">
+            <li> <a href="/" class="active">首页</a></li>
+            <li>时间</li>
+        </ol>
+        <div id="app"></div>
+
+        <template id="template">
+            <h3>时间戳：{{nowTs}}</h3>
+            <h3>时间：{{nowTime}}</h3>
+            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+        </template>
+        <script text="text/javascript">
+            $(document).ready(function () {
+                var vm = Vue.createApp({
+                    data() {
+                        return {
+                            "nowTs": dayjs().unix(),
+                            "nowTime": dayjs().format("YYYY-MM-DD HH:mm:ss")
+                        }
+                    },
+                    template: '#template',
+                    mounted() {
+                        this.initEditor()
+                    },
+                    methods: {
+                        async initEditor() {
+
+                        }
+                    }
+                })
+                vm.mount('#app')
+            })
+        </script>
+    </div>
+</body>
+
+</html>
