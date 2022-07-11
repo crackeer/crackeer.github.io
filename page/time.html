@@ -23,9 +23,48 @@
         <div id="app"></div>
 
         <template id="template">
-            <h3>时间戳：{{nowTs}}</h3>
-            <h3>时间：{{nowTime}}</h3>
-            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <strong>当前时间</strong>
+                        </div>
+                        <div class="panel-body">
+                            时间戳
+                            <input type="number" class="form-control" placeholder="时间戳" v-model="nowTs" @input="transTs">
+                            时间
+                            <input type="text" class="form-control" placeholder="时间" v-model="nowTime">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <strong>时间戳转换时间</strong>
+                        </div>
+                        <div class="panel-body">
+                            请输入时间戳
+                            <input type="number" class="form-control" placeholder="时间戳" v-model="ts" @input="transTs">
+                            时间
+                            <input type="text" class="form-control" placeholder="时间" v-model="tsTime">
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <strong>时间转换时间戳</strong>
+                        </div>
+                        <div class="panel-body">
+                            请输入时间
+                            <input type="text" class="form-control" placeholder="时间" v-model="time" @input="transTime">
+                            时间戳
+                            <input type="number" class="form-control" placeholder="时间戳" v-model="timeTs">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </template>
         <script text="text/javascript">
             $(document).ready(function () {
@@ -33,16 +72,20 @@
                     data() {
                         return {
                             "nowTs": dayjs().unix(),
-                            "nowTime": dayjs().format("YYYY-MM-DD HH:mm:ss")
+                            "nowTime": dayjs().format("YYYY-MM-DD HH:mm:ss"),
+                            "ts": 0,
+                            "tsTime" : "",
+                            "time" : dayjs().format("YYYY-MM-DD HH:mm:ss"),
+                            "timeTs" : dayjs().unix(),
                         }
                     },
                     template: '#template',
-                    mounted() {
-                        this.initEditor()
-                    },
                     methods: {
-                        async initEditor() {
-
+                        async transTs() {
+                            this.tsTime = dayjs.unix(this.ts).format("YYYY-MM-DD HH:mm:ss")
+                        },
+                         async transTime() {
+                            this.timeTs = dayjs(this.time).unix()
                         }
                     }
                 })
