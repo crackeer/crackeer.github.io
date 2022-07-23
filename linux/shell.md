@@ -23,3 +23,19 @@ git push origin master
 ```sh
 命令格式：sed -i "s/原内容/新内容/g" `grep 原内容 -rl 所在目录`    注：千万注意这个符号【`】，是【最左上角】那个符号不是单引号
 ```
+
+## 批量修改文件夹下的文件扩展名
+
+```sh
+#!/bin/bash
+list=$(find . -name '*.html')
+for item in $list
+    do
+        if [ "${item##*/}" == "index.html" ];then
+            echo $item;
+        else
+            mv $item ${item%.*}
+        fi
+        #
+    done
+```

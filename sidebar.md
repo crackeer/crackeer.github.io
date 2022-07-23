@@ -4,6 +4,7 @@
   - [nginx配置](/linux/nginx.md)
   - [caddy配置](/linux/caddy.md)
   - [Shell](/linux/shell.md)
+  - [Shell中字符串截取](/linux/string-sub.md)
 * Golang
   - [发送邮件](/Golang/send-mail.md)
   - [工具箱](/Golang/box.md)
