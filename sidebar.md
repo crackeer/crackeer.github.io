@@ -1,4 +1,5 @@
 * [首页](/)
+* [VSCode插件](/Golang/vscode-plugin.md)
 * Linux
   - [添加system service](/linux/systemctl.md)
   - [nginx配置](/linux/nginx.md)
@@ -9,7 +10,7 @@
   - [发送邮件](/Golang/send-mail.md)
   - [工具箱](/Golang/box.md)
   - [静态文件服务器](/Golang/server.md)
-  - [VSCode插件](/Golang/vscode-plugin.md)
+
   - [开发热加载](/Golang/hot-reload.md)
   - [MySQL表结构迁移sqlite3](/Golang/mysql2sqlite.md)
 * Node

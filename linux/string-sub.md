@@ -1,6 +1,7 @@
 ## shell中字符串截取
 
-转自:https://www.cnblogs.com/xiaoyaojiugui/p/15831971.html#1-%E5%8F%B7%E6%88%AA%E5%8F%96%E5%88%A0%E9%99%A4%E5%B7%A6%E8%BE%B9%E5%AD%97%E7%AC%A6%E4%BF%9D%E7%95%99%E5%8F%B3%E8%BE%B9%E5%AD%97%E7%AC%A6
+转自:https://www.cnblogs.com/xiaoyaojiugui/p/15831971.html
+
 > 字符串截取命令一、简单截取
 > 假设有变量 var=http://www.baidu.com/test.htm
 ### 1. #号截取，删除左边字符，保留右边字符。
