@@ -7,3 +7,7 @@
 ## 2. AI代码补全
 
 > Tabnine AI Autocomplete for Javascript, Python, Typescript
+
+## 3. Markdown Previvew Enhanced
+
+## 4. Paste Image
