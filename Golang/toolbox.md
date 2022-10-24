@@ -1,5 +1,5 @@
 
-> awsome-go：https://awesome-go.com
+> awesome-go：https://awesome-go.com
 
 #### 常用lib
 
