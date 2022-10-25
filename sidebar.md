@@ -7,8 +7,8 @@
   - [Shell](/linux/shell.md)
   - [Shell中字符串截取](/linux/string-sub.md)
 * Golang
-  - [工具箱/Code](/golang/tool.md)
-  - [开发热加载](/golang/reload.md)
+  - [工具箱/Code](/go/tool.md)
+  - [开发热加载](/go/reload.md)
 * 工具箱
   - <a href="/page/json.html" target="_blank">JSON编辑</a>
   - <a href="/page/bytemd.html" target="_blank">Markdown编辑</a>
