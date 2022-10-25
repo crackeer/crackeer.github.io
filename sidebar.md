@@ -1,5 +1,5 @@
 * [首页](/)
-* [VSCode插件](/golang/vscode-plugin.md)
+* [VSCode插件](/go/vscode-plugin.md)
 * Linux
   - [添加system service](/linux/systemctl.md)
   - [nginx配置](/linux/nginx.md)
