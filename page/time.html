@@ -7,15 +7,15 @@
     <meta name="description" content="Description">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title>时间</title>
-    <script src="https://unpkg.com/dayjs@1.11.3/dayjs.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    <script src="/assets/js/dayjs.min.js"></script>
+    <link rel="stylesheet" href="/assets/css/bootstrap3.4.min.css"
         integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-    <script src="https://unpkg.com/jquery@3.6.0/dist/jquery.js"></script>
-    <script src="https://unpkg.com/vue@next"></script>
+    <script src="/assets/js/jquery.js"></script>
+    <script src="/assets/js/vue.global.js"></script>
 
 
 <body>
-    <div style="margin:20px auto;width:95%">
+    <div style="margin:20px auto;width:80%">
         <ol class="breadcrumb">
             <li> <a href="/" class="active">首页</a></li>
             <li>时间</li>
@@ -25,22 +25,27 @@
         <template id="template">
             <div class="row">
                 <div class="col-md-4">
+                    <img src="/assets/css/img/resvg.svg" type="image/svg+xml" width="350" height="245" />
+                </div>
+                <div class="col-md-8" style="height: 250px;">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <strong>当前时间</strong>
                         </div>
                         <div class="panel-body">
                             时间戳
-                            <input type="number" class="form-control" placeholder="时间戳" v-model="nowTs" @input="transTs">
+                            <input type="number" class="form-control" placeholder="时间戳" v-model="nowTs"
+                                @input="transTs">
                             时间
                             <input type="text" class="form-control" placeholder="时间" v-model="nowTime">
                         </div>
                     </div>
                 </div>
+
                 <div class="col-md-4">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <strong>时间戳转换时间</strong>
+                            <strong>时间戳转换</strong>
                         </div>
                         <div class="panel-body">
                             请输入时间戳
@@ -50,10 +55,10 @@
                         </div>
                     </div>
                 </div>
-                 <div class="col-md-4">
+                <div class="col-md-4">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <strong>时间转换时间戳</strong>
+                            <strong>时间->时间戳</strong>
                         </div>
                         <div class="panel-body">
                             请输入时间
@@ -63,6 +68,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
 
         </template>
@@ -74,9 +80,9 @@
                             "nowTs": dayjs().unix(),
                             "nowTime": dayjs().format("YYYY-MM-DD HH:mm:ss"),
                             "ts": 0,
-                            "tsTime" : "",
-                            "time" : dayjs().format("YYYY-MM-DD HH:mm:ss"),
-                            "timeTs" : dayjs().unix(),
+                            "tsTime": "",
+                            "time": dayjs().format("YYYY-MM-DD HH:mm:ss"),
+                            "timeTs": dayjs().unix(),
                         }
                     },
                     template: '#template',
@@ -84,7 +90,7 @@
                         async transTs() {
                             this.tsTime = dayjs.unix(this.ts).format("YYYY-MM-DD HH:mm:ss")
                         },
-                         async transTime() {
+                        async transTime() {
                             this.timeTs = dayjs(this.time).unix()
                         }
                     }
