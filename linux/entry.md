@@ -1,5 +1,3 @@
-# Shell集锦
-
 ## jq的使用
 - jq -r .data.message，可以去掉message外层的双引号
 
@@ -107,4 +105,48 @@ echo ""
 green "Successfully"
 echo ""
 
+```
+
+## 添加system service
+
+```sh
+[Unit]
+Description=XXXX
+Documentation=http://nginx.org/en/docs/
+ 
+[Service]
+Type=simple
+PIDFile=/run/xxx.pid
+ExecStart=/root/.xxx.sh start
+ExecReload=/bin/kill -s HUP $MAINPID
+ExecStop=/bin/kill -s QUIT $MAINPID
+PrivateTmp=true
+ 
+[Install]
+WantedBy=multi-user.target
+```
+
+## clashX 设置白名单，忽略本地hosts测试域名的代理设置
+
+打开终端，在新建一个文件
+```sh
+vim ~/.config/clash/proxyIgnoreList.plist
+```
+文件内容可以从官方下载。不方便下载的也可以直接复制我下面的文件内容，改一下就好
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+    <string>192.168.0.0/16</string>
+    <string>10.0.0.0/8</string>
+
+    <!--上面的不要删，在下面添加你想要忽略的域名-->
+    <string>*.lc.com</string>
+    <string>*-lc.com</string>
+    <string>*-local.com</string>
+    <string>*-.local.com</string>
+</array>
+</plist>
 ```

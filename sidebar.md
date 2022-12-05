@@ -1,11 +1,11 @@
 * [首页](/)
 * [VSCode插件](/go/vscode-plugin.md)
 * Linux
-  - [添加system service](/linux/systemctl.md)
+  - [常见Q](/linux/entry.md)
   - [nginx配置](/linux/nginx.md)
   - [caddy配置](/linux/caddy.md)
-  - [Shell](/linux/shell.md)
   - [Shell中字符串截取](/linux/string-sub.md)
+  - [Docker](/linux/docker.md)
 * Golang
   - [工具箱/Code](/go/tool.md)
   - [开发热加载](/go/reload.md)

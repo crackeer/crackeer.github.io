@@ -1,7 +1,7 @@
 # go开发如何热加载
 go install  github.com/cosmtrek/air@master
 
-```conf
+```toml
 root = "."
 tmp_dir = "tmp"
 
