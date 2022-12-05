@@ -52,8 +52,6 @@ WORKDIR /data0/www/htdocs
 RUN apk update  && apk add --no-cache git tar
 
 # Internal Gitlab
-RUN git config --global url."https://guanfu202211:KVspTR6Su8CQZay6y9or@git.lianjia.com/vrlab_server".insteadOf "https://git.lianjia.com/vrlab_server"
-
 # ------------------------- 编译文件 ---------------------------------
 
 ARG APP_ID_ARG
