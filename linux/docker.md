@@ -38,7 +38,7 @@ fi
 
 ## 一份Dockerfile
 
-```
+```docker
 # 使用go
 # FROM business_base:local
 
