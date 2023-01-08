@@ -1,3 +1,5 @@
+## Redis命令参考:http://doc.redisfans.com/
+
 ####  单线程为何那么快
 
 1. redis是存储在内存上的，读写的话不会受到硬盘 I/O 速度的限制
@@ -8,15 +10,21 @@
 
 ####  支持的数据结构，底层实现
 
+> https://zhuanlan.zhihu.com/p/145384563
+
 ####  持久化：AOF、RDB
 
 > https://www.cnblogs.com/itdragon/p/7906481.html
 
 ####  redis使用，单机版、哨兵模式、集群
 
+1. https://www.cnblogs.com/zhonglongbo/p/13128955.html
+
 ####  与memcache对比
 
 ####  实现分布式锁
+
+1. https://juejin.cn/post/6844903830442737671
 
 ####   缓存雪崩、缓存穿透、缓存击穿
 
@@ -26,13 +34,18 @@
 
 ####  Redis的应用场景
 
+> 热点数据缓存、发布订阅、队列、分布式锁、登录Token
+
 ####  Redis支持的数据类型（必考）
+
+>  
 
 ####  zset跳表的数据结构（必考）
 
-####  Redis的数据过期策略（必考）
+####  Redis的数据过期策略 +  Redis的LRU过期策略的具体实现
 
-####   Redis的LRU过期策略的具体实现
+1. https://zhuanlan.zhihu.com/p/152643114
+2. https://www.cnblogs.com/xuliangxing/p/7151812.html
 
 ####   如何解决Redis缓存雪崩，缓存穿透问题
 

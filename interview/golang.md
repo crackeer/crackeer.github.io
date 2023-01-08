@@ -12,10 +12,9 @@
 
 #### 调度模型、调度器，GMP，netpoller
 
-#### interface
+1. https://wudaijun.com/2018/01/go-scheduler/
+2. https://zhuanlan.zhihu.com/p/108603451
+3. http://hushi55.github.io/2015/12/08/golang-G-P-M
 
-#### 并发使用，sync. WaitGroup, chan
-
-#### sync. RWMutex、sync. Mutex
 
 #### gin源码，前缀树路由
