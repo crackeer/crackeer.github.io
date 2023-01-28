@@ -1,7 +1,5 @@
-* [首页](/)
-* Golang
-  - [工具/Code](/go/tool.md)
-  - [开发热加载](/go/reload.md)
+* [Golang](/go/tool.md)
+* [Rust](/rust/index.md)
 * [程序员手册](/linux/entry.md)
-* [自制工具箱](/tool.md)
+* [工具箱](/tool.md)
 * [GO2023年](/interview/index.md)  

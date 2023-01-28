@@ -1,22 +1,15 @@
-## rust
-- 语言圣经：https://course.rs/about-book.html
+## 记录
 
-## golang
+> 诚然，现代社会前所未有地提高了我们的收入，至少使我们看起来更为富有。实际上，现代社会给人们真实的感受却是我们愈来愈感觉到贫穷。现代社会激发了人们无限的期望，在我们想要得到的和能够得到的东西之间、在我们实际的地位和理想的地位之间造成了永远无法填补的鸿沟。《身份焦虑》
 
-- 模板引擎：
-  - http://github.com/flosch/pongo2/v4
-  - https://github.com/unrolled/render
-- JSON转换Go Struct：
-  - https://app.quicktype.io/
-  - https://mholt.github.io/json-to-go/
-- MySQL转换Go Struct： https://www.devtool.com/sql2go.html
-- Curl请求转换成Golang代码：https://mholt.github.io/curl-to-go/
+> 令人奇怪的是，人类物质方面的实际拥有极大地丰富了，随之而来的竟然是一种挥之不去且愈显强烈的“一无所有”的感觉，以及对这种感觉的恐惧！《身份焦虑》
 
-
-## 其他人的工具
-- 一个牛掰的开发者工具箱：https://devtool.tech/
-- MySQL语句转换成ES：http://www.ischoolbar.com/EsParser/
-- Redis命令查阅文档：http://doc.redisfans.com/
-- 阮一峰个人博客：http://www.ruanyifeng.com/home.html
-- 电鸭社区：https://eleduck.com/
-- DayJS：https://dayjs.fenxianglu.cn/
+## 注意
+- 健康
+- 提高数学技能
+- 提高英语能力
+- 活跃的 GitHub 账号
+- 写博客、开源、写文档
+- 学会沉默是金，简洁是灵魂
+- 培养良好的沟通能力
+- 在赚钱的同时也要学会理财
