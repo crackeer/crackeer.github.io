@@ -1,15 +1,7 @@
 * [首页](/)
-* [VSCode插件](/go/vscode-plugin.md)
-* Linux
-  - [常见Q](/linux/entry.md)
-  - [nginx配置](/linux/nginx.md)
-  - [caddy配置](/linux/caddy.md)
-  - [Shell中字符串截取](/linux/string-sub.md)
-  - [Docker](/linux/docker.md)
 * Golang
   - [工具/Code](/go/tool.md)
   - [开发热加载](/go/reload.md)
+* [程序员手册](/linux/entry.md)
 * [自制工具箱](/tool.md)
-* [Go2023年](/interview/index.md)
-* 树莓派
-  - [树莓派问题解决](/raspberry/problem.md)
+* [GO2023年](/interview/index.md)  
