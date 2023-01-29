@@ -1,5 +1,4 @@
 * [Golang](/go/tool.md)
 * [Rust](/rust/index.md)
 * [程序员手册](/linux/entry.md)
-* [工具箱](/tool.md)
 * [GO2023年](/interview/index.md)  
