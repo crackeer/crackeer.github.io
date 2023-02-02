@@ -1,6 +1,10 @@
 # Caddy配置
 
-## 一份配置文件
+## caddy文档
+
+> https://caddyserver.com/docs/
+
+## 一份Sample配置
 
 ```json
 {
