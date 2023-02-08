@@ -1,11 +1,11 @@
-## jq的使用
+## shell中解析json: jq
 - jq -r .data.message，可以去掉message外层的双引号
 
-## curl使用
+## curl静默模式
 
 - curl -s 静默模式，可不展示请求进度
 
-## 定时提交
+## git定时提交
 
 ```shell
 #!/bin/sh
@@ -17,12 +17,12 @@ git commit -m"$COMMENT"
 git push origin master
 ```
 
-## 批量替换多个文件内容
+## sed批量替换
 ```sh
 命令格式：sed -i "s/原内容/新内容/g" `grep 原内容 -rl 所在目录`    注：千万注意这个符号【`】，是【最左上角】那个符号不是单引号
 ```
 
-## 批量修改文件夹下的文件扩展名
+## 批量改文件扩展名
 
 ```sh
 #!/bin/bash
@@ -126,7 +126,7 @@ PrivateTmp=true
 WantedBy=multi-user.target
 ```
 
-## clashX 设置白名单，忽略本地hosts测试域名的代理设置
+## clashX设置白名单
 
 打开终端，在新建一个文件
 ```sh
@@ -150,3 +150,53 @@ vim ~/.config/clash/proxyIgnoreList.plist
 </array>
 </plist>
 ```
+
+## shell中字符串分割
+
+> 参照：https://blog.csdn.net/Baiyi_destroyer/article/details/126530139
+- 1. ${parameter//pattern/string},用string来替换parameter变量中所有匹配的pattern
+
+```sh
+#!/bin/bash
+string="hello,shell,split,test"  
+array=(${string//,/ }) 
+for var in ${array[@]}
+do
+   echo $var
+done 
+
+```
+
+- 自定义IFS变量, 改变分隔符, 对字符串进行切
+
+```sh
+#!/bin/bash
+string="hello,shell,split,test"  
+#对IFS变量 进行替换处理
+OLD_IFS="$IFS"
+IFS=","
+array=($string)
+IFS="$OLD_IFS"
+for var in ${array[@]}
+do
+   echo $var
+done
+
+```
+
+- 使用tr：由于只是对单个字符进行的替换，则可以用  echo args |   tr "oldSpilt" "newSpilt"  的方式实现。
+
+```sh
+#!/bin/bash
+ 
+string="hello,shell,split,test"  
+array=(`echo $string | tr ',' ' '` )  
+ 
+for var in ${array[@]}
+do
+   echo $var
+done 
+
+```
+
+
