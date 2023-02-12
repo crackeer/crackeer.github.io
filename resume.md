@@ -117,6 +117,6 @@ https://github.com/crackeer/go-gateway
 
 ## 三、个人评价
 
-- 学习能力强，乐于学习新技能，最近在学习Rust语言(目标:用Rust重写go版的`APPGateway`)
+- 学习能力强，乐于学习新技能，在学Rust语言(目标:用Rust重写go版的`APPGateway`)
 - 有良好的沟通能力，工作积极主动、认真负责，并有较强的抗压能力
 - 对代码质量有追求，善于面对需求变化，拥抱变化
