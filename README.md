@@ -12,6 +12,7 @@
 - <a href="/page/time.html" target="_blank">时间转换</a>
 - <a href="/page/jsondiff/" target="_blank">JSON对比</a>
 - <a href="/page/reveal.html" target="_blank">Reveal</a>
+- <a href="/page/jstool/index.html" target="_blank">JsTool</a>
 
 ## 注意
 - 健康
