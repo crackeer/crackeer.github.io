@@ -4,4 +4,4 @@
 - [Redis](/interview/redis.md)
 - [MySQL](/interview/mysql.md)
 - [Kafka](/interview/kafka.md)
-- [Algorithm](/interview/algo.md)
+- [Algorithm](/interview/algo/entry.md)

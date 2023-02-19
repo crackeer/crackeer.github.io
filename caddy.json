@@ -22,7 +22,7 @@
                             "match": [
                                 {
                                     "host": [
-                                        "i.blog.crackeer.com"
+                                        "i.blog.crackeer.com", "localhost", "127.0.0.1"
                                     ]
                                 }
                             ],
