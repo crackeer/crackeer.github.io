@@ -23,3 +23,9 @@
 4. https://pandaychen.github.io/2020/02/28/GOMAXPROCS-POT/
 
 #### gin源码，前缀树路由
+https://github.com/crackeer/go-gateway
+
+#### chan原理
+
+- https://blog.csdn.net/weixin_42309691/article/details/125694412
+- https://www.cnblogs.com/haiyux/p/15161495.html
