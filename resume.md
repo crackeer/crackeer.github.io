@@ -5,32 +5,13 @@
 
 ## 一、专业技能
 
-<div style="border:1px solid gray;padding:5px 20px;border-color:#0066cc">
 
-#### **Golang**
-
-- `4年`工作经验，有大流量、高并发服务实战经验
-- 有大型系统的重构经验&编程语言迁移经验
+- Golang 4年工作经验，有大流量、高并发服务实战经验
+- 有大型系统的重构经验、以及语言迁移经验
 - 熟悉Golang标准库，以及常见的性能优化
-- 熟悉`Gin`/`GORM`/`Kafka`/`Bleve`等优秀开源库使用
-- 注重代码质量，有良好的编程习惯：可读性、扩展性、健壮性
-
-#### **数据库 · 消息队列**
-
+- 熟悉Gin / GORM / Kafka / Bleve等优秀开源库使用
 - 熟悉MySQL、Redis的使用，并了解相关运行原理和调优机制，实战经验丰富
-- 熟悉kafka用户，有实际业务应用经验
-
-#### **运维部署**
-
-- 熟悉Bash脚本编程
-- 有Docker服务部署经验
-
-#### **其他技能**
-
-- 前端技能：React/NextJS，
-- 使用NodeJS快写脚本
-
-</div>
+- 熟悉kafka消息队列，有实际业务应用经验
 
 
 ## 二、工作经历
@@ -61,7 +42,6 @@
 **技术栈：**
 
 - 后端Golang：[Server路由:gin-gonic/gin](https://github.com/gin-gonic/gin)`/`[ORM:go-gorm/gorm](https://github.com/go-gorm/gorm)`/`[JSON解析:tidwall/gjson](https://github.com/tidwall/gjson)`/`[缓存:go-redis](http://github.com/go-redis/redis/v8) `/` [监控:prometheus](http://github.com/prometheus/client_golang) 
-- 前端React：NextJS、AntDesign
 
 **成果：**
 - 支撑如视开放平台[OpenAPI](https://open-platform.realsee.com/developer/open/api#/)
@@ -80,10 +60,9 @@ https://github.com/crackeer/go-gateway
 `主要开发者`
 
 **特性：**
-- `开放API`任务创建、查询、任务统计、Callback
-- 一定程度的`任务编排`能力、消息通知订阅
-- 任务失败率`报警`
-- 可视化任务管理后台，实时查看任务执行情况
+
+- 系统特点1：开放API任务创建、查询、任务统计、Callback、任务重试
+- 系统特点2：一定程度的任务编排能力、消息通知订阅
 
 **架构示意图：**
 <img src="/images/shepherd.png" height="310px" width="530px"/>
@@ -91,7 +70,6 @@ https://github.com/crackeer/go-gateway
 **技术栈：**
 
 - 后端Golang：[Server路由:gin-gonic/gin](https://github.com/gin-gonic/gin) `/` [ORM:go-gorm/gorm](https://github.com/go-gorm/gorm) `/` [消息队列:segmentio/kafka-go](https://github.com/segmentio/kafka-go) 
-- 前端React：NextJS、AntDesign
 
 **成果：**
 - 支撑业务：未来家`AI设计`方案产出、`VR生产流程`、`本地化部署`基础服务
@@ -118,6 +96,9 @@ https://github.com/crackeer/go-gateway
 
 ## 三、个人评价
 
-- 学习能力强，乐于学习新技能，在学Rust语言(目标:用Rust重写go版的`APPGateway`)
+- 学习能力强，乐于学习新技能，在学Rust语言(目标：用Rust重写go版的APPGateway)
 - 有良好的沟通能力，工作积极主动、认真负责，并有较强的抗压能力
 - 对代码质量有追求，善于面对需求变化，拥抱变化
+- Show Me Your Code
+  - 网关gateway：https://github.com/crackeer/go-gateway
+  - 制作Web页：https://github.com/crackeer/goweb
