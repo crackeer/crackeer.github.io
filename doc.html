@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>记录·是变好的开始</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="Description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/vue.css">
+
+</head>
+
+<body>
+    <div id="app"></div>
+    <script>
+        if(isResume()) {
+            document.title = "简历"
+        }
+        window.$docsify = {
+            name : "首页",
+            loadSidebar: 'sidebar.md',
+            subMaxLevel: 2,
+            auto2top: true,
+            themeColor: '#0066CC',
+            count: {
+                countable: false,
+                fontsize: '0.9em',
+                color: 'rgb(90,90,90)',
+                language: 'chinese'
+            },
+            tabs: {
+                persist: true,      // default
+                sync: true,      // default
+                theme: 'classic', // default
+                tabComments: true,      // default
+                tabHeadings: true       // default
+            }
+        }
+    </script>
+    <!-- Docsify v4 -->
+    <script src="/assets/js/docsify@4.js"></script>
+    <script src="/assets/js/prism-go.min.js"></script>
+    <script src="/assets/js/prism-json.min.js"></script>
+    <script src="/assets/js/prism-textile.min.js"></script>
+    <script src="/assets/js/prism-ini.min.js"></script>
+    <script src="/assets/js/prism-php.min.js"></script>
+    <script src="/assets/js/prism-javascript.min.js"></script>
+    <script src="/assets/js//prism-bash.min.js"></script>
+    <script src="/assets/js//prism-nginx.min.js"></script>
+    <script src="/assets/js//prism-toml.min.js"></script>
+    <script src="/assets/js//prism-docker.min.js"></script>
+    <script src="/assets/js/docsify-tabs@1.js"></script>
+    <script src="/assets/js/docsify-copy-code.js"></script>
+    
+    <script src="/assets/js/countable.js"></script>
+    <script src="/assets/js/zoom-image.min.js"></script>
+</body>
+<style>
+    body {
+        --docsifytabs-border-color: #0066CC;
+        --docsifytabs-tab-highlight-color: #0066CC;
+    }
+
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+    .sidebar {
+        padding: 10px 0 0;
+    }
+    a {
+        text-decoration: none;
+    }
+    .markdown-section code {
+        font-size: 16px!important;
+        color: #ff0808;
+        font-weight: bold;
+    }
+</style>
+
+</html>

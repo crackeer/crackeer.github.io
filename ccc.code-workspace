@@ -1,10 +1,13 @@
 {
 	"folders": [
 		{
-			"path": "."
+			"path": "../go-gateway"
 		},
 		{
-			"path": "../go-gateway"
+			"path": "C:/Users/liuhu/Desktop/Temp"
+		},
+		{
+			"path": "../seego"
 		}
 	],
 	"settings": {}
