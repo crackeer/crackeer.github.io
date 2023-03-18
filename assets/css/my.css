@@ -1,0 +1,31 @@
+body {
+    padding: 20px 7.5% 50px;
+}
+
+h2 {
+    font-weight: 500;
+}
+
+h4 {
+    font-weight: 900;
+}
+
+.link-list a {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.label {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.pic-list img {
+    display: block;
+    border: 1px solid gray;
+    margin: 5px auto;
+}
+
+th {
+    text-align: center;
+}
