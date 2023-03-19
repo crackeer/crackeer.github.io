@@ -17,3 +17,102 @@ func subSequenceLen(list []int) int {
 	return util.Max(dp...)
 }
 ```
+
+## 硬币凑钱数
+> leecode :https://leetcode.cn/problems/coin-change/submissions/
+
+```go
+func coinChangeX(coins []int, amount int) int {
+
+	if amount < 0 {
+		return -1
+	}
+
+	if amount < 1 {
+		return 0
+	}
+	table := make([]int, amount+1)
+
+	for i := 1; i <= amount; i++ {
+		table[i] = math.MaxInt
+		for _, c := range coins {
+			if i-c >= 0 {
+				if table[i-c] != math.MaxInt {
+					table[i] = min(table[i], table[i-c]+1)
+				}
+			}
+		}
+	}
+	if table[amount] == math.MaxInt {
+		return -1
+	}
+	return table[amount]
+}
+```
+
+## 下降路径最小和
+
+> https://leetcode.cn/problems/minimum-falling-path-sum/
+
+```go
+func minFallingPathSum(matrix [][]int) int {
+	data := minWays(matrix)
+	result := math.MaxInt
+	for _, item := range data {
+		result = min(result, item)
+	}
+	return result
+}
+
+func minWays(matrix [][]int) []int {
+	if len(matrix) < 1 {
+		return []int{}
+	}
+
+	if len(matrix) == 1 {
+		return matrix[0]
+	}
+
+	result := make([]int, len(matrix[0]))
+	minSums := minWays(matrix[1:])
+	for index, val := range matrix[0] {
+		result[index] = val + minSums[index]
+		if index-1 >= 0 {
+			result[index] = min(result[index], val+minSums[index-1])
+		}
+
+		if index+1 <= len(matrix[0]) {
+			result[index] = min(result[index], val+minSums[index+1])
+		}
+	}
+	return result
+}
+```
+
+## 不同的子序列
+
+> https://leetcode.cn/problems/distinct-subsequences/
+
+```go
+func numDistinct(s string, t string) int {
+
+    if len(s) < len(t) {
+		return 0
+	}
+
+    if len(t) < 1 {
+        return 1
+    }
+
+	if s == t {
+		return 1
+	}
+	result := 0
+	for i, b := range []byte(s) {
+		if b == t[0] {
+			result += numDistinct(s[i+1:], t[1:])
+		}
+	}
+	return result
+}
+```
