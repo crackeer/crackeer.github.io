@@ -29,3 +29,7 @@ h4 {
 th {
     text-align: center;
 }
+
+.progress strong {
+    font-size: 18px;
+}
