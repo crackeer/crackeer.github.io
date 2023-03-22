@@ -152,5 +152,3 @@ func transferBit2Str(str string) int {
 }
 
 ```
-
-## 
