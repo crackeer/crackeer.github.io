@@ -1,5 +1,5 @@
 var header = `
-<link rel="stylesheet" href="/assets/css/bootstrap3.4.min.css" />
+<link rel="stylesheet" href="./assets/css/bootstrap3.4.min.css" />
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
