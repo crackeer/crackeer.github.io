@@ -37,19 +37,22 @@
 > 热点数据缓存、发布订阅、队列、分布式锁、登录Token
 
 ####  Redis支持的数据类型（必考）
+- String，字符串
+- Hash，HashMap
+- List, 列表
+- Set，集合
+- ZSet，有序集合
 
->  
-
-####  zset跳表的数据结构（必考）
+####  zset跳表的数据结构
 
 ####  Redis的数据过期策略 +  Redis的LRU过期策略的具体实现
 
 1. https://zhuanlan.zhihu.com/p/152643114
 2. https://www.cnblogs.com/xuliangxing/p/7151812.html
 
-####   如何解决Redis缓存雪崩，缓存穿透问题
+####  如何解决Redis缓存雪崩，缓存穿透问题
 
-####   Redis的管道pipeline
+####  Redis的管道pipeline
 
 ####  Redis集群
 
@@ -71,3 +74,14 @@
 #### redis过期策略
 
 > https://www.cnblogs.com/zjoch/p/11149278.html
+
+​- redis的过期策略就是：定期删除 + 惰性删除
+
+#### 内存淘汰机制
+
+- `noeviction`：当内存不足以容纳新写入数据时，新写入操作会报错。这个一般很少用。
+- `allkeys-lru`：当内存不足以容纳新写入数据时，在键空间中，移除最近最少使用的key，这个是最常用的。
+- `allkeys-random`：当内存不足以容纳新写入数据时，在键空间中，随机移除某个key。
+- `volatile-lru`：当内存不足以容纳新写入数据时，在设置了过期时间的键空间中，移除最近最少使用的key。
+- `volatile-random`：当内存不足以容纳新写入数据时，在设置了过期时间的键空间中，随机移除某个key。
+- `volatile-ttl`：当内存不足以容纳新写入数据时，在设置了过期时间的键空间中，有更早过期时间的key优先移除。
