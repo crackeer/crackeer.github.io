@@ -7,3 +7,4 @@
 - [Algorithm](/w2023h/algo/entry.md)
 - [网络](/w2023h/network.md)
 - [技巧](/w2023h/skill.md)
+- [基础](/w2023h/base.md)
