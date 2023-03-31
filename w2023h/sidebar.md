@@ -6,4 +6,5 @@
 - [Kafka](/w2023h/kafka.md)
 - [Algorithm](/w2023h/algo/entry.md)
 - [网络](/w2023h/network.md)
+- [HTTP](/w2023h/http.md)
 - [技巧](/w2023h/skill.md)
