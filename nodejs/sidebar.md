@@ -1,4 +1,4 @@
-* [常用](/nodejs/index.md)
+* [NodeJS](/nodejs/index.md)
 
 ----
 * [静态服务器](/nodejs/静态服务器.md)

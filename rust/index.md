@@ -3,7 +3,7 @@
 - tauri-app：https://tauri.app/zh-cn/
 - awesomeapp：https://awesomeapp.org/
 
-## github
+## 个人项目
 
 - tauri写的一个简单的markdown编辑器：https://github.com/crackeer/tauri-markdown
 

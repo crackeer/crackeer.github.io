@@ -1,4 +1,4 @@
-## 其他人的工具
+## 工具箱
 - 一个牛掰的开发者工具箱：https://devtool.tech/
 - MySQL语句转换成ES：http://www.ischoolbar.com/EsParser/
 - Redis命令查阅文档：http://doc.redisfans.com/
@@ -14,12 +14,5 @@
 - <a href="/page/reveal.html" target="_blank">Reveal</a>
 - <a href="/page/jstool/index.html" target="_blank">JsTool</a>
 
-## 注意
-- 健康
-- 提高数学技能
-- 提高英语能力
-- 活跃的 GitHub 账号
-- 写博客、开源、写文档
-- 学会沉默是金，简洁是灵魂
-- 培养良好的沟通能力
-- 在赚钱的同时也要学会理财
+## Attention Please
+`健康`、`提高英语能力`、`活跃的GitHub账号`、`写博客、开源、写文档`、`沉默是金，简洁是灵魂`、`良好的沟通能力`、`学会理财`

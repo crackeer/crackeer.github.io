@@ -1,3 +1,3 @@
-* [GO2023年](/rust/index.md)
+* [RustYYDS](/rust/index.md)
 ----
 - [代码](/rust/code.md)
