@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>记录</title>
@@ -19,7 +18,7 @@
             loadSidebar: 'sidebar.md',
             subMaxLevel: 2,
             auto2top: true,
-            search : true,
+            search: true,
             themeColor: '#0066CC',
             count: {
                 countable: false,
@@ -33,7 +32,12 @@
                 theme: 'classic', // default
                 tabComments: true,      // default
                 tabHeadings: true       // default
-            }
+            },
+            toc: {
+                scope: '.content',
+                headings: 'h1, h2, h3, h4, h5, h6',
+                title: 'Table of Contents',
+            },
         }
     </script>
     <!-- Docsify v4 -->
@@ -64,9 +68,7 @@
         display: block;
         margin: 0 auto;
     }
-    .sidebar {
-        padding: 10px 0 0;
-    }
+
     a {
         text-decoration: none;
     }
