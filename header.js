@@ -22,21 +22,21 @@ var header = `
 
         <div class="collapse navbar-collapse" id="navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="./me.html">主页</a></li>
-                <li><a href="/">个人项目</a></li>
+                <li><a href="/">首页</a></li>
+                <li><a href="/page/bookmark.html">书签</a></li>
+                <li><a href="/page/json.html">JSON编辑</a></li>
+                <li><a href="/page/me.html">关于我</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="https://studygolang.com/" target="_blank">Go语言中文网</a></li>
-                <li><a href=" https://doc.rust-lang.org/book/title-page.html" target="_blank">Rust学</a></li>
-                <li><a href="https://tauri.app/zh-cn/" target="_blank">Tauri</a></li>
-                <li><a href="https://v3.bootcss.com/getting-started/" target="_blank">Bootstrap</a></li>
+                <li><a href="/page/jstool/index.html" target="_blank">JS工具</a></li>
+                <li><a href="/doc.html" target="_blank">文档</a></li>
             </ul>
         </div>
     </div>
 </nav>
 `
 
-$(document).ready(function(){
+$(document).ready(function () {
     $('#header').html(header)
     $('a[href="' + window.location.pathname + '"]').parent().addClass('active')
 })
