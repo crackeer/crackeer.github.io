@@ -163,3 +163,16 @@ const puppeteer = require('puppeteer');
 
 })();
 ```
+
+## 原生fetch上传
+```js
+async function doUploadFile(file) {
+    var url = window.location.href + file.name
+    const formData = new FormData()
+    formData.append('file', file)
+    return await fetch(url, {
+        method: 'PUT',
+        body: formData
+    })
+}
+```
