@@ -20,14 +20,28 @@
     <div id="jsoneditor" style="width: 100%; height: calc(100vh - 100px);"></div>
     <script>
         const container = document.getElementById("jsoneditor")
+        function getInitJSON() {
+            try {
+                let value = localStorage.getItem("json-editor") || '{}'
+                return JSON.parse(value)
+            } catch(e) {
+                return {}
+            }
+        }
         const options = {
             "mode": "code",
             "search": true,
             "indentation": 4,
+            "onChangeText" : (json) => {
+                try {
+                    JSON.parse(json)
+                    localStorage.setItem("json-editor", json)
+                } catch(e){
+
+                }
+            }
         }
-        const editor = new JSONEditor(container, options)
-        const initialJson = {}
-        editor.set(initialJson)
+        const editor = new JSONEditor(container, options, getInitJSON())
         const updatedJson = editor.get()
     </script>
 </body>
