@@ -1,0 +1,60 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Markdown编辑</title>
+    <link rel="stylesheet" href="./assets/css/bytemd.css" />
+    <link rel="stylesheet" href="./assets/css/github-markdown.css" />
+    <script src="https://polyfill.io/v3/polyfill.min.js"></script>
+    <script
+        src="https://polyfill.io/v3/polyfill.min.js?features=Uint16Array,Array.prototype.find,smoothscroll"></script>
+    <script src="./assets/js/bytemd.umd.js"></script>
+    <script src="./assets/js/bytemd-plugin-gfm.js"></script>
+    <link rel="stylesheet" href="./assets/css/bootstrap3.4.min.css" />
+    <link rel="stylesheet" href="./assets/css/my.css" />
+    <script src="./assets/js/jquery.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./header.js"></script>
+    <script src="./assets/js/prism-go.min.js"></script>
+    <script src="./assets/js/prism-json.min.js"></script>
+    <script src="./assets/js/prism-textile.min.js"></script>
+    <script src="./assets/js/prism-ini.min.js"></script>
+    <script src="./assets/js/prism-php.min.js"></script>
+    <script src="./assets/js/prism-javascript.min.js"></script>
+    <script src="./assets/js//prism-bash.min.js"></script>
+    <script src="./assets/js//prism-nginx.min.js"></script>
+    <script src="./assets/js//prism-toml.min.js"></script>
+    <script src="./assets/js//prism-docker.min.js"></script>
+</head>
+
+<body>
+    <div id="header"></div>
+    <div id="markdown" style="height: auto;"></div>
+    <script>
+        var plugins = [bytemdPluginGfm()];
+        var getMarkdown = async () => {
+            const curUrl = new URL(document.location)
+            const curUrlParams = curUrl.searchParams
+            const file = curUrlParams.get('file') || ''
+            if(file.length < 1) {
+                return
+            }
+            let response = await fetch(file)
+            let content = await response.text()
+            console.log(content)
+            new bytemd.Viewer({
+                target: document.getElementById("markdown"),
+                props: {
+                    value: content
+                },
+                plugins: plugins
+            });
+        }
+        getMarkdown()
+
+    </script>
+</body>
+
+</html>
