@@ -81,6 +81,33 @@
                                 }
                             ],
                             "terminal" : true
+                        },
+                        {
+                            "match": [
+                                {
+                                    "header": {
+                                        "proxy": [
+                                            "simple"
+                                        ]
+                                    }
+                                }
+                            ],
+                            "handle": [
+                                {
+                                    "handler": "reverse_proxy",
+                                    "dynamic_upstreams": {
+                                        "source": "a",
+                                        "name": "proxy.host.com"
+                                    },
+                                    "headers": {
+                                        "request" : {
+                                            "add" : {
+                                                "Host" : ["proxy.host.com"]
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
                         }
                     ]
                 }
