@@ -199,4 +199,19 @@ done
 
 ```
 
+## 字符串切割成数组
+
+> https://www.cnblogs.com/linux985/p/14866985.html
+
+```sh
+OLD_IFS="$IFS" 
+IFS="," 
+arr=($a) 
+IFS="$OLD_IFS" 
+for s in ${arr[@]} 
+do 
+    echo "$s" 
+done
+```
+
 
