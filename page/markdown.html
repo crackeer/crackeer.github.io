@@ -43,7 +43,6 @@
             }
             let response = await fetch(file)
             let content = await response.text()
-            console.log(content)
             new bytemd.Viewer({
                 target: document.getElementById("markdown"),
                 props: {

@@ -23,7 +23,7 @@ var header = `
         <div class="collapse navbar-collapse" id="navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li><a href="/">主项目</a></li>
-                <li><a href="/interest.html">兴趣项目</a></li>
+                <li><a href="/page/interest.html">兴趣项目</a></li>
                 <li><a href="/page/bookmark.html">书签</a></li>
                 <li><a href="/page/json.html">JSON编辑</a></li>
                 <li><a href="/page/me.html">关于我</a></li>
