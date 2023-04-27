@@ -21,11 +21,23 @@
                         {
                             "match": [
                                 {
-                                    "host": [
-                                        "i.blog.crackeer.com", "localhost", "127.0.0.1"
-                                    ]
+                                    "header": {
+                                        "proxy": [
+                                            "sqlite"
+                                        ]
+                                    }
                                 }
                             ],
+                            "handle": [
+                                {
+                                    "handler": "database",
+                                    "driver": "sqlite",
+                                    "dsn": "./sqlite.db"
+                                }
+                            ],
+                            "terminal": true
+                        },
+                        {
                             "handle": [
                                 {
                                     "handler": "file_server",
