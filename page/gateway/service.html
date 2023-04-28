@@ -31,11 +31,10 @@
         </div>
 
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-            <div class="panel panel-default" v-for="(item, i) in serviceList">
+            <div class="panel panel-default" v-for="(item, i) in serviceList" style="margin-top: 20px;">
                 <div class="panel-body">
                     <h4>
-                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
-                            :href="'#' + item.id" aria-expanded="false" :aria-controls="item.id">{{item.name}} </a>
+                        {{item.name}}
                         <div class="label label-warning"> {{item.namespace}}</div> <small>{{item.host}}</small>
                         <div style="float: right;">
                             <button class="btn btn-sm btn-link" @click="showEditModal(item)">编辑</button>
@@ -44,14 +43,50 @@
                         </div>
                     </h4>
                     <hr />
-                    <p><strong>签名算法：</strong>{{item.sign_algo}}</p>
-                    <p><strong>超时控制：</strong>{{item.connect_timeout + item.read_timeout }}<small>（ms）</small></p>
-                    <p><strong>描述：</strong>{{item.description}}</p>
-                    <div :id="item.id" class="panel-collapse collapse" role="tabpanel" :aria-labelledby="item.id">
-                        <p><strong>创建人：</strong>{{item.creator}}</p>
-                        <p><strong>创建时间：</strong>{{item.create_time}}</p>
-                        <p><strong>修改时间：</strong>{{item.modify_time}}</p>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <p><strong>超时控制：</strong>{{item.connect_timeout + item.read_timeout }}<small>（ms）</small>
+                            </p>
+                            <p><strong>描述：</strong>{{item.description}}</p>
+                            <p><strong>创建人：</strong>{{item.creator}}</p>
+                            <p><strong>创建时间：</strong>{{item.create_time}}</p>
+                            <p><strong>修改时间：</strong>{{item.modify_time}}</p>
+                        </div>
+                        <div class="col-md-4">
+                            <p><strong>签名配置：</strong>
+                                <textarea type="text" class="form-control" rows="3">{{item.sign_config}}</textarea>
+                            </p>
+                            <p><strong>签名算法：</strong>{{item.sign_algo}}</p>
+                        </div>
+                        <div class="col-md-4">
+                            <p><strong>扩展配置：</strong>
+                                <textarea type="text" class="form-control" rows="3">{{item.extension}}</textarea>
+                            </p>
+                        </div>
+                        <div class="col-md-12">
+                            <h5>API列表</h5>
+                            <div style="height: 300px; overflow-y: scroll;">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>唯一标识</th>
+                                            <th>Path</th>
+                                            <th>ContentType</th>
+                                            <th colspan="2" style="text-align:center;">操作</th>
+                                        </tr>
+                                    <tbody>
+                                        <tr v-for="(api, i) in item.api_list">
+                                            <td>{{api.name}}</td>
+                                            <td>【{{api.method}}】{{api.uri}}</td>
+                                            <td>{{api.content_type}}</td>
+                                            <td style="text-align:center;">删除</td>
+                                            <td style="text-align:center;">编辑</td>
+                                        </tr>
+                                </table>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -215,8 +250,32 @@
                             'limit': PAGE_SIZE,
                             'order_by': 'id desc',
                         })
+
+                        let namespaces = []
+                        for (var i in result.data.data) {
+                            namespaces.push(result.data.data[i].namespace)
+                        }
+                        let result1 = await axios.post('/select/service_api', {
+                            'query': {
+                                'service_namespace': namespaces,
+                            },
+                            'order_by': 'id desc',
+                        })
+                        let serviceApiMap = {}
+                        for (var i in result1.data.data) {
+                            if (serviceApiMap[result1.data.data[i].service_namespace] == undefined) {
+                                serviceApiMap[result1.data.data[i].service_namespace] = []
+                            }
+                            serviceApiMap[result1.data.data[i].service_namespace].push(result1.data.data[i])
+                        }
+                        for (var i in result.data.data) {
+                            if (serviceApiMap[result.data.data[i].namespace] != undefined) {
+                                result.data.data[i].api_list = serviceApiMap[result.data.data[i].namespace]
+                            }
+                        }
                         this.serviceList = result.data.data
-                        $('.collapse').collapse()
+                        console.log(result.data.data)
+
                     },
                     async showEditModal(item) {
                         this.service = cloneObject(item)
@@ -226,7 +285,7 @@
                     async showCreateModel() {
                         this.service = {
                             'name': '',
-                            'env' : 'default',
+                            'env': 'default',
                             'namespace': '',
                             'host': '',
                             'description': '',
