@@ -25,7 +25,7 @@
             </div>
             <div class="row">
                 <div class="col-md-3">
-                    <div class="list-group">
+                    <div class="list-group" style="height:400px;overflow-y: scroll;">
                         <template v-for="(item, i) in tables">
                             <a href="javascript:;" class="list-group-item" @click="queryTable(item)">
                                 {{item}}
@@ -33,24 +33,12 @@
                         </template>
                     </div>
                 </div>
-                <div class="col-md-9" v-if="tableDesc.length > 0">
-                    <p>字段详细</p>
-                    <table class="table table-striped  table-bordered">
-                        <thead>
-                            <tr>
-                                <th v-for="(item, i) in tableDescHeader">
-                                    {{item}}
-                                </th>
-                            </tr>
-                        <tbody>
-                            <tr v-for="(city, i) in tableDesc">
-                                <td v-for="(item, i) in tableDescHeader">
-                                    {{city[item]}}
-                                </td>
-                            </tr>
-                    </table>
+                <div class="col-md-9">
                     <p>Create SQL</p>
-                    <textarea class="form-control" rows="4" style="min-width: 100%;max-width: 100%;">{{createSQL}}</textarea>
+                    <textarea class="form-control" rows="5"
+                        >{{createSQL}}</textarea>
+                    <p>Sample Data</p>
+                    <textarea class="form-control" rows="8">{{sampleData}}</textarea>
                 </div>
             </div>
             <div class="page-header">
@@ -77,9 +65,8 @@
                     return {
                         tables: list,
                         sql: "",
-                        tableDescHeader: [],
-                        tableDesc: [],
-                        createSQL : "",
+                        sampleData: '',
+                        createSQL: "",
                     }
                 },
                 template: '#template',
@@ -104,8 +91,13 @@
                             return
                         }
                         this.tables = result.data.data
+
+                        if (result.data.data.length > 0) {
+                            this.queryTable(result.data.data[0])
+                        }
                     },
                     async queryTable(table) {
+                        /*
                         let result = await axios.post('/desc/' + table)
                         if (result.data.code != 0) {
                             alert(result.data.message)
@@ -114,10 +106,15 @@
                         this.tableDesc = result.data.data
                         if (result.data.data.length > 0) {
                             this.tableDescHeader = Object.keys(result.data.data[0])
-                        }
+                        }*/
                         let result1 = await axios.post('/show_create_table/' + table)
                         this.createSQL = result1.data.data
+                        let result2 = await axios.post('/select/' + table, {
+                            'limit': 3,
+                        })
+                        this.sampleData = JSON.stringify(result2.data.data, "\r\n")
                     }
+
                 }
             })
             vm.mount('#app')
