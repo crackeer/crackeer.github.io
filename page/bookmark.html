@@ -11,73 +11,61 @@
     <link rel="stylesheet" href="/assets/css/my.css" />
     <script src="/assets/js/jquery.js"></script>
     <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/vue.global.js"></script>
+    <script src="/assets/js/axios.min.js"></script>
+    <script src="/assets/js/util.js"></script>
     <script src="/header.js"></script>
 
 <body>
     <div id="header"></div>
-        <div class="panel panel-default">
-            <div class="panel-heading">常用</div>
+    <div id="app"></div>
+    <template id="template">
+        <div class="panel panel-default" v-for="item in list">
+            <div class="panel-heading" >{{item.name}}</div>
             <div class="panel-body">
                 <div class="link-list">
-                    <a href="https://imgse.com" target="_blank">路过图床</a> /
-                    <a href="https://img.logosc.cn/" target="_blank">改图神器</a> /
-                    <a href="http://www.ruanyifeng.com/blog/" target="_blank">阮一峰 - 科技爱好者周刊</a> /
-                    <a href="https://www.vocabulary.com/vocabtrainer/" target="_blank">vocabulary</a> /
-                    <a href="http://www.atoolbox.net/Tool.php?Id=789/" target="_blank">举牌小人生成器</a> 
+                    <template v-for="link in item.links">
+                        <a :href="link.href" target="_blank">{{link.title}}</a>
+                    </template>
                 </div>
             </div>
         </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">开发者</div>
-            <div class="panel-body">
-                <div class="link-list">
-                    <a href="https://studygolang.com/" target="_blank">Go语言中文网</a> /
-                    <a href=" https://doc.rust-lang.org/book/title-page.html" target="_blank">Rust学</a> / 
-                    <a href="https://tauri.app/zh-cn/" target="_blank">Tauri</a> /
-                    <a href="https://v3.bootcss.com/getting-started/" target="_blank">Bootstrap</a> /
-                    <a href="https://replit.com/" target="_blank">在线IDE-replit</a> /
-                    <a href="https://pkg.go.dev/" target="_blank">pkg.go.dev</a> /
-                    <a href="https://dev.com.cn/tools" target="_blank">开发者工具测评</a> /
-                    <a href="https://devtool.tech/" target="_blank">开发者武器库</a> /
-                    <a href="http://www.ischoolbar.com/EsParser/" target="_blank">MySQL转换成ES</a> /
-                    <a href="http://doc.redisfans.com/" target="_blank">Redis 命令参考</a> /
-                    <a href="https://tool.lu" target="_blank">在线常用工具</a> / 
-                    <a href="https://arco.design/" target="_blank">arco.design</a> /
-                    <a href="https://docsify.js.org/#/" target="_blank">docsify文档</a> /
-                    <a href="https://www.devtool.com/sql2go.html" target="_blank">SQL转Go结构体</a> /
-                    <a href="https://cilishenqi.cc/" target="_blank">磁力神器</a>
-                    <a href="https://uutool.cn/excel-link" target="_blank">excel提取链接</a> /
-                    <a href="https://ray.so" target="_blank">代码->图片</a>
-                    
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">JSON</div>
-            <div class="panel-body">
-                <div class="link-list">
-                    <a href="https://jsondiff.org/" target="_blank">JSON对比</a> /
-                    <a href="https://app.quicktype.io/" target="_blank">QuickType</a> /
-                    <a href="http://www.esjson.com/jsontoexcel.html" target="_blank">JSON转Excel</a> / 
-                    <a href="https://mholt.github.io/json-to-go/" target="_blank">JSON转Go结构体</a>
-                    
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="panel panel-default">
-            <div class="panel-heading">社区</div>
-            <div class="panel-body">
-                <div class="link-list">
-                    <a href="https://eleduck.com/" target="_blank">电鸭</a> /
-                    <a href="https://www.guozaoke.com/" target="_blank">武汉·过早客</a> /
-                    <a href="https://www.zhuayuya.com/" target="_blank">抓鱼呀</a>
-                    
-                </div>
-            </div>
-        </div>
-
-    </div>
+    </template>
 </body>
+<script>
+    const CATEGORY = [
+        "常用", "开发者", "Golang", "前端", "JSON", "社区"
+    ]
+    $(document).ready(function () {
+        var vm = Vue.createApp({
+            data() {
+                return {
+                    list: [],
+                }
+            },
+            template: '#template',
+            async mounted() {
+                this.getList()
+            },
+            methods: {
+                async getList() {
+                    let list = []
+                    for (var i in CATEGORY) {
+                        let file = "/assets/self/bookmark/" + CATEGORY[i] + ".txt"
+                        let response = await fetch(file)
+                        let content = await response.text()
+                        list.push({
+                            'name': CATEGORY[i],
+                            'links': parseBookmark(content)
+                        })
+
+                    }
+                    this.list = list
+                }
+            }
+        })
+        vm.mount('#app')
+    })
+</script>
+
 </html>

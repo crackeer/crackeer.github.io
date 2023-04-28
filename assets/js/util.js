@@ -28,3 +28,26 @@ function cloneObject(data) {
    let raws = JSON.stringify(data)
    return JSON.parse(raws)
 }
+
+function parseBookmark(content) {
+    let parts = content.split("\n")
+    let list = []
+    console.log(parts)
+    for(var i in parts) {
+        if(parts[i].length > 0 ) {
+            let temp = parts[i].split(">")
+            if(temp.length == 1) {
+                list.push({
+                    title : temp[0],
+                    href : temp[0]
+                })
+            } else if(temp.length > 1) {
+                list.push({
+                    title : temp[1],
+                    href : temp[0]
+                })
+            }
+        }
+    }
+    return list
+ }
