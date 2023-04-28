@@ -26,13 +26,13 @@
                 <input type="radio" name="env" :value="item" v-model="env" @change="clickEnv">{{item}}
             </label>
         </div>
-        <div class="page-header" v-if="env == 'default'">
-            <button class="btn btn-primary" @click="showCreateModel()">新建服务</button>
+        <div style="margin: 15px 0;">
+            <button class="btn btn-primary btn-md" @click="showCreateModel()">新建服务</button>
         </div>
 
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-            <div v-for="(item, i) in serviceList">
-                <div class="page-header">
+            <div class="panel panel-default" v-for="(item, i) in serviceList">
+                <div class="panel-body">
                     <h4>
                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
                             :href="'#' + item.id" aria-expanded="false" :aria-controls="item.id">{{item.name}} </a>
@@ -43,14 +43,15 @@
                             <button class="btn btn-sm btn-link" @click="showCopyModal(item)">复制</button>
                         </div>
                     </h4>
-                </div>
-                <p><strong>签名算法：</strong>{{item.sign_algo}}</p>
-                <p><strong>超时控制：</strong>{{item.connect_timeout + item.read_timeout }}<small>（ms）</small></p>
-                <p><strong>描述：</strong>{{item.description}}</p>
-                <div :id="item.id" class="panel-collapse collapse" role="tabpanel" :aria-labelledby="item.id">
-                    <p><strong>创建人：</strong>{{item.creator}}</p>
-                    <p><strong>创建时间：</strong>{{item.create_time}}</p>
-                    <p><strong>修改时间：</strong>{{item.modify_time}}</p>
+                    <hr />
+                    <p><strong>签名算法：</strong>{{item.sign_algo}}</p>
+                    <p><strong>超时控制：</strong>{{item.connect_timeout + item.read_timeout }}<small>（ms）</small></p>
+                    <p><strong>描述：</strong>{{item.description}}</p>
+                    <div :id="item.id" class="panel-collapse collapse" role="tabpanel" :aria-labelledby="item.id">
+                        <p><strong>创建人：</strong>{{item.creator}}</p>
+                        <p><strong>创建时间：</strong>{{item.create_time}}</p>
+                        <p><strong>修改时间：</strong>{{item.modify_time}}</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -72,6 +73,10 @@
                             <div class="form-group">
                                 <label for="recipient-name" class="control-label">唯一标识</label>
                                 <input type="text" class="form-control" v-model="service.namespace" :disabled="edit">
+                            </div>
+                            <div class="form-group">
+                                <label for="recipient-name" class="control-label">环境</label>
+                                <input type="text" class="form-control" v-model="service.env" disabled>
                             </div>
                             <div class="form-group">
                                 <label for="recipient-name" class="control-label">Host</label>
@@ -221,6 +226,7 @@
                     async showCreateModel() {
                         this.service = {
                             'name': '',
+                            'env' : 'default',
                             'namespace': '',
                             'host': '',
                             'description': '',
