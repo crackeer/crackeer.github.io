@@ -58,7 +58,7 @@
     </div>
     <script>
         $(document).ready(function () {
-            axios.defaults.headers.common['proxy'] = "sqlite";
+            axios.defaults.headers.common['proxy'] = "storage";
             var vm = Vue.createApp({
                 data() {
                     let list = []
