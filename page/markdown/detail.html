@@ -1,0 +1,65 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Markdown编辑</title>
+    <link rel="stylesheet" href="/assets/css/bytemd.css" />
+    <link rel="stylesheet" href="/assets/css/github-markdown.css" />
+    <script src="https://polyfill.io/v3/polyfill.min.js"></script>
+    <script
+        src="https://polyfill.io/v3/polyfill.min.js?features=Uint16Array,Array.prototype.find,smoothscroll"></script>
+    <script src="/assets/js/bytemd.umd.js"></script>
+    <script src="/assets/js/bytemd-plugin-gfm.js"></script>
+    <link rel="stylesheet" href="/assets/css/bootstrap3.4.min.css" />
+    <link rel="stylesheet" href="/assets/css/my.css" />
+    <script src="/assets/js/jquery.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/util.js"></script>
+    <script src="/header.js"></script>
+    <script src="/assets/js/axios.min.js"></script>
+
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <h1 id="title" style="text-align: center;margin-bottom: 10px;"></h1>
+    <div id="markdown" style="height: auto;"></div>
+    <hr />
+    <div style="margin-top: 15px;">
+        分类：<span id="classify"></span>
+    </div>
+
+    <script>
+        axios.defaults.headers.common['proxy'] = "storage";
+        var plugins = [bytemdPluginGfm()];
+        var getMarkdown = async () => {
+            let id = getQuery("id", 0)
+            let result = await axios.post('/select/markdown', {
+                query: {
+                    id: id,
+                }
+            })
+            if (result.data.data.length < 1) {
+                return
+            }
+            let content = result.data.data[0].content
+            let classify = '<small>    <a href="/page/markdown/list.html?classify=' + result.data.data[0].classify + '">' + result.data.data[0].classify + '</a></small>'
+            $('#title').html(result.data.data[0].title)
+            $('#classify').html( classify)
+            new bytemd.Viewer({
+                target: document.getElementById("markdown"),
+                props: {
+                    value: content
+                },
+                plugins: plugins
+            });
+        }
+        getMarkdown()
+
+    </script>
+</body>
+
+</html>

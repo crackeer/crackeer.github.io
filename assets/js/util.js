@@ -16,6 +16,10 @@ function reloadWith(query) {
     window.location.href = window.location.pathname + '?' + httpBuildQuery(query)
 }
 
+function jump(path, query) {
+    window.location.href = path + '?' + httpBuildQuery(query)
+}
+
 function httpBuildQuery(query){
     let params = new URLSearchParams("")
     Object.keys(query).forEach(k => {

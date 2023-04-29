@@ -1,7 +1,4 @@
-https://doc.rust-lang.org/book/title-page.html>Rust学 
-https://tauri.app/zh-cn/>Tauri
 https://replit.com/>在线IDE-replit
-https://pkg.go.dev/>pkg.go.dev
 https://dev.com.cn/tools>开发者工具测评
 https://devtool.tech/>开发者武器库
 http://www.ischoolbar.com/EsParser/>MySQL转换成ES
