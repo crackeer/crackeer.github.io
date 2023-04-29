@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="description" content="Description">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>服务列表</title>
+    <title>服务</title>
     <link rel="stylesheet" href="/assets/css/bootstrap3.4.min.css" />
     <link rel="stylesheet" href="/assets/css/my.css" />
     <script src="/assets/js/jquery.js"></script>
@@ -15,7 +15,7 @@
     <script src="/assets/js/axios.min.js"></script>
     <script src="/assets/js/bootbox.min.js"></script>
     <script src="/assets/js/util.js"></script>
-    <script src="/header.js"></script>
+    <script src="/page/gateway/header.js"></script>
 
 <body>
     <div id="header"></div>
@@ -27,7 +27,7 @@
             </label>
         </div>
         <div style="margin: 15px 0;">
-            <button class="btn btn-primary btn-md" @click="showCreateModel()">新建服务</button>
+            <button class="btn btn-primary btn-sm" @click="showCreateModel()">新建服务</button>
         </div>
 
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
@@ -35,7 +35,7 @@
                 <div class="panel-body">
                     <h4>
                         {{item.name}}
-                        <div class="label label-warning"> {{item.namespace}}</div> <small>{{item.host}}</small>
+                        <div class="label label-warning"> {{item.service}}</div> <small>{{item.host}}</small>
                         <div style="float: right;">
                             <button class="btn btn-sm btn-link" @click="showEditModal(item)">编辑</button>
                             <button class="btn btn-sm btn-link" @click="showDeleteModal(item)">删除</button>
@@ -45,10 +45,9 @@
                     <hr />
                     <div class="row">
                         <div class="col-md-4">
-                            <p><strong>超时控制：</strong>{{item.connect_timeout + item.read_timeout }}<small>（ms）</small>
+                            <p><strong>超时时间：</strong>{{item.timeout }}<small>（ms）</small>
                             </p>
                             <p><strong>描述：</strong>{{item.description}}</p>
-                            <p><strong>创建人：</strong>{{item.creator}}</p>
                             <p><strong>创建时间：</strong>{{item.create_time}}</p>
                             <p><strong>修改时间：</strong>{{item.modify_time}}</p>
                         </div>
@@ -56,43 +55,51 @@
                             <p><strong>签名配置：</strong>
                                 <textarea type="text" class="form-control" rows="3">{{item.sign_config}}</textarea>
                             </p>
-                            <p><strong>签名算法：</strong>{{item.sign_algo}}</p>
+                            <p><strong>签名算法：</strong>{{item.sign}}</p>
                         </div>
                         <div class="col-md-4">
-                            <p><strong>扩展配置：</strong>
-                                <textarea type="text" class="form-control" rows="3">{{item.extension}}</textarea>
+                            <p><strong>response配置：</strong>
+                                <textarea type="text" class="form-control" rows="3">{{item.response_config}}</textarea>
                             </p>
                         </div>
                         <div class="col-md-12">
-                            <h5>API列表</h5>
-                            <div style="height: 300px; overflow-y: scroll;">
+                            <p>API列表
+                                <span style="display: inline-block;margin-left: 10px;"><button class="btn btn-link btn-sm" @click="showCreateApiModal(item)">新增</button></span></p>
+                            <div style="max-height: 300px; overflow-y: scroll;">
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
-                                            <th>唯一标识</th>
+                                            <th>api标识</th>
                                             <th>Path</th>
                                             <th>ContentType</th>
                                             <th colspan="2" style="text-align:center;">操作</th>
                                         </tr>
                                     <tbody>
                                         <tr v-for="(api, i) in item.api_list">
-                                            <td>{{api.name}}</td>
+                                            <td>{{api.api}}</td>
                                             <td>【{{api.method}}】{{api.uri}}</td>
                                             <td>{{api.content_type}}</td>
-                                            <td style="text-align:center;">删除</td>
-                                            <td style="text-align:center;">编辑</td>
+                                            <td style="text-align:center;">
+                                                <a href="javascript:;" @click="showEditApiModal(api)">
+                                                    编辑
+                                                </a>
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <a href="javascript:;"  @click="showDeleteApiModal(api)">
+                                                    删除
+                                                </a>
+                                            </td>
                                         </tr>
                                 </table>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
 
         <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
-            <div class="modal-dialog" role="document">
+            <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
@@ -100,42 +107,61 @@
                         <h4 class="modal-title">{{ this.edit ? '修改' : '创建'}}</h4>
                     </div>
                     <div class="modal-body">
-                        <div>
+                        <div class="form-horizontal">
                             <div class="form-group">
-                                <label for="recipient-name" class="control-label">中文名</label>
-                                <input type="text" class="form-control" v-model="service.name">
+                                <label for="name" class="control-label col-sm-2">中文名</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" v-model="service.name">
+                                </div>
                             </div>
                             <div class="form-group">
-                                <label for="recipient-name" class="control-label">唯一标识</label>
-                                <input type="text" class="form-control" v-model="service.namespace" :disabled="edit">
+                                <label for="service" class="control-label col-sm-2">唯一标识</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" v-model="service.service" :disabled="edit">
+                                </div>
                             </div>
                             <div class="form-group">
-                                <label for="recipient-name" class="control-label">环境</label>
-                                <input type="text" class="form-control" v-model="service.env" disabled>
+                                <label for="env" class="control-label col-sm-2">环境</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" v-model="service.env" disabled>
+                                </div>
                             </div>
                             <div class="form-group">
-                                <label for="recipient-name" class="control-label">Host</label>
-                                <input type="text" class="form-control" v-model="service.host">
+                                <label for="host" class="control-label col-sm-2">Host</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" v-model="service.host">
+                                </div>
                             </div>
                             <div class="form-group">
-                                <label for="recipient-name" class="control-label">默认超时</label>
-                                <input type="number" class="form-control" v-model="service.connect_timeout" />
+                                <label for="timeout" class="control-label col-sm-2">超时时间（ms）</label>
+                                <div class="col-sm-10">
+                                    <input type="number" class="form-control" v-model="service.timeout" />
+                                </div>
                             </div>
                             <div class="form-group">
-                                <label for="recipient-name" class="control-label">签名算法</label>
-                                <input type="text" class="form-control" v-model="service.sign_algo">
+                                <label for="sign" class="control-label col-sm-2">签名算法</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" v-model="service.sign">
+                                </div>
                             </div>
                             <div class="form-group">
-                                <label for="recipient-name" class="control-label">签名配置</label>
-                                <textarea type="text" class="form-control" v-model="service.sign_config"></textarea>
+                                <label for="sign_config" class="control-label col-sm-2">签名配置</label>
+                                <div class="col-sm-10">
+                                    <textarea type="text" class="form-control" v-model="service.sign_config"></textarea>
+                                </div>
                             </div>
                             <div class="form-group">
-                                <label for="recipient-name" class="control-label">扩展配置</label>
-                                <textarea type="text" class="form-control" v-model="service.extension"></textarea>
+                                <label for="response_config" class="control-label col-sm-2">response配置</label>
+                                <div class="col-sm-10">
+                                    <textarea type="text" class="form-control"
+                                        v-model="service.response_config"></textarea>
+                                </div>
                             </div>
                             <div class="form-group">
-                                <label for="message-text" class="control-label">描述</label>
-                                <textarea class="form-control" v-model="service.description"></textarea>
+                                <label for="description" class="control-label col-sm-2">描述</label>
+                                <div class="col-sm-10">
+                                    <textarea class="form-control" v-model="service.description"></textarea>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -178,6 +204,84 @@
             </div>
         </div>
 
+        <div class="modal fade" tabindex="-1" role="dialog" id="myApiModal">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">{{ this.edit ? '修改API' : '新增API'}}</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-horizontal">
+                            <div class="form-group">
+                                <label for="api" class="control-label col-sm-2">Path</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" v-model="api.path"
+                                        placeholder="your/path.json">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="api" class="control-label col-sm-2">api标识</label>
+                                <div class="col-sm-10">
+
+                                    <input type="text" class="form-control" v-model="api.api"
+                                        placeholder="your_path_id">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="method" class="control-label col-sm-2">method</label>
+                                <div class="col-sm-10">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="method" value="GET" v-model="api.method">
+                                        GET
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="method" id="inlineRadio2" value="POST"
+                                            v-model="api.method">
+                                        POST
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="content_type" class="control-label col-sm-2">ContentType</label>
+                                <div class="col-sm-10">
+                                    <select class="form-control" v-model="api.content_type">
+                                        <option value="none">无</option>
+                                        <option value="application/json">application/json</option>
+                                        <option value="text/plain">text/plain</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="timeout" class="control-label col-sm-2">超时时间（ms）</label>
+                                <div class="col-sm-10">
+                                    <input type="number" class="form-control" v-model="api.timeout" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="response_config" class="control-label col-sm-2">response配置</label>
+                                <div class="col-sm-10">
+                                    <textarea type="text" class="form-control"
+                                        v-model="service.response_config"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="description" class="control-label col-sm-2">描述</label>
+                                <div class="col-sm-10">
+                                    <textarea class="form-control" v-model="api.description"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-primary" @click="doUpdateServiceAPI()">保存</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div style="text-align: center;">
             <div style="margin: 10px auto;">
                 <button type="button" class="btn btn-link" v-if="page > 1" @click="prev()">上一页</button>
@@ -204,7 +308,9 @@
                         service: {},
                         edit: false,
                         copyEnv: '',
-                        pageSize: PAGE_SIZE
+                        pageSize: PAGE_SIZE,
+
+                        api: {}
                     }
                 },
                 template: '#template',
@@ -253,24 +359,24 @@
 
                         let namespaces = []
                         for (var i in result.data.data) {
-                            namespaces.push(result.data.data[i].namespace)
+                            namespaces.push(result.data.data[i].service)
                         }
                         let result1 = await axios.post('/select/service_api', {
                             'query': {
-                                'service_namespace': namespaces,
+                                'service': namespaces,
                             },
                             'order_by': 'id desc',
                         })
                         let serviceApiMap = {}
                         for (var i in result1.data.data) {
-                            if (serviceApiMap[result1.data.data[i].service_namespace] == undefined) {
-                                serviceApiMap[result1.data.data[i].service_namespace] = []
+                            if (serviceApiMap[result1.data.data[i].service] == undefined) {
+                                serviceApiMap[result1.data.data[i].service] = []
                             }
-                            serviceApiMap[result1.data.data[i].service_namespace].push(result1.data.data[i])
+                            serviceApiMap[result1.data.data[i].service].push(result1.data.data[i])
                         }
                         for (var i in result.data.data) {
-                            if (serviceApiMap[result.data.data[i].namespace] != undefined) {
-                                result.data.data[i].api_list = serviceApiMap[result.data.data[i].namespace]
+                            if (serviceApiMap[result.data.data[i].service] != undefined) {
+                                result.data.data[i].api_list = serviceApiMap[result.data.data[i].service]
                             }
                         }
                         this.serviceList = result.data.data
@@ -286,13 +392,13 @@
                         this.service = {
                             'name': '',
                             'env': 'default',
-                            'namespace': '',
+                            'service': '',
                             'host': '',
                             'description': '',
-                            'sign_algo': '',
+                            'sign': '',
                             'sign_config': '',
-                            'connect_timeout': 1000,
-                            'extension': '',
+                            'timeout': 1000,
+                            'response_config': '',
                         }
                         this.edit = false
                         $('#myModal').modal()
@@ -303,10 +409,10 @@
                                 'name': this.service.name,
                                 'host': this.service.host,
                                 'description': this.service.description,
-                                'sign_algo': this.service.sign_algo,
+                                'sign': this.service.sign,
                                 'sign_config': this.service.sign_config,
-                                'connect_timeout': this.service.connect_timeout,
-                                'extension': this.service.extension,
+                                'timeout': this.service.timeout,
+                                'response_config': this.service.response_config,
                             }
 
                             let result = await axios.post('/update/service', {
@@ -323,13 +429,13 @@
                         } else {
                             let insertData = {
                                 'name': this.service.name,
-                                'namespace': this.service.namespace,
+                                'service': this.service.service,
                                 'host': this.service.host,
                                 'description': this.service.description,
-                                'sign_algo': this.service.sign_algo,
+                                'sign': this.service.sign,
                                 'sign_config': this.service.sign_config,
-                                'connect_timeout': this.service.connect_timeout,
-                                'extension': this.service.extension,
+                                'timeout': this.service.timeout,
+                                'response_config': this.service.response_config,
                                 'env': 'default',
                             }
 
@@ -367,13 +473,13 @@
                     async doCopyService() {
                         let insertData = {
                             'name': this.service.name,
-                            'namespace': this.service.namespace,
+                            'service': this.service.service,
                             'host': this.service.host,
                             'description': this.service.description,
-                            'sign_algo': this.service.sign_algo,
+                            'sign': this.service.sign,
                             'sign_config': this.service.sign_config,
-                            'connect_timeout': this.service.connect_timeout,
-                            'extension': this.service.extension,
+                            'timeout': this.service.timeout,
+                            'response_config': this.service.response_config,
                             'env': this.copyEnv,
                         }
 
@@ -386,8 +492,85 @@
                                 page: 1
                             })
                         }
-                    }
+                    },
+                    async showCreateApiModal(data) {
+                        this.edit = false
+                        this.service = data
+                        this.api = {
+                            api: '',
+                            path: '',
+                            method: 'GET',
+                            content_type: 'none',
+                            timeout: 4000,
+                            description: ''
+                        }
+                        $('#myApiModal').modal();
+                    },
+                    async showEditApiModal(item) {
+                        this.api = cloneObject(item)
+                        this.edit = true
+                        $('#myApiModal').modal()
+                    },
+                    async doUpdateServiceAPI() {
+                        if (this.edit) {
+                            let updateData = {
+                                'api' : this.api.api,
+                                'path': this.api.path,
+                                'description': this.api.description,
+                                'method': this.api.method,
+                                'timeout': this.api.timeout,
+                                'content_type': this.api.content_type,
+                            }
 
+                            let result = await axios.post('/update/service_api', {
+                                'query': {
+                                    'id': this.api.id
+                                },
+                                'update': updateData,
+                            })
+                            if (result.data.code < 0) {
+                                alert(result.data.message)
+                            } else {
+                                simpleReload()
+                            }
+                        } else {
+                            let insertData = {
+                                'service': this.service.service,
+                                'api' : this.api.api,
+                                'path': this.api.path,
+                                'description': this.api.description,
+                                'method': this.api.method,
+                                'timeout': this.api.timeout,
+                                'content_type': this.api.content_type,
+                            }
+
+                            let result = await axios.post('/insert/service_api', [insertData])
+                            if (result.data.code < 0) {
+                                alert(result.data.message)
+                            } else {
+                                simpleReload()
+                            }
+                        }
+                    },
+                    async showDeleteApiModal(item) {
+                        bootbox.confirm("确认删除`" + item.path +  "`？", (result) => {
+                            if (result) {
+                                this.doDeleteServiceApi(item.id)
+                            }
+                        })
+                    },
+                    async doDeleteServiceApi(id) {
+                        let result = await axios.post('/delete/service_api', {
+                            'query': {
+                                'id': id
+                            }
+                        })
+                        if (result.data.code < 0) {
+                            alert(result.data.message)
+                        } else {
+                            simpleReload()
+                        }
+                    },
                 },
 
             })

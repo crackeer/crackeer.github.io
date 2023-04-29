@@ -23,7 +23,7 @@
                                 {
                                     "header": {
                                         "proxy": [
-                                            "sqlite"
+                                            "storage"
                                         ]
                                     }
                                 }

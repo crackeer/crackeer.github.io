@@ -6,13 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="description" content="Description">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>JSON编辑</title>
+    <title>数据表管理</title>
     <link rel="stylesheet" href="/assets/css/bootstrap3.4.min.css" />
     <link rel="stylesheet" href="/assets/css/my.css" />
     <script src="/assets/js/jquery.js"></script>
     <script src="/assets/js/bootstrap.min.js"></script>
     <script src="/assets/js/vue.global.js"></script>
     <script src="/assets/js/axios.min.js"></script>
+    <script src="/assets/js/util.js"></script>
+    <script src="/assets/js/bootbox.min.js"></script>
     <script src="/header.js"></script>
 
 <body>
@@ -27,7 +29,7 @@
                 <div class="col-md-3">
                     <div class="list-group" style="height:400px;overflow-y: scroll;">
                         <template v-for="(item, i) in tables">
-                            <a href="javascript:;" class="list-group-item" @click="queryTable(item)">
+                            <a href="javascript:;" class="list-group-item" @click="queryTable(item)" :class="{'active' : item == table}">
                                 {{item}}
                             </a>
                         </template>
@@ -35,10 +37,12 @@
                 </div>
                 <div class="col-md-9">
                     <p>Create SQL</p>
-                    <textarea class="form-control" rows="5"
-                        >{{createSQL}}</textarea>
+                    <textarea class="form-control" rows="5">{{createSQL}}</textarea>
                     <p>Sample Data</p>
                     <textarea class="form-control" rows="8">{{sampleData}}</textarea>
+                    <div style="margin-top: 10px;">
+                        <button @click="showDropTable()" class="btn btn-primary btn-sm">删除该表</button>
+                    </div>
                 </div>
             </div>
             <div class="page-header">
@@ -64,6 +68,7 @@
                     let list = []
                     return {
                         tables: list,
+                        table : '',
                         sql: "",
                         sampleData: '',
                         createSQL: "",
@@ -85,7 +90,6 @@
                     },
                     async getTables() {
                         let result = await axios.post('/show_tables')
-                        console.log(result)
                         if (result.data.code != 0) {
                             alert(result.data.message)
                             return
@@ -107,14 +111,30 @@
                         if (result.data.data.length > 0) {
                             this.tableDescHeader = Object.keys(result.data.data[0])
                         }*/
+                        this.table = table
                         let result1 = await axios.post('/show_create_table/' + table)
                         this.createSQL = result1.data.data
                         let result2 = await axios.post('/select/' + table, {
                             'limit': 3,
                         })
                         this.sampleData = JSON.stringify(result2.data.data, "\r\n")
+                    },
+                    showDropTable() {
+                        bootbox.confirm("确认删除`" + this.table + "，无法恢复？", (result) => {
+                            if (result) {
+                                this.doDeleteTable(this.table)
+                            }
+                        })
+                    },
+                    async doDeleteTable(table) {
+                        let result = await axios.post('/drop/' + table)
+                        if(result.data.code != 0) {
+                            bootbox.alert(result.data.message)
+                            return
+                        } else {
+                            simpleReload()
+                        }
                     }
-
                 }
             })
             vm.mount('#app')
