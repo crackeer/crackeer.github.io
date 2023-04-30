@@ -21,6 +21,7 @@
     <script src="/assets/js/axios.min.js"></script>
     <script src="/assets/js/bootbox.min.js"></script>
     <script src="/assets/js/util.js"></script>
+    <script src="/assets/js/dayjs.min.js"></script>
 
 </head>
 
@@ -105,7 +106,10 @@
                         var editor = new bytemd.Editor({
                             target: document.getElementById("markdown"),
                             props: {
-                                value: this.content
+                                value: this.content,
+                                uploadImages: async (file) => {
+                                    return uploadFile(file)
+                                }
                             },
                             plugins: plugins
                         });
@@ -129,10 +133,10 @@
                             return
                         }
                         let result = await axios.post('/update/markdown', {
-                            'query' : {
-                                id : this.id
+                            'query': {
+                                id: this.id
                             },
-                            'update' : data
+                            'update': data
                         })
                         if (result.data.code != 0) {
                             bootbox.alert(result.data.message)

@@ -48,7 +48,7 @@
             let content = result.data.data[0].content
             let classify = '<small>    <a href="/page/markdown/list.html?classify=' + result.data.data[0].classify + '">' + result.data.data[0].classify + '</a></small>'
             $('#title').html(result.data.data[0].title)
-            $('#classify').html( classify)
+            $('#classify').html(classify)
             new bytemd.Viewer({
                 target: document.getElementById("markdown"),
                 props: {
@@ -61,5 +61,15 @@
 
     </script>
 </body>
+<style>
+    .markdown-body img {
+        display: block;
+        margin: 10px auto;
+        border-style: groove;
+        border: 1px solid gray;
+        width: 60%;
+        height: 60%;
+    }
+</style>
 
 </html>

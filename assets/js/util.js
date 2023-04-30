@@ -8,6 +8,10 @@ function pushStateWith(query) {
     window.history.pushState(null, "", newURL)
 }
 
+function nanoid(t) {
+    return crypto.getRandomValues(new Uint8Array(t)).reduce(((t,e)=>t+=(e&=63)<36?e.toString(36):e<62?(e-26).toString(36).toUpperCase():e>62?"-":"_"),"")
+}
+
 function simpleReload() {
     window.location.reload()
 }
@@ -20,7 +24,7 @@ function jump(path, query) {
     window.location.href = path + '?' + httpBuildQuery(query)
 }
 
-function httpBuildQuery(query){
+function httpBuildQuery(query) {
     let params = new URLSearchParams("")
     Object.keys(query).forEach(k => {
         params.append(k, query[k])
@@ -29,29 +33,73 @@ function httpBuildQuery(query){
 }
 
 function cloneObject(data) {
-   let raws = JSON.stringify(data)
-   return JSON.parse(raws)
+    let raws = JSON.stringify(data)
+    return JSON.parse(raws)
 }
 
 function parseBookmark(content) {
     let parts = content.split("\n")
     let list = []
     console.log(parts)
-    for(var i in parts) {
-        if(parts[i].length > 0 ) {
+    for (var i in parts) {
+        if (parts[i].length > 0) {
             let temp = parts[i].split(">")
-            if(temp.length == 1) {
+            if (temp.length == 1) {
                 list.push({
-                    title : temp[0],
-                    href : temp[0]
+                    title: temp[0],
+                    href: temp[0]
                 })
-            } else if(temp.length > 1) {
+            } else if (temp.length > 1) {
                 list.push({
-                    title : temp[1],
-                    href : temp[0]
+                    title: temp[1],
+                    href: temp[0]
                 })
             }
         }
     }
     return list
- }
+}
+
+async function uploadFile(files) {
+    let retData = []
+    for (var i in files) {
+        let formData = new FormData();
+        formData.append('file', files[i])
+        let config = getImageUploadConfig(files[i])
+        let dest = config.dir + "/" + config.name
+        let data = await axios.put(dest, formData, {
+            headers: {
+                'proxy': 'upload2dir'
+            }
+        });
+        if (data.status != 200) {
+            return new Promise((_, reject) => {
+                resolve(data.statusText)
+            })
+        }
+        retData.push({
+            url: dest,
+            title: config.name,
+        })
+    }
+    
+    return new Promise((resolve, _) => {
+        resolve(retData)
+    })
+}
+
+function getImageUploadConfig(file) {
+    let parts = file.type.split('/')
+    let ext = ''
+    if (parts.length > 1) {
+        ext = parts[1]
+    }
+    let fileName = dayjs().format('HH-mm-ss@') +nanoid(3)
+    if (ext.length > 0) {
+        fileName = fileName + '.' + ext
+    }
+    return {
+        dir: '/assets/upload/' + dayjs().format('YYYY-MM-DD'),
+        name: fileName,
+    }
+}

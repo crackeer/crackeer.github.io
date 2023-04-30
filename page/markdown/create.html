@@ -21,7 +21,7 @@
     <script src="/assets/js/axios.min.js"></script>
     <script src="/assets/js/bootbox.min.js"></script>
     <script src="/assets/js/util.js"></script>
-
+    <script src="/assets/js/dayjs.min.js"></script>
 </head>
 
 <body>
@@ -70,9 +70,13 @@
                     var editor = new bytemd.Editor({
                         target: document.getElementById("markdown"),
                         props: {
-                            value: ""
+                            value: "",
+                            uploadImages: async (file) => {
+                                return uploadFile(file)
+                            }
                         },
-                        plugins: plugins
+                        plugins: plugins,
+
                     });
                     editor.$on('change', (e) => {
                         this.content = e.detail.value
@@ -88,10 +92,10 @@
                     },
                     async addClassify() {
                         bootbox.prompt("请输入分类", (result) => {
-                            if(result == null) {
+                            if (result == null) {
                                 return true
                             }
-                            if(result.length < 1) {
+                            if (result.length < 1) {
                                 return false
                             }
                             this.classifyList.push(result)
@@ -114,12 +118,12 @@
                         }
                         console.log(data)
                         let result = await axios.post('/insert/markdown', [data])
-                        if(result.data.code != 0) {
+                        if (result.data.code != 0) {
                             bootbox.alert(result.data.message)
                             return
                         }
                         jump('/page/markdown/list.html', {
-                            'classify' : this.classify,
+                            'classify': this.classify,
                         })
 
                     }
