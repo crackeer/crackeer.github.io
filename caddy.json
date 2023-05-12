@@ -32,7 +32,7 @@
                             "handle" : [
                                 {
                                     "handler" : "upload2dir",
-                                    "file_server_root" : "D:\\github\\ccc",
+                                    "file_server_root" : "./",
                                     "file_field_name" : "file"
                                 }
                             ],
@@ -61,7 +61,7 @@
                             "handle": [
                                 {
                                     "handler": "file_server",
-                                    "root": "D:\\github\\ccc",
+                                    "root": "./",
                                     "browse": {
                                         "template_file": ""
                                     }
