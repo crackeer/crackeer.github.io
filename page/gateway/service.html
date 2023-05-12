@@ -141,7 +141,10 @@
                             <div class="form-group">
                                 <label for="sign" class="control-label col-sm-2">签名算法</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" v-model="service.sign">
+                                    <select class="form-control"  v-model="service.sign">
+                                      <option value="">无</option>
+                                      <option v-for="item in signList" value="item.name">{{item.name}}</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -151,10 +154,29 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="response_config" class="control-label col-sm-2">response配置</label>
+                                <label for="response_config" class="control-label col-sm-2">是否提取结果</label>
                                 <div class="col-sm-10">
-                                    <textarea type="text" class="form-control"
-                                        v-model="service.response_config"></textarea>
+                                    <label class="radio-inline">
+                                      <input type="radio" value="1" name="extract" v-model="service.extract_response" >是
+                                    </label>
+                                    <label class="radio-inline">
+                                      <input type="radio" value="0" name="extract" v-model="service.extract_response">否
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group" v-if="service.extract_response > 0">
+                                <label for="response_config" class="control-label col-sm-2">提取配置</label>
+                                <div class="col-sm-2">
+                                    <input type="text" class="form-control" v-model="service.code_key" placeholder="code_key" />
+                                </div>
+                                <div class="col-sm-2">
+                                    <input type="text" class="form-control" v-model="service.data_key" placeholder="data_key" />
+                                </div>
+                                <div class="col-sm-2">
+                                    <input type="text" class="form-control" v-model="service.success_code" placeholder="success_code" />
+                                </div>
+                                <div class="col-sm-2">
+                                    <input type="text" class="form-control" v-model="service.message_key" placeholder="message_key"/>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -310,7 +332,8 @@
                         copyEnv: '',
                         pageSize: PAGE_SIZE,
 
-                        api: {}
+                        api: {},
+                        signList : []
                     }
                 },
                 template: '#template',
@@ -319,6 +342,7 @@
                     this.env = getQuery('env', 'default')
                     await this.getEnvList()
                     await this.getServiceList()
+                    this.getSignList()
                 },
                 methods: {
                     async clickEnv() {
@@ -570,6 +594,15 @@
                         } else {
                             simpleReload()
                         }
+                    },
+                    async getSignList() {
+                        let result = await axios.post('/select/sign', {
+                            'query': {},
+                            'offset': (this.page - 1) * 100,
+                            'limit': 100,
+                            'order_by': 'id desc',
+                        })
+                        this.signList = result.data.data
                     },
                 },
 
