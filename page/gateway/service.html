@@ -35,7 +35,7 @@
                 <div class="panel-body">
                     <h4>
                         {{item.name}}
-                        <div class="label label-warning"> {{item.service}}</div> <small>{{item.host}}</small>
+                        <small>{{item.host}}</small>
                         <div style="float: right;">
                             <button class="btn btn-sm btn-link" @click="showEditModal(item)">编辑</button>
                             <button class="btn btn-sm btn-link" @click="showDeleteModal(item)">删除</button>
@@ -45,47 +45,57 @@
                     <hr />
                     <div class="row">
                         <div class="col-md-4">
-                            <p><strong>超时时间：</strong>{{item.timeout }}<small>（ms）</small>
+                            <p><strong>唯一标识：</strong>{{item.service }}
+                            </p>
+                            <p><strong>超时：</strong>{{item.timeout }}<small>（ms）</small>
                             </p>
                             <p><strong>描述：</strong>{{item.description}}</p>
-                            <p><strong>创建时间：</strong>{{item.create_time}}</p>
-                            <p><strong>修改时间：</strong>{{item.modify_time}}</p>
+                            <p><strong>创建时间：</strong>{{item.create_at}}</p>
+                            <p><strong>修改时间：</strong>{{item.modify_at}}</p>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-4" style="border-left:1px solid gray;">
+                            <p><strong>签名算法：</strong>{{item.sign}}</p>
                             <p><strong>签名配置：</strong>
                                 <textarea type="text" class="form-control" rows="3">{{item.sign_config}}</textarea>
                             </p>
-                            <p><strong>签名算法：</strong>{{item.sign}}</p>
                         </div>
-                        <div class="col-md-4">
-                            <p><strong>response配置：</strong>
-                                <textarea type="text" class="form-control" rows="3">{{item.response_config}}</textarea>
-                            </p>
+                        <div class="col-md-4" style="border-left:1px solid gray;">
+                            <p><strong>response提取：</strong>{{item.extract_response ? '是' : '否'}}</p>
+                            <template v-if="item.extract_response > 0">
+                                <p><strong>CodeKey：</strong>{{item.code_key}}</p>
+                                <p><strong>DataKey：</strong>{{item.data_key}}</p>
+                                <p><strong>MessageKey：</strong>{{item.message_key}}</p>
+                                <p><strong>SuccessCodeKey：</strong>{{item.success_code_key}}</p>
+                            </template>
                         </div>
                         <div class="col-md-12">
                             <p>API列表
-                                <span style="display: inline-block;margin-left: 10px;"><button class="btn btn-link btn-sm" @click="showCreateApiModal(item)">新增</button></span></p>
+                                <span style="display: inline-block;margin-left: 10px;"><button
+                                        class="btn btn-link btn-sm" @click="showCreateApiModal(item)">新增</button></span>
+                            </p>
                             <div style="max-height: 300px; overflow-y: scroll;">
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
-                                            <th>api标识</th>
+                                            <th>API标识</th>
                                             <th>Path</th>
                                             <th>ContentType</th>
+                                            <th>Timeout(ms)</th>
                                             <th colspan="2" style="text-align:center;">操作</th>
                                         </tr>
                                     <tbody>
                                         <tr v-for="(api, i) in item.api_list">
                                             <td>{{api.api}}</td>
-                                            <td>【{{api.method}}】{{api.uri}}</td>
+                                            <td>【{{api.method}}】{{api.path}}</td>
                                             <td>{{api.content_type}}</td>
+                                            <td>{{api.timeout}}</td>
                                             <td style="text-align:center;">
                                                 <a href="javascript:;" @click="showEditApiModal(api)">
                                                     编辑
                                                 </a>
                                             </td>
                                             <td style="text-align:center;">
-                                                <a href="javascript:;"  @click="showDeleteApiModal(api)">
+                                                <a href="javascript:;" @click="showDeleteApiModal(api)">
                                                     删除
                                                 </a>
                                             </td>
@@ -104,20 +114,21 @@
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                                 aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title">{{ this.edit ? '修改' : '创建'}}</h4>
+                        <h4 class="modal-title">{{ this.edit ? '修改' : '创建'}}服务</h4>
                     </div>
                     <div class="modal-body">
                         <div class="form-horizontal">
                             <div class="form-group">
                                 <label for="name" class="control-label col-sm-2">中文名</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" v-model="service.name">
+                                    <input type="text" class="form-control" v-model="service.name" placeholder="中文名">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="service" class="control-label col-sm-2">唯一标识</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" v-model="service.service" :disabled="edit">
+                                    <input type="text" class="form-control" v-model="service.service" :disabled="edit"
+                                        placeholder="英文唯一标识">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -129,21 +140,23 @@
                             <div class="form-group">
                                 <label for="host" class="control-label col-sm-2">Host</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" v-model="service.host">
+                                    <input type="text" class="form-control" v-model="service.host"
+                                        placeholder="http://api.baidu.com">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="timeout" class="control-label col-sm-2">超时时间（ms）</label>
                                 <div class="col-sm-10">
-                                    <input type="number" class="form-control" v-model="service.timeout" />
+                                    <input type="number" class="form-control" v-model="service.timeout"
+                                        placeholder="毫秒" />
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="sign" class="control-label col-sm-2">签名算法</label>
                                 <div class="col-sm-10">
-                                    <select class="form-control"  v-model="service.sign">
-                                      <option value="">无</option>
-                                      <option v-for="item in signList" value="item.name">{{item.name}}</option>
+                                    <select class="form-control" v-model="service.sign" @change="changeSignName">
+                                        <option value="">无</option>
+                                        <option v-for="item in signList" :value="item.name">{{item.name}}</option>
                                     </select>
                                 </div>
                             </div>
@@ -157,26 +170,36 @@
                                 <label for="response_config" class="control-label col-sm-2">是否提取结果</label>
                                 <div class="col-sm-10">
                                     <label class="radio-inline">
-                                      <input type="radio" value="1" name="extract" v-model="service.extract_response" >是
+                                        <input type="radio" value="1" name="extract"
+                                            v-model="service.extract_response">是
                                     </label>
                                     <label class="radio-inline">
-                                      <input type="radio" value="0" name="extract" v-model="service.extract_response">否
+                                        <input type="radio" value="0" name="extract"
+                                            v-model="service.extract_response">否
                                     </label>
                                 </div>
                             </div>
                             <div class="form-group" v-if="service.extract_response > 0">
                                 <label for="response_config" class="control-label col-sm-2">提取配置</label>
                                 <div class="col-sm-2">
-                                    <input type="text" class="form-control" v-model="service.code_key" placeholder="code_key" />
+                                    <input type="text" class="form-control" v-model="service.code_key"
+                                        placeholder="code_key" />
+                                    <span class="help-block">code_key</span>
                                 </div>
                                 <div class="col-sm-2">
-                                    <input type="text" class="form-control" v-model="service.data_key" placeholder="data_key" />
+                                    <input type="text" class="form-control" v-model="service.data_key"
+                                        placeholder="data_key" />
+                                    <span class="help-block">data_key</span>
                                 </div>
                                 <div class="col-sm-2">
-                                    <input type="text" class="form-control" v-model="service.success_code" placeholder="success_code" />
+                                    <input type="text" class="form-control" v-model="service.success_code_key"
+                                        placeholder="成功code" />
+                                    <span class="help-block">success_code_key</span>
                                 </div>
                                 <div class="col-sm-2">
-                                    <input type="text" class="form-control" v-model="service.message_key" placeholder="message_key"/>
+                                    <input type="text" class="form-control" v-model="service.message_key"
+                                        placeholder="message_key" />
+                                    <span class="help-block">message_key</span>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -259,8 +282,7 @@
                                         GET
                                     </label>
                                     <label class="radio-inline">
-                                        <input type="radio" name="method" id="inlineRadio2" value="POST"
-                                            v-model="api.method">
+                                        <input type="radio" name="method" value="POST" v-model="api.method">
                                         POST
                                     </label>
                                 </div>
@@ -279,13 +301,6 @@
                                 <label for="timeout" class="control-label col-sm-2">超时时间（ms）</label>
                                 <div class="col-sm-10">
                                     <input type="number" class="form-control" v-model="api.timeout" />
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="response_config" class="control-label col-sm-2">response配置</label>
-                                <div class="col-sm-10">
-                                    <textarea type="text" class="form-control"
-                                        v-model="service.response_config"></textarea>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -333,7 +348,7 @@
                         pageSize: PAGE_SIZE,
 
                         api: {},
-                        signList : []
+                        signList: []
                     }
                 },
                 template: '#template',
@@ -422,7 +437,11 @@
                             'sign': '',
                             'sign_config': '',
                             'timeout': 1000,
-                            'response_config': '',
+                            'extract_response': '1',
+                            'code_key': 'code',
+                            'message_key': 'message',
+                            'data_key': 'data',
+                            'success_code_key': '0'
                         }
                         this.edit = false
                         $('#myModal').modal()
@@ -436,7 +455,11 @@
                                 'sign': this.service.sign,
                                 'sign_config': this.service.sign_config,
                                 'timeout': this.service.timeout,
-                                'response_config': this.service.response_config,
+                                'data_key': this.service.data_key,
+                                'code_key': this.service.code_key,
+                                'message_key': this.service.message_key,
+                                'success_code_key': this.service.success_code_key,
+                                'extract_response': this.service.extract_response,
                             }
 
                             let result = await axios.post('/update/service', {
@@ -459,8 +482,12 @@
                                 'sign': this.service.sign,
                                 'sign_config': this.service.sign_config,
                                 'timeout': this.service.timeout,
-                                'response_config': this.service.response_config,
                                 'env': 'default',
+                                'data_key': this.service.data_key,
+                                'code_key': this.service.code_key,
+                                'message_key': this.service.message_key,
+                                'success_code_key': this.service.success_code_key,
+                                'extract_response': this.service.extract_response,
                             }
 
                             let result = await axios.post('/insert/service', [insertData])
@@ -503,8 +530,12 @@
                             'sign': this.service.sign,
                             'sign_config': this.service.sign_config,
                             'timeout': this.service.timeout,
-                            'response_config': this.service.response_config,
                             'env': this.copyEnv,
+                            'data_key': this.service.data_key,
+                            'code_key': this.service.code_key,
+                            'message_key': this.service.message_key,
+                            'success_code_key': this.service.success_code_key,
+                            'extract_response': this.service.extract_response,
                         }
 
                         let result = await axios.post('/insert/service', [insertData])
@@ -538,7 +569,7 @@
                     async doUpdateServiceAPI() {
                         if (this.edit) {
                             let updateData = {
-                                'api' : this.api.api,
+                                'api': this.api.api,
                                 'path': this.api.path,
                                 'description': this.api.description,
                                 'method': this.api.method,
@@ -560,7 +591,7 @@
                         } else {
                             let insertData = {
                                 'service': this.service.service,
-                                'api' : this.api.api,
+                                'api': this.api.api,
                                 'path': this.api.path,
                                 'description': this.api.description,
                                 'method': this.api.method,
@@ -577,7 +608,7 @@
                         }
                     },
                     async showDeleteApiModal(item) {
-                        bootbox.confirm("确认删除`" + item.path +  "`？", (result) => {
+                        bootbox.confirm("确认删除`" + item.path + "`？", (result) => {
                             if (result) {
                                 this.doDeleteServiceApi(item.id)
                             }
@@ -604,6 +635,19 @@
                         })
                         this.signList = result.data.data
                     },
+                    async changeSignName(e) {
+                        if (e.target.value == '') {
+                            this.service.sign_config = ''
+                            return
+                        }
+
+                        for (var i in this.signList) {
+                            if (this.signList[i].name == e.target.value) {
+                                this.service.sign_config = this.signList[i].config_template
+                            }
+                        }
+
+                    }
                 },
 
             })

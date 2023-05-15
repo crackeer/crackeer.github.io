@@ -33,11 +33,20 @@ CREATE TABLE router (
    id INTEGER PRIMARY KEY AUTOINCREMENT,
    path           TEXT    NOT NULL,
    status INT NOT NULL,
-   request_type        TEXT    NOT NULL,
-   request_config TEXT NOT NULL,
-   response_type TEXT NOT NULL,
-   response_config TEXT NOT NULL,
+   classify        TEXT    NOT NULL,
+   mode        TEXT    NOT NULL,
+   request TEXT NOT NULL,
+   response TEXT NOT NULL,
    description TEXT NOT NULL,
+   create_at INT,
+   modify_at INT
+)
+CREATE TABLE sign(
+   id INTEGER PRIMARY KEY AUTOINCREMENT,
+   name           TEXT    NOT NULL,
+   code        TEXT    NOT NULL,
+   config_template        TEXT    NOT NULL,
+   description           TEXT     NOT NULL,
    create_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
    modify_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
+)

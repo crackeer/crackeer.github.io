@@ -14,8 +14,6 @@ var header = `
 
         <div class="collapse navbar-collapse" id="navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="/page/admin.html">数据库管理</a></li>
-                <li><a href="/page/gateway/app.html">应用</a></li>
                 <li><a href="/page/gateway/router.html">路由</a></li>
                 <li><a href="/page/gateway/service.html">服务</a></li>
                 <li><a href="/page/gateway/sign.html">签名算法</a></li>
