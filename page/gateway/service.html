@@ -60,7 +60,7 @@
                             </p>
                         </div>
                         <div class="col-md-4" style="border-left:1px solid gray;">
-                            <p><strong>response提取：</strong>{{item.extract_response ? '是' : '否'}}</p>
+                            <p><strong>禁用response提取：</strong>{{item.disable_extract ? '是' : '否'}}</p>
                             <template v-if="item.extract_response > 0">
                                 <p><strong>CodeKey：</strong>{{item.code_key}}</p>
                                 <p><strong>DataKey：</strong>{{item.data_key}}</p>
@@ -167,19 +167,19 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="response_config" class="control-label col-sm-2">是否提取结果</label>
+                                <label for="response_config" class="control-label col-sm-2">禁用提取结果</label>
                                 <div class="col-sm-10">
                                     <label class="radio-inline">
                                         <input type="radio" value="1" name="extract"
-                                            v-model="service.extract_response">是
+                                            v-model="service.disable_extract">是
                                     </label>
                                     <label class="radio-inline">
                                         <input type="radio" value="0" name="extract"
-                                            v-model="service.extract_response">否
+                                            v-model="service.disable_extract">否
                                     </label>
                                 </div>
                             </div>
-                            <div class="form-group" v-if="service.extract_response > 0">
+                            <div class="form-group" v-if="service.disable_extract < 1">
                                 <label for="response_config" class="control-label col-sm-2">提取配置</label>
                                 <div class="col-sm-2">
                                     <input type="text" class="form-control" v-model="service.code_key"
@@ -437,7 +437,7 @@
                             'sign': '',
                             'sign_config': '',
                             'timeout': 1000,
-                            'extract_response': '1',
+                            'disable_extract': '0',
                             'code_key': 'code',
                             'message_key': 'message',
                             'data_key': 'data',
@@ -459,7 +459,7 @@
                                 'code_key': this.service.code_key,
                                 'message_key': this.service.message_key,
                                 'success_code_key': this.service.success_code_key,
-                                'extract_response': this.service.extract_response,
+                                'disable_extract': this.service.disable_extract,
                             }
 
                             let result = await axios.post('/update/service', {
@@ -487,7 +487,7 @@
                                 'code_key': this.service.code_key,
                                 'message_key': this.service.message_key,
                                 'success_code_key': this.service.success_code_key,
-                                'extract_response': this.service.extract_response,
+                                'disable_extract': this.service.disable_extract,
                             }
 
                             let result = await axios.post('/insert/service', [insertData])
@@ -535,7 +535,7 @@
                             'code_key': this.service.code_key,
                             'message_key': this.service.message_key,
                             'success_code_key': this.service.success_code_key,
-                            'extract_response': this.service.extract_response,
+                            'disable_extract': this.service.disable_extract,
                         }
 
                         let result = await axios.post('/insert/service', [insertData])

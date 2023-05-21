@@ -7,13 +7,16 @@ CREATE TABLE service(
    timeout int,
    sign TEXT NOT NULL,
    sign_config TEXT NOT NULL,
-   response_config TEXT NOT NULL,
+   disable_extract INTEGER NOT NULL,
+   code_key TEXT NOT NULL,
+   message_key TEXT NOT NULL,
+   data_key TEXT NOT NULL,
+   success_code_key TEXT NOT NULL,
    description TEXT NOT NULL,
    create_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
    modify_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
+)
 CREATE INDEX idx_service_env on service (service, env);
-
 
 CREATE TABLE service_api(
    id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -26,7 +29,7 @@ CREATE TABLE service_api(
    description TEXT NOT NULL,
    create_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
    modify_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
+)
 CREATE INDEX idx_service_api on service_api (service, api);
 
 CREATE TABLE router (
