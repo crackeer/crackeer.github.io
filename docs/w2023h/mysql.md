@@ -1,6 +1,6 @@
 #### ACID
 
-![](images/2023-03-30-08-39-33.png)
+<img title="" src="images/2023-03-30-08-39-33.png" alt="" data-align="inline">
 
 #### 事物并发问题
 
@@ -8,16 +8,16 @@
 
 #### 事物隔离级别
 
-|事务隔离级别| 脏读| 不可重复读| 幻读
-|  ----  | ----  |----  | ----  |
-|读未提交（read-uncommitted）| 是| 是| 是
-|不可重复读（read-committed）| 否| 是| 是
-|可重复读（repeatable-read）| 否| 否| 是
-|串行化（serializable）| 否| 否| 否
+| 事务隔离级别                 | 脏读  | 不可重复读 | 幻读  |
+| ---------------------- | --- | ----- | --- |
+| 读未提交（read-uncommitted） | 是   | 是     | 是   |
+| 不可重复读（read-committed）  | 否   | 是     | 是   |
+| 可重复读（repeatable-read）  | 否   | 否     | 是   |
+| 串行化（serializable）      | 否   | 否     | 否   |
 
 #### 索引：聚簇索引、覆盖索引
-> https://zhuanlan.zhihu.com/p/488771839
 
+> https://zhuanlan.zhihu.com/p/488771839
 
 #### B+树怎样的
 

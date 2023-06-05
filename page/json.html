@@ -10,21 +10,39 @@
     <link rel="stylesheet" href="/assets/css/bootstrap3.4.min.css" />
     <link rel="stylesheet" href="/assets/css/my.css" />
     <script src="/assets/js/jsoneditor9.8.js"></script>
-    <link href="/assets/css/jsoneditor9.8.css" rel="stylesheet"/>
+    <link href="/assets/css/jsoneditor9.8.css" rel="stylesheet" />
     <script src="/assets/js/jquery.js"></script>
+    <script src="/assets/js/util.js"></script>
+    <script src="/assets/js/filereader.js"></script>
     <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/bootbox.min.js"></script>
     <script src="/header.js"></script>
 
 <body>
     <div id="header"></div>
+    <div class="row" style="margin-bottom: 10px;">
+        <div class="col-md-2">
+            <input type="file" id="loadDocument" value="Load" />
+        </div>
+        <div class="col-md-4">
+            <button type="button" id="save">
+                保存到本地
+            </button>
+        </div>
+    </div>
+
     <div id="jsoneditor" style="width: 100%; height: calc(100vh - 100px);"></div>
+    <div style="margin:10px auto;text-align: center;">
+
+
+    </div>
     <script>
         const container = document.getElementById("jsoneditor")
         function getInitJSON() {
             try {
                 let value = localStorage.getItem("json-editor") || '{}'
                 return JSON.parse(value)
-            } catch(e) {
+            } catch (e) {
                 return {}
             }
         }
@@ -32,17 +50,43 @@
             "mode": "code",
             "search": true,
             "indentation": 4,
-            "onChangeText" : (json) => {
+            "onChangeText": (json) => {
                 try {
                     JSON.parse(json)
                     localStorage.setItem("json-editor", json)
-                } catch(e){
+                } catch (e) {
 
                 }
             }
         }
         const editor = new JSONEditor(container, options, getInitJSON())
         const updatedJson = editor.get()
+        $('#save').click(() => {
+            bootbox.prompt("请输入文件名", (fname) => {
+                if (fname != "") {
+                    if (fname.indexOf(".") === -1) {
+                        fname = fname + ".json"
+                    } else {
+                        if (fname.split('.').pop().toLowerCase() === "json") {
+                            // Nothing to do
+                        } else {
+                            fname = fname.split('.')[0] + ".json"
+                        }
+                    }
+                    saveFile(JSON.stringify(editor.get()), fname)
+                }
+            })
+        })
+        // Load a JSON document
+        FileReaderJS.setupInput(document.getElementById('loadDocument'), {
+            readAsDefault: 'Text',
+            on: {
+                load: function (event, file) {
+                    editor.setText(event.target.result)
+                }
+            }
+        })
     </script>
 </body>
+
 </html>

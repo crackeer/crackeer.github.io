@@ -47,7 +47,9 @@ type hchan struct {
 ```
 
 #### init函数要点知识
+
 > https://blog.csdn.net/liuyuede123/article/details/127394496
+
 - init函数先于main函数自动执行，不能被其他函数调用；
 - init函数没有输入参数、返回值；
 - 每个包可以有多个init函数；
