@@ -27,7 +27,7 @@ var header = `
                 <li><a href="/page/golang.html">Golang</a></li>
                 <li><a href="/page/rust.html">Rust</a></li>
                 <li><a href="/page/javascript.html">Javascript</a></li>
-                <li><a href="/page/json.html">JSON编辑</a></li>
+                <li><a href="/page/json.html">JSON</a></li>
                 <li><a href="/page/markdown/list.html">Markdown</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
