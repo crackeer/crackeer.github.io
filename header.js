@@ -24,7 +24,9 @@ var header = `
         <div class="collapse navbar-collapse" id="navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li><a href="/">首页</a></li>
-                <li><a href="/page/bookmark.html">书签</a></li>
+                <li><a href="/page/golang.html">Golang</a></li>
+                <li><a href="/page/rust.html">Rust</a></li>
+                <li><a href="/page/javascript.html">Javascript</a></li>
                 <li><a href="/page/json.html">JSON编辑</a></li>
                 <li><a href="/page/markdown/list.html">Markdown</a></li>
             </ul>
