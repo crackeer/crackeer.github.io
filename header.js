@@ -8,8 +8,6 @@ var header = `
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="https://github.com/crackeer" target="_blank">
                 <svg height="25" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="25"
@@ -24,10 +22,7 @@ var header = `
         <div class="collapse navbar-collapse" id="navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li><a href="/">首页</a></li>
-                <li><a href="/page/golang.html">Golang</a></li>
-                <li><a href="/page/rust.html">Rust</a></li>
-                <li><a href="/page/javascript.html">Javascript</a></li>
-                <li><a href="/page/json.html">JSON</a></li>
+                <li><a href="/page/bookmark.html">书签</a></li>
                 <li><a href="/page/markdown/list.html">Markdown</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">

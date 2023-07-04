@@ -16,13 +16,54 @@
     <script src="/assets/js/util.js"></script>
     <script src="/header.js"></script>
     <script src="/assets/component/header.js" type="module"></script>
+
 <body>
     <div id="header"></div>
+    <div class="panel panel-default">
+        <div class="panel-heading bold">Golang</div>
+        <div class="panel-body">
+            <div class="link-list large">
+                <a href="https://www.devtool.com/sql2go.html" target="_blank">SQL转结构体</a>
+                <a href="https://mholt.github.io/json-to-go/" target="_blank">JSON转结构体</a>
+                <a href="https://replit.com/" target="_blank">在线IDE</a>
+            </div>
+            <hr />
+            <div class="link-list">
+                <a href="https://pkg.go.dev/" target="_blank">Go packages</a>
+                <a href="https://studygolang.com/" target="_blank">Go语言中文网</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading bold">Rust</div>
+        <div class="panel-body">
+            <div class="link-list large">
+                <a href="https://doc.rust-lang.org/book/title-page.html" target="_blank">学Rust</a>
+                <a href="https://tauri.app/zh-cn/" target="_blank">TAURI.APP</a>
+                <a href="https://doc.rust-lang.org/std/index.html" target="_blank">Rust标准库文档</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading bold">前端</div>
+        <div class="panel-body">
+            <div class="link-list">
+                <a href="https://imgse.com" target="_blank" class="large">路过图床</a>
+                <a href="https://arco.design/" target="_blank">arco.design</a>
+                <a href="https://docsify.js.org/#/" target="_blank">docsify文档</a>
+                <a href="https://v3.bootcss.com/getting-started/" target="_blank" class="large">Bootstrap</a>
+                <a href="https://nodeppt.js.org/" target="_blank">web端PPT</a>
+                <a href="https://www.iconfont.cn/" target="_blank">阿里巴巴IconFont</a>
+            </div>
+        </div>
+    </div>
     <div id="app"></div>
-   
+
     <template id="template">
         <div class="panel panel-default" v-for="item in list">
-            <div class="panel-heading" >{{item.name}}</div>
+            <div class="panel-heading bold">{{item.name}}</div>
             <div class="panel-body">
                 <div class="link-list">
                     <template v-for="link in item.links">
@@ -35,7 +76,7 @@
 </body>
 <script>
     const CATEGORY = [
-        "常用", "开发者", "Golang", "前端", "Rust", "JSON", "社区", "English"
+        "常用", "开发者", "JSON", "社区", "English"
     ]
     $(document).ready(function () {
         var vm = Vue.createApp({

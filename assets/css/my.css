@@ -18,6 +18,7 @@ body {
     border: 1px solid gray;
     margin: 5px auto;
 }
+
 .progress strong {
     font-size: 16px;
 }
@@ -28,5 +29,16 @@ textarea {
 }
 
 .bytemd-status-right input[type=checkbox] {
-    margin: 0 4px 0 0!important;
+    margin: 0 4px 0 0 !important;
+}
+
+.large {
+    font-size: 17px;
+    font-weight: bold;
+}
+.red {
+    color: red;
+}
+.bold {
+    font-weight: bold;;
 }
