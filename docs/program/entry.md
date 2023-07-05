@@ -214,4 +214,10 @@ do
 done
 ```
 
+## ssh查看连接过程
+
+```sh
+ ssh -vT git@github.com
+ ```
+
 
