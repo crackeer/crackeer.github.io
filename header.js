@@ -23,6 +23,7 @@ var header = `
             <ul class="nav navbar-nav">
                 <li><a href="/">首页</a></li>
                 <li><a href="/page/bookmark.html">书签</a></li>
+                <li><a href="/page/json.html">JSON</a></li>
                 <li><a href="/page/markdown/list.html">Markdown</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
