@@ -48,7 +48,6 @@ pub fn simple_read_dir(dir: String, ext: String) -> Vec<FileItem> {
             }
         }
     }
-
     list
 }
 ```
