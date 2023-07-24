@@ -51,3 +51,11 @@ pub fn simple_read_dir(dir: String, ext: String) -> Vec<FileItem> {
     list
 }
 ```
+
+## 使用ssh2链接服务器
+- convert ssh id_rsa to PEM Format
+https://github.com/alexcrichton/ssh2-rs
+```
+ssh-keygen -p -m PEM -f ~/.ssh/id_rsa
+```    
+
