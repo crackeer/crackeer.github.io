@@ -1,14 +1,14 @@
 * [Golang](/go/tool.md)
-  * [1. 开发热加载](/go/reload.md)
-  * [2. 涨知识啦](/go/knowledge.md)
-  * [3. 疑难杂症](/go/problem.md)
+  * [开发热加载](/go/reload.md)
+  * [涨知识啦](/go/knowledge.md)
+  * [疑难杂症](/go/problem.md)
 
 * [Rust](/rust/index.md)
-  - [1. 代码](/rust/code.md)
+  - [代码](/rust/code.md)
 
 * [NodeJS](/nodejs/index.md)
-  * [1. 静态服务器](/nodejs/静态服务器.md)
-  * [2. 一些code](/nodejs/code.md)
+  * [静态服务器](/nodejs/静态服务器.md)
+  * [一些code](/nodejs/code.md)
 
 * [程序员手册](/program/entry.md)
   - [VSCode插件](/program/vscode-plugin.md)

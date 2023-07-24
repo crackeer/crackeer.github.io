@@ -44,7 +44,7 @@
                 return
             }
             let content = result.data.data[0].content
-            let classify = '<a href="/page/markdown/list.html?classify=' + result.data.data[0].classify + '">markdown列表（' + result.data.data[0].classify + '）</a>'
+            let classify = '<a href="/page/markdown/list.html?classify=' + result.data.data[0].classify + '">' + result.data.data[0].classify + '</a>'
             let edit = '<a href="/page/markdown/edit.html?id=' + result.data.data[0].id + '"><span  class="glyphicon glyphicon-pencil"></span></a>'
             $('#title').html(result.data.data[0].title)
             $('#classify').html(classify)
