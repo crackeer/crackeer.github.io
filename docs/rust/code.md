@@ -59,3 +59,5 @@ https://github.com/alexcrichton/ssh2-rs
 ssh-keygen -p -m PEM -f ~/.ssh/id_rsa
 ```    
 
+## rust调用C的静态链接库
+- https://blog.csdn.net/ytxwhwlb/article/details/103465066
