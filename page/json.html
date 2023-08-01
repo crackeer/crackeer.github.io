@@ -21,25 +21,26 @@
 <body>
     <div id="header"></div>
     <div class="row" style="margin-bottom: 10px;">
-        <div class="col-md-4">
-            <div class="link-list"><a href="https://jsondiff.org/" target="_blank">JSON对比
-                </a><a href="https://app.quicktype.io/" target="_blank">QuickType
-                </a><a href="http://www.esjson.com/jsontoexcel.html" target="_blank">JSON转Excel
-                </a></div>
-        </div>
         <div class="col-md-2">
             <input type="file" id="loadDocument" value="Load" />
         </div>
-        <div class="col-md-2">
-            <button type="button" id="save">
-                保存到本地
-            </button>
+        <div class="col-md-4 col-md-offset-6">
+            <div class="link-list" style="float: right;"><a href="https://jsondiff.org/" target="_blank">JSON对比
+                </a><a href="https://app.quicktype.io/" target="_blank">QuickType
+                </a><a href="http://www.esjson.com/jsontoexcel.html" target="_blank">JSON转Excel
+                </a>
+            </div>
         </div>
 
     </div>
 
     <div id="jsoneditor" style="width: 100%; height: calc(100vh - 140px);"></div>
-    <div style="margin:10px auto;text-align: center;"></div>
+    <div style="position:fixed; bottom: 50%; right: 2%;">
+        <button type="button" id="save" class="btn btn-primary">
+            <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
+            保存
+        </button>
+    </div>
     <script>
         const container = document.getElementById("jsoneditor")
         function getInitJSON() {
@@ -67,18 +68,19 @@
         const updatedJson = editor.get()
         $('#save').click(() => {
             bootbox.prompt("请输入文件名", (fname) => {
-                if (fname != "") {
-                    if (fname.indexOf(".") === -1) {
-                        fname = fname + ".json"
-                    } else {
-                        if (fname.split('.').pop().toLowerCase() === "json") {
-                            // Nothing to do
-                        } else {
-                            fname = fname.split('.')[0] + ".json"
-                        }
-                    }
-                    saveFile(JSON.stringify(editor.get()), fname)
+                if (fname == null || fname == '') {
+                    return true
                 }
+                if (fname.indexOf(".") === -1) {
+                    fname = fname + ".json"
+                } else {
+                    if (fname.split('.').pop().toLowerCase() === "json") {
+                        // Nothing to do
+                    } else {
+                        fname = fname.split('.')[0] + ".json"
+                    }
+                }
+                saveFile(JSON.stringify(editor.get()), fname)
             })
         })
         // Load a JSON document
