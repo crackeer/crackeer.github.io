@@ -1,14 +1,7 @@
-* [Golang](/go/tool.md)
-  * [开发热加载](/go/reload.md)
-  * [涨知识啦](/go/knowledge.md)
-  * [疑难杂症](/go/problem.md)
+* [Golang](/golang/)
+* [Rust](/rust/)
 
-* [Rust](/rust/index.md)
-  - [代码](/rust/code.md)
-
-* [NodeJS](/nodejs/index.md)
-  * [静态服务器](/nodejs/静态服务器.md)
-  * [一些code](/nodejs/code.md)
+* [NodeJS](/nodejs/)
 
 * [程序员手册](/program/entry.md)
   - [VSCode插件](/program/vscode-plugin.md)
@@ -20,7 +13,6 @@
   - [MySQL/SQLite](/program/sql.md)
 
 * [GO2023年](/w2023h/index.md)  
-  - [Golang](/w2023h/golang.md)
   - [Redis](/w2023h/redis.md)
   - [MySQL](/w2023h/mysql.md)
   - [Kafka](/w2023h/kafka.md)

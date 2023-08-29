@@ -1,25 +1,3 @@
-## 创建文件夹 & 写文件
-
-```rust
-pub fn write_media_file(dir: String, name : String, content: Vec<u8>) -> String {
-    let mut tmp_path = std::path::Path::new(&dir);
-    if let Err(err) = std::fs::create_dir_all(&tmp_path) {
-        return err.to_string();
-    }
-    let path_buf = tmp_path.join(&name);
-    std::fs::write(tmp_path, &content.as_slice());
-    if let Ok(mut file) = File::create(path_buf.as_path()) {
-        if let Ok(_) = file.write_all(&content) {
-            return String::from("ok")
-        }
-    }
-    String::from("error")
-}
-```
-
-## 读取文件夹
-
-```rust
 pub fn simple_read_dir(dir: String, ext: String) -> Vec<FileItem> {
     let mut list: Vec<FileItem> = Vec::new();
     let entry = read_dir(dir);
@@ -50,14 +28,3 @@ pub fn simple_read_dir(dir: String, ext: String) -> Vec<FileItem> {
     }
     list
 }
-```
-
-## 使用ssh2链接服务器
-- convert ssh id_rsa to PEM Format
-https://github.com/alexcrichton/ssh2-rs
-```
-ssh-keygen -p -m PEM -f ~/.ssh/id_rsa
-```    
-
-## rust调用C的静态链接库
-- https://blog.csdn.net/ytxwhwlb/article/details/103465066

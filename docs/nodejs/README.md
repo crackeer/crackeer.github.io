@@ -1,61 +1,19 @@
+
+# 一、书签
+
+- 快速操作MySQL的ali-rds：https://github.com/ali-sdk/ali-rds
+- HTTP请求的AXIOS: https://axios-http.com/docs/intro
+
+# 二、一些代码
+
+## Node端一个文件完成静态服务器
+> 使用场景，next-js静态导出文件后，可使用该代码完成静态服务部署
+
+[filename](sample/static-server.js ':include :type=code')
+
 ## 使用`ali-rds`操作数据
 
-```js
-const rds = require('ali-rds');
-const onlineDB = rds({
-    host: 'what kind of host',
-    port: '3306',
-    user: 'username',
-    password: 'password',
-    database: 'database', 
-})
-var select = async function() {
-   let data = await onlineDB.select("table_name", {
-       where : {
-        "task_id" : '37675849834616860',
-       },
-       columns: ['author', 'title'],
-       orders: [['id', 'desc']],
-       limit : 3,
-    })
-    console.log(data)
-}
-
-var execSQL = async function() {
-    let res = await db.query("UPDATE `table_name` SET `picture_url` = 'simple_url' WHERE `id` = 1060")
-}
-// update
-var updateData = async function() {
-    await onlineDB.update("table_name", {
-        config : "Some Config"
-        status : 5,
-        name : "your name",
-    }, {
-        where : {
-            id : someID
-        }
-    })
-}
-// Delete
-db.delete('table_name', {
-    id : 1022
-})
-```
-
-## 使用axios请求
-
-```js
-var axios = require('axios')
-var getData = async function(value) {
-    let res = await axios.get('http://i.svc.open.realsee.com/inner/work/show', {
-        params : {
-            key : value
-        },
-    })
-    return res.data.data
-}
-getData('54djM0oR6ky3Ey8e')
-```
+[filename2](sample/ali-rds.js ':include :type=code')
 
 ## 读取文件
 

@@ -1,7 +1,3 @@
-## Node端一个文件完成静态服务器
-> 使用场景，next-js静态导出文件后，可使用该代码完成静态服务部署
-
-```js
 "use strict";
 //加载所需要的模块
 var http = require('http');
@@ -124,4 +120,3 @@ function processRequest(request, response) {
         }
     });
 }
-```
