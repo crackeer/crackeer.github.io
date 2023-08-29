@@ -8,14 +8,16 @@
 
 # 二、一些代码
 
-## Node端一个文件完成静态服务器
+## 纯Node静态服务器
+
 > 使用场景，next-js静态导出文件后，可使用该代码完成静态服务部署
 
-[filename](sample/static-server.js ':include :type=code')
+<a href="/page/code.html?file=/docs/nodejs/sample/static-server.js&title=纯Node静态服务器" target="_blank">查看源代码</a>
 
 ## 使用`ali-rds`操作数据
 
-[filename2](sample/ali-rds.js ':include :type=code')
+<a href="/page/code.html?file=/docs/nodejs/sample/ali-rds.js&title=使用ali-rds" target="_blank">查看源代码</a>
+
 
 ## 读取文件
 
