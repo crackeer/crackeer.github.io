@@ -1,1 +1,1 @@
-* <a href="/page/json.html">JSON</a>
+* <a href="/page/json.html" target="_blank">JSON</a>
