@@ -1,4 +1,22 @@
 
+# 一、参考文档
+
+- https://labuladong.gitee.io/algo/zhun-bei-g-8db77/
+
+
+
+# 二、二叉树
+
+- <a href="/page/code.html?file=/docs/algo/sample/tree/build_tree.go&title=二叉树构建" target="_blank">二叉树构建</a>
+- <a href="/page/code.html?file=/docs/algo/sample/tree/print_tree.go&title=二叉树层序遍历" target="_blank">层序遍历</a>
+- <a href="/page/code.html?file=/docs/algo/sample/tree/pre_traverse.go&title=二叉树前序遍历" target="_blank">前序遍历</a>
+- <a href="/page/code.html?file=/docs/algo/sample/tree/middle_traverse.go&title=二叉树中序遍历" target="_blank">中序遍历</a>
+- <a href="/page/code.html?file=/docs/algo/sample/tree/back_traverse.go&title=二叉树后序遍历" target="_blank">后序遍历</a>
+
+# 三、链表
+
+# 四、动态规划
+
 ## 最长递增子序列
 - https://labuladong.gitee.io/algo/di-er-zhan-a01c6/dong-tai-g-a223e/dong-tai-g-6ea57/
 

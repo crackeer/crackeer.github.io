@@ -286,7 +286,7 @@ main.hidden {
 
 .sidebar ul,
 .sidebar ul li {
-    list-style: none
+    list-style: none;
 }
 
 .sidebar ul li a {
@@ -716,7 +716,7 @@ body {
 }
 
 .sidebar li {
-    margin: 6px 0
+    margin: 6px 20px;
 }
 
 .sidebar ul li a {

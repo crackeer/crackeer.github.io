@@ -1,0 +1,32 @@
+FROM node:16.17-alpine
+
+MAINTAINER realsee.com
+
+WORKDIR /data0/www/htdocs
+
+RUN apk update  && apk add --no-cache git tar
+
+ARG APP_ID_ARG #接受参数
+ARG BUILD_ENV
+ENV APP_ID=${APP_ID_ARG}
+
+ADD ./ /usr/local/${APP_ID}
+
+# 指定工作路径
+WORKDIR /usr/local/${APP_ID}
+RUN APP_ID=${APP_ID} BUILD_ENV=${BUILD_ENV} sh -e build_local.sh
+
+# ------------------------- 输出最终镜像 ---------------------------------
+
+FROM node:16-alpine
+
+ARG APP_ID_ARG
+ENV APP_ID=${APP_ID_ARG}
+
+RUN apk update && apk add zip tzdata curl
+WORKDIR /data0/www/htdocs/${APP_ID}/bin
+COPY --from=0 /usr/local/${APP_ID}/releases/${APP_ID}/bin /data0/www/htdocs/${APP_ID}/bin
+
+# 容器对外爆露的端口
+EXPOSE 80
+CMD sh /data0/www/htdocs/${APP_ID}/bin/run.sh run

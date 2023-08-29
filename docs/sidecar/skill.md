@@ -84,7 +84,7 @@ func foo(slice []int) {
 
 func main() {
   
-	fmt.Println(transferBit2Str("11101"))
+  fmt.Println(transferBit2Str("11101"))
   fmt.Println(transferNum2Bit(29, 16, "0123456789ABCDEF"))
   fmt.Println(transfer2To16("11101"))
 }
