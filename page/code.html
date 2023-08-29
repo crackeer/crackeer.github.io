@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="Description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>签名</title>
+    <link rel="stylesheet" href="/assets/css/bootstrap3.4.min.css" />
+    <link rel="stylesheet" href="/assets/css/my.css" />
+    <link rel="stylesheet" href="/assets/higlight/styles/an-old-hope.min.css" />
+    <script src="/assets/js/jquery.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/util.js"></script>
+    <script src="/assets/higlight/highlight.min.js"></script>
+    <script src="/assets/higlight/languages/go.min.js"></script>
+    <script src="/assets/higlight/languages/javascript.min.js"></script>
+    <script src="/assets/higlight/languages/json.min.js"></script>
+    <script src="/assets/higlight/languages/php.min.js"></script>
+    <script src="/assets/higlight/languages/rust.min.js"></script>
+    <script src="/assets/higlight/languages/sql.min.js"></script>
+
+<body>
+    <div id="container" style="width: 85%;margin: 0 auto;">
+        <h3 id="title-id"></h3>
+        <pre><code id="code-id"></code></pre>
+    </div>
+    <script>
+        $(document).ready(function () {
+            let file = getQuery('file', '')
+            let title = getQuery('title', '文件：' + file)
+            $('#title-id').text(title)
+            if (file.length < 1) {
+                return
+            }
+            fetch(file).then(async response => {
+                if (response.status == 200) {
+                    let data = await response.text()
+                    $('#code-id').text(data)
+                    hljs.highlightAll();
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>
