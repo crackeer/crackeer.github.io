@@ -15,6 +15,9 @@
 
 # 三、链表
 
+- <a href="/page/code.html?file=/docs/algo/sample/linklist/reverse.go&title=翻转链表：递归/非递归" target="_blank">翻转链表：递归 / 非递归</a>
+- <a href="/page/code.html?file=/docs/algo/sample/linklist/reverse_k.go&title=K个一组翻转链表" target="_blank">K个一组翻转链表</a>
+
 # 四、动态规划
 
 ## 最长递增子序列
