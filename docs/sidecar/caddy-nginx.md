@@ -1,117 +1,14 @@
-# Caddy
+# A. Caddy
 
-> https://caddyserver.com/docs/
+> 文档：https://caddyserver.com/docs/
 
-## 一份 Sample 配置
+- 一份配置：<a href="/page/code.html?file=/docs/sidecar/sample/caddy.json&title=一份caddy.json" target="_blank">查看JSON</a>
 
-```json
-{
-  "admin": {
-    "disabled": false,
-    "listen": "0.0.0.0:2019",
-    "enforce_origin": false,
-    "origins": [""]
-  },
+----
 
-  "apps": {
-    "http": {
-      "servers": {
-        "static": {
-          "idle_timeout": 30000000000,
-          "listen": ["0.0.0.0:80"],
-          "max_header_bytes": 10240000,
-          "read_header_timeout": 10000000000,
-          "routes": [
-            {
-              "match": [
-                {
-                  "host": ["simple.com"]
-                }
-              ],
-              "handle": [
-                {
-                  "handler": "reverse_proxy",
-                  "upstreams": [
-                    {
-                      "dial": "localhost:9393"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "match": [
-                {
-                  "path_regexp": {
-                    "name": "iss",
-                    "pattern": "^/iss-vr-index"
-                  }
-                }
-              ],
-              "handle": [
-                {
-                  "handler": "reverse_proxy",
-                  "upstreams": [
-                    {
-                      "dial": "10.26.52.27:11111"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "match": [
-                {
-                  "host": ["www.simple.com"]
-                }
-              ],
-              "handle": [
-                {
-                  "handler": "file_server",
-                  "root": "/your/patc",
-                  "browse": {
-                    "template_file": ""
-                  }
-                }
-              ],
-              "terminal": true
-            },
-            {
-              "match": [
-                {
-                  "header": {
-                    "proxy": ["simple"]
-                  }
-                }
-              ],
-              "handle": [
-                {
-                  "handler": "reverse_proxy",
-                  "dynamic_upstreams": {
-                    "source": "a",
-                    "name": "proxy.host.com"
-                  },
-                  "headers": {
-                    "request": {
-                      "add": {
-                        "Host": ["proxy.host.com"]
-                      }
-                    }
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      }
-    }
-  }
-}
-```
+# B. Nginx
 
-# Nginx
-
-## nextjs 静态化部署 nginx 配置
+- nextjs 静态化部署 nginx 配置
 
 ```nginx
  server {

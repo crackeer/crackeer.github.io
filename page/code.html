@@ -20,7 +20,7 @@
     <script src="/assets/higlight/languages/php.min.js"></script>
     <script src="/assets/higlight/languages/rust.min.js"></script>
     <script src="/assets/higlight/languages/sql.min.js"></script>
-
+    <script src="/assets/higlight/highlightjs-line-numbers.min.js"></script>
 <body>
     <div id="container" style="width: 85%;margin: 0 auto;">
         <h3 id="title-id" style="margin-bottom: 20px;"></h3>
@@ -40,6 +40,7 @@
                     let data = await response.text()
                     $('#code-id').text(data)
                     hljs.highlightAll();
+                    hljs.initLineNumbersOnLoad();
                 }
             })
         })
