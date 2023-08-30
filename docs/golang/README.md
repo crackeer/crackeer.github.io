@@ -1,45 +1,47 @@
 > awesome-go：https://awesome-go.com
 
-
 # 一、常用站点
 
-## 书签
+## 工具类
 
-- 验证工具：https://github.com/gookit/validate
-- 模板引擎：
-  - http://github.com/flosch/pongo2/v4
-  - https://github.com/unrolled/render
-- JSON转换Go Struct：
-  - https://app.quicktype.io/
-  - https://mholt.github.io/json-to-go/
-- MySQL转换Go Struct： https://www.devtool.com/sql2go.html
-- Curl请求转换成Golang代码：https://mholt.github.io/curl-to-go/
-
-## 常用代码sample
-
-- HTTP服务器：https://github.com/crackeer/go-code-test/blob/master/http-server/main.go
-- MySQL表结构导入SQLite：https://github.com/crackeer/go-code-test/blob/master/mysql/mysql2sqlite3.go
-- MySQL数据生成SQL：https://github.com/crackeer/golang-code/blob/master/mysql2sql/main.go
-- 发送邮件：https://github.com/crackeer/go-code-test/blob/master/send-mail/main.go
-- WebAssembly：https://github.com/crackeer/go-code-test/blob/master/wasm/main.go
-- ES查询：https://github.com/crackeer/go-code-test/blob/master/es/main.go
-- BoltDB使用：https://github.com/crackeer/go-code-test/blob/master/boltdb/boltdb.go
+| 描述 | 链接 |
+| ----| ---- |
+|验证工具 | https://github.com/gookit/validate|
+|awesome-go | https://awesome-go.com|
+|模板引擎|  http://github.com/flosch/pongo2 <br> https://github.com/unrolled/render|
+|JSON转换Go Struct | https://app.quicktype.io/ <br>https://mholt.github.io/json-to-go/ |
+|MySQL转换Go Struct | https://www.devtool.com/sql2go.html |
+|Curl请求转换成Golang | https://mholt.github.io/curl-to-go/ |
 
 ## 知识网站图谱站点
 
-- [https://draveness.me/golang/](https://draveness.me/golang/)
-- [https://github.com/qcrao/Go-Questions](https://github.com/qcrao/Go-Questions)
-- [https://github.com/cch123/golang-notes](https://github.com/cch123/golang-notes)
-- [https://www.cnblogs.com/qcrao-2018](https://www.cnblogs.com/qcrao-2018)
-- [https://xargin.com](https://xargin.com)
-- [https://www.linkinstar.wiki](https://www.linkinstar.wiki)
+* [https://draveness.me/golang/](https://draveness.me/golang/)
+* [https://github.com/qcrao/Go-Questions](https://github.com/qcrao/Go-Questions)
+* [https://github.com/cch123/golang-notes](https://github.com/cch123/golang-notes)
+* [https://www.cnblogs.com/qcrao-2018](https://www.cnblogs.com/qcrao-2018)
+* [https://xargin.com](https://xargin.com)
+* [https://www.linkinstar.wiki](https://www.linkinstar.wiki)
 
 ----
 
-# 二、基础知识
+# 二、代码sample
 
-- https://blog.csdn.net/qq_43716830/article/details/124405506
-- https://blog.csdn.net/swg0110/article/details/114242776
+* HTTP服务器：https://github.com/crackeer/go-code-test/blob/master/http-server/main.go
+* MySQL表结构导入SQLite：https://github.com/crackeer/go-code-test/blob/master/mysql/mysql2sqlite3.go
+* MySQL数据生成SQL：https://github.com/crackeer/golang-code/blob/master/mysql2sql/main.go
+* 发送邮件：https://github.com/crackeer/go-code-test/blob/master/send-mail/main.go
+* WebAssembly：https://github.com/crackeer/go-code-test/blob/master/wasm/main.go
+* ES查询：https://github.com/crackeer/go-code-test/blob/master/es/main.go
+* BoltDB使用：https://github.com/crackeer/go-code-test/blob/master/boltdb/boltdb.go
+
+
+
+----
+
+# 三、基础知识
+
+* https://blog.csdn.net/qq_43716830/article/details/124405506
+* https://blog.csdn.net/swg0110/article/details/114242776
 
 ## new() 与 make() 的区别
 
@@ -54,9 +56,9 @@
 > https://blog.csdn.net/weixin_44065217/article/details/122482368
 > 逃逸分析是编译器用来确定由程序创建的值所处位置的过程。具体来说，编译器执行静态代码分析，以确定是否可以将值放在构造函数的栈(帧)上，或者该值是否必须“逃逸”到堆上。在Go中，没有关键字或函数可以用于在此决策中指导编译器。只有通过你写的代码来分析这一点
 
-- 逃逸分析的好处是为了减少gc的压力，不逃逸的对象分配在栈上，当函数返回时就回收了资源，不需要gc标记清除。
-- 逃逸分析完后可以确定哪些变量可以分配在栈上，栈的分配比堆快，性能好
-- 同步消除，如果你定义的对象的方法上有同步锁，但在运行时，却只有一个线程在访问，此时逃逸分析后的机器码，会去掉同步锁运行。
+* 逃逸分析的好处是为了减少gc的压力，不逃逸的对象分配在栈上，当函数返回时就回收了资源，不需要gc标记清除。
+* 逃逸分析完后可以确定哪些变量可以分配在栈上，栈的分配比堆快，性能好
+* 同步消除，如果你定义的对象的方法上有同步锁，但在运行时，却只有一个线程在访问，此时逃逸分析后的机器码，会去掉同步锁运行。
 
 ## 调度模型、调度器，GMP，netpoller
 
@@ -67,8 +69,8 @@
 
 ## chan原理
 
-- https://blog.csdn.net/weixin_42309691/article/details/125694412
-- https://www.cnblogs.com/haiyux/p/15161495.html
+* https://blog.csdn.net/weixin_42309691/article/details/125694412
+* https://www.cnblogs.com/haiyux/p/15161495.html
 
 ```go
 type hchan struct {
@@ -91,28 +93,28 @@ type hchan struct {
 
 > https://blog.csdn.net/liuyuede123/article/details/127394496
 
-- init函数先于main函数自动执行，不能被其他函数调用；
-- init函数没有输入参数、返回值；
-- 每个包可以有多个init函数；
-- 包的每个源文件也可以有多个init函数，这点比较特殊；
-- 同一个包的init执行顺序，golang没有明确定义，编程时要注意程序不要依赖这个执行顺序。
-- 不同包的init函数按照包导入的依赖关系决定执行顺序。
+* init函数先于main函数自动执行，不能被其他函数调用；
+* init函数没有输入参数、返回值；
+* 每个包可以有多个init函数；
+* 包的每个源文件也可以有多个init函数，这点比较特殊；
+* 同一个包的init执行顺序，golang没有明确定义，编程时要注意程序不要依赖这个执行顺序。
+* 不同包的init函数按照包导入的依赖关系决定执行顺序。
 
 ## 值类型和引用类型
 
-- 值类型 ： 基本数据类型int、float、bool、string以及数组和struct
-- 值类型：变量直接存储，内存通常在栈中分配。
-- 引用类型：指针、slice、map、chan等都是引用类型
-- 引用类型：变量存储的是一个地址，这个地址存储最终的值。内存通常在堆上分配。通过GC回收
+* 值类型 ： 基本数据类型int、float、bool、string以及数组和struct
+* 值类型：变量直接存储，内存通常在栈中分配。
+* 引用类型：指针、slice、map、chan等都是引用类型
+* 引用类型：变量存储的是一个地址，这个地址存储最终的值。内存通常在堆上分配。通过GC回收
 
 ## rune和byte的区别
 
-- https://www.jianshu.com/p/4fbf529926ca
+* https://www.jianshu.com/p/4fbf529926ca
 
 ## 调度器
 
-- [GO SCHEDULER](https://www.dazhuanlan.com/2019/12/12/5df121e8a157b/)
-- [Golang调度器源码分析](http://ga0.github.io/golang/2015/09/20/golang-runtime-scheduler.html)
+* [GO SCHEDULER](https://www.dazhuanlan.com/2019/12/12/5df121e8a157b/)
+* [Golang调度器源码分析](http://ga0.github.io/golang/2015/09/20/golang-runtime-scheduler.html)
 
 ## map打印为什么是无序的？
 
@@ -120,26 +122,26 @@ type hchan struct {
 
 ## map的底层实现
 
-- 参考[Go语言map底层实现](https://i6448038.github.io/2018/08/26/map-secret/)
-- [大话图解golang map源码详解](https://www.linkinstar.wiki/2019/06/03/golang/source-code/graphic-golang-map/)
-- [https://github.com/qcrao/Go-Questions/tree/master/map](https://github.com/qcrao/Go-Questions/tree/master/map)
-- [https://github.com/cch123/golang-notes/blob/master/map.md](https://github.com/cch123/golang-notes/blob/master/map.md)
-- [https://draveness.me/golang-hashmap](https://draveness.me/golang-hashmap)
-- [https://lukechampine.com/hackmap.html](https://lukechampine.com/hackmap.html)
+* 参考[Go语言map底层实现](https://i6448038.github.io/2018/08/26/map-secret/)
+* [大话图解golang map源码详解](https://www.linkinstar.wiki/2019/06/03/golang/source-code/graphic-golang-map/)
+* [https://github.com/qcrao/Go-Questions/tree/master/map](https://github.com/qcrao/Go-Questions/tree/master/map)
+* [https://github.com/cch123/golang-notes/blob/master/map.md](https://github.com/cch123/golang-notes/blob/master/map.md)
+* [https://draveness.me/golang-hashmap](https://draveness.me/golang-hashmap)
+* [https://lukechampine.com/hackmap.html](https://lukechampine.com/hackmap.html)
 
-## `defer`/`panic`/`recover`
+## `defer` / `panic` / `recover`
 
 > 在golang当中，defer代码块会在函数调用链表中增加一个函数调用。这个函数调用不是普通的函数调用，而是会在函数正常返回，也就是return之后添加一个函数调用。因此，defer通常用来释放函数内部变量
 
-- 当defer被声明时，其参数就会被实时解析
+* 当defer被声明时，其参数就会被实时解析
 
 > 函数返回的过程是这样子的：先给返回值赋值，然后调用defer表达式，最后才是返回到调用函数中。
 
-- defer执行顺序为先进后出
+* defer执行顺序为先进后出
 
 ----
 
-# 三、使用问题
+# 四、使用问题
 
 ## 私有仓库不支持https
 
