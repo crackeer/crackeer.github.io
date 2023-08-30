@@ -9,5 +9,5 @@
 * [网络](/sidecar/network.md)
 * [Nginx](/sidecar/caddy-nginx.md)
 ----
-* [**开发**](/develop/)
+* [开发](/develop/)
 * [算法](/algo/)
