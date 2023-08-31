@@ -42,7 +42,7 @@
                     let data = await response.text()
                     $('#code-id').text(data)
                     hljs.highlightAll();
-                    hljs.initLineNumbersOnLoad();
+                    //hljs.initLineNumbersOnLoad();
                     $('#copy-btn').click(() => {
                         copyToClipboard(data)
                         alert("复制成功")
