@@ -1,8 +1,7 @@
-> awesome-go：https://awesome-go.com
 
 # 一、常用站点
 
-## 工具类
+#### 工具类
 
 | 描述 | 链接 |
 | ----| ---- |
@@ -13,7 +12,7 @@
 |MySQL转换Go Struct | https://www.devtool.com/sql2go.html |
 |Curl请求转换成Golang | https://mholt.github.io/curl-to-go/ |
 
-## 知识网站图谱站点
+#### 知识网站图谱站点
 
 * [https://draveness.me/golang/](https://draveness.me/golang/)
 * [https://github.com/qcrao/Go-Questions](https://github.com/qcrao/Go-Questions)

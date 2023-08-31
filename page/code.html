@@ -21,10 +21,12 @@
     <script src="/assets/higlight/languages/rust.min.js"></script>
     <script src="/assets/higlight/languages/sql.min.js"></script>
     <script src="/assets/higlight/highlightjs-line-numbers.min.js"></script>
+    <script src="/assets/js/copy-to-clipboard.js"></script>
+
 <body>
     <div id="container" style="width: 85%;margin: 0 auto;">
         <h3 id="title-id" style="margin-bottom: 20px;"></h3>
-        <pre><code id="code-id"></code></pre>
+        <pre><button id="copy-btn">复制代码</button><button id="open-file" style="margin-left:10px">查看源码</button><code id="code-id"></code></pre>
     </div>
     <script>
         $(document).ready(function () {
@@ -41,7 +43,15 @@
                     $('#code-id').text(data)
                     hljs.highlightAll();
                     hljs.initLineNumbersOnLoad();
+                    $('#copy-btn').click(() => {
+                        copyToClipboard(data)
+                        alert("复制成功")
+                    })
+                    $('#open-file').click(() => {
+                        window.open(file, '_blank')
+                    })
                 }
+
             })
         })
     </script>
