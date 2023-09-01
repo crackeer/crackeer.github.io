@@ -28,9 +28,6 @@ textarea {
     max-width: 100%;
 }
 
-.bytemd-status-right input[type=checkbox] {
-    margin: 0 4px 0 0 !important;
-}
 
 .large {
     font-size: 17px;
