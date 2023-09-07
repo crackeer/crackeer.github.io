@@ -1,16 +1,9 @@
 # VSCode插件
 
-## 1. Golang自动注释插件
-
-> **GoComment**使用`Ctrl + Alt + /`
-
-## 2. AI代码补全
-
-> Tabnine AI Autocomplete for Javascript, Python, Typescript
-
-## 3. Markdown Previvew Enhanced
-
-## 4. Paste Image
+- Golang自动注释插件
+- AI代码补全
+- Markdown Previvew Enhanced
+- Paste Image
 
 # 树莓派
 
@@ -134,4 +127,8 @@ PRAGMA TABLE_INFO (UserInfo);
 
     }
 ```
+
+# Git使用
+
+- [彻底删除git中的较大文件,包括历史提交记录](https://blog.csdn.net/HappyRocking/article/details/89313501)
 
