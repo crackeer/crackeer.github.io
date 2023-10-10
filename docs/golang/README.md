@@ -21,18 +21,16 @@
 * [https://xargin.com](https://xargin.com)
 * [https://www.linkinstar.wiki](https://www.linkinstar.wiki)
 
-----
 
 # 二、代码sample
 
-* HTTP服务器：https://github.com/crackeer/go-code-test/blob/master/http-server/main.go
-* MySQL表结构导入SQLite：https://github.com/crackeer/go-code-test/blob/master/mysql/mysql2sqlite3.go
-* MySQL数据生成SQL：https://github.com/crackeer/golang-code/blob/master/mysql2sql/main.go
-* 发送邮件：https://github.com/crackeer/go-code-test/blob/master/send-mail/main.go
-* WebAssembly：https://github.com/crackeer/go-code-test/blob/master/wasm/main.go
-* ES查询：https://github.com/crackeer/go-code-test/blob/master/es/main.go
-* BoltDB使用：https://github.com/crackeer/go-code-test/blob/master/boltdb/boltdb.go
-
+- <a href="/page/code.html?file=/code/golang/http-server/main.go&title=HTTP服务器" target="_blank">HTTP服务器</a>
+- <a href="/page/code.html?file=/code/golang/mysql/mysql2sqlite3.go&title=MySQL表结构导入SQLite" target="_blank">MySQL表结构导入SQLite</a>
+- <a href="/page/code.html?file=/code/golang/mysql2sql/main.go&title=MySQL数据生成SQL" target="_blank">MySQL数据生成SQL</a>
+- <a href="/page/code.html?file=/code/golang/send-mail/main.go&title=发送邮件" target="_blank">发送邮件</a>
+- <a href="/page/code.html?file=/code/golang/wasm/main.go&title=WebAssembly" target="_blank">WebAssembly</a>
+- <a href="/page/code.html?file=/code/golang/es/main.go&title=ES查询" target="_blank">ES查询</a>
+- <a href="/page/code.html?file=/code/golang/boltdb/boltdb.go&title=BoltDB使用" target="_blank">BoltDB使用</a>
 
 
 ----
