@@ -28,3 +28,21 @@
 | 16 进制转 2 进制 | 暂无                                                                                         | <a href="/page/code.html?file=/code/algo/crack/16to2.go&title=16进制转2进制" target="_blank">解决</a>               |
 | 字符串相乘       | 暂无                                                                                         | <a href="/page/code.html?file=/code/algo/crack/str_multiply.go&title=字符串相乘" target="_blank">解决</a>           |
 | 括号对生成       | 暂无                                                                                         | <a href="/page/code.html?file=/code/algo/crack/gen_parenthesis.go&title=括号对生成" target="_blank">解决</a>        |
+
+# 五、刷题记录
+
+<!-- tabs:start -->
+
+#### **2023-10**
+
+- 2023-10-12
+[258.各数相加](https://leetcode.cn/problems/add-digits/)
+[268.丢失的数字](https://leetcode.cn/problems/missing-number/)
+[283.移动零](https://leetcode.cn/problems/move-zeroes/)
+[290.单词规律](https://leetcode.cn/problems/word-pattern/)
+[257.二叉树的所有路径](https://leetcode.cn/problems/binary-tree-paths/)
+#### **2023-11**
+
+等待添加
+
+<!-- tabs:end -->
