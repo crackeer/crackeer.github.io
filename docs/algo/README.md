@@ -41,6 +41,9 @@
 [283.移动零](https://leetcode.cn/problems/move-zeroes/)
 [290.单词规律](https://leetcode.cn/problems/word-pattern/)
 [257.二叉树的所有路径](https://leetcode.cn/problems/binary-tree-paths/)
+- 2023-10-13
+[316.去除重复字母](https://leetcode.cn/problems/remove-duplicate-letters/submissions/473943004/)
+
 #### **2023-11**
 
 等待添加
