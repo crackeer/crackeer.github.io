@@ -27,10 +27,3 @@ ssh-keygen -p -m PEM -f ~/.ssh/id_rsa
 
 # 三、一些代码示例
 
-## 写文件
-[write_file.rs](sample/write_file.rs ':include :type=code')
-
-## 读取文件夹
-
-[filename](sample/read_dir.rs ':include :type=code')
-
