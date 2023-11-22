@@ -132,3 +132,7 @@ PRAGMA TABLE_INFO (UserInfo);
 
 - [彻底删除git中的较大文件,包括历史提交记录](https://blog.csdn.net/HappyRocking/article/details/89313501)
 
+# Docker清理
+
+- https://post.smzdm.com/p/an3l7zg7/
+
