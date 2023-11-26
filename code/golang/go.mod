@@ -51,6 +51,7 @@ require (
 	github.com/blevesearch/zapx/v13 v13.3.7 // indirect
 	github.com/blevesearch/zapx/v14 v14.3.7 // indirect
 	github.com/blevesearch/zapx/v15 v15.3.8 // indirect
+	github.com/clbanning/mxj v1.8.4 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/dsnet/compress v0.0.1 // indirect
 	github.com/fredbi/uri v0.1.0 // indirect
@@ -66,6 +67,7 @@ require (
 	github.com/golang/geo v0.0.0-20210211234256-740aa86cb551 // indirect
 	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/golang/snappy v0.0.4 // indirect
+	github.com/google/go-querystring v1.0.0 // indirect
 	github.com/gopherjs/gopherjs v1.17.2 // indirect
 	github.com/inconshreveable/mousetrap v1.0.1 // indirect
 	github.com/joho/godotenv v1.4.0 // indirect
@@ -75,8 +77,10 @@ require (
 	github.com/lestrrat-go/file-rotatelogs v2.4.0+incompatible // indirect
 	github.com/lestrrat-go/strftime v1.0.6 // indirect
 	github.com/mholt/archiver/v4 v4.0.0-alpha.7 // indirect
+	github.com/mitchellh/mapstructure v1.4.3 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180228061459-e0a39a4cb421 // indirect
 	github.com/modern-go/reflect2 v1.0.2 // indirect
+	github.com/mozillazg/go-httpheader v0.2.1 // indirect
 	github.com/mschoch/smat v0.2.0 // indirect
 	github.com/nwaples/rardecode/v2 v2.0.0-beta.2 // indirect
 	github.com/pierrec/lz4/v4 v4.1.14 // indirect
@@ -88,6 +92,7 @@ require (
 	github.com/srwiley/oksvg v0.0.0-20220731023508-a61f04f16b76 // indirect
 	github.com/srwiley/rasterx v0.0.0-20210519020934-456a8d69b780 // indirect
 	github.com/stretchr/testify v1.8.0 // indirect
+	github.com/tencentyun/cos-go-sdk-v5 v0.7.45 // indirect
 	github.com/tevino/abool v1.2.0 // indirect
 	github.com/therootcompany/xz v1.0.1 // indirect
 	github.com/ulikunitz/xz v0.5.10 // indirect
