@@ -1,0 +1,20 @@
+{
+  "name": "puffy-pegasi",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^2.0.3",
+    "@astrojs/react": "^3.0.9",
+    "@astrojs/rss": "^4.0.1",
+    "@astrojs/sitemap": "^3.0.4",
+    "antd": "^5.12.7",
+    "astro": "^4.0.8"
+  }
+}
