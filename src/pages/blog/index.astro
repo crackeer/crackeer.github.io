@@ -16,47 +16,24 @@ const posts = (await getCollection('blog')).sort(
 
 <head>
 	<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	<style>
-		main {
-			width: 960px;
-		}
-
-		.title {
-			margin: 0;
-			color: rgb(var(--black));
-			line-height: 1;
-		}
-
-		.date {
-			margin: 0;
-			color: rgb(var(--gray));
-		}
-
-		a:hover h4,
-		a:hover .date {
-			color: rgb(var(--accent));
-		}
-
-		a {
-			text-decoration: none;
-		}
-	</style>
 </head>
 
 <body>
 	<Header />
 	<main>
-		{
-		posts.map((post) => (
-		<a href={`/blog/${post.slug}/`}>
-			<h4 class="title">{post.data.title}</h4>
-			<p class="date">
-				<FormattedDate date={post.data.pubDate} />
-			</p>
-			<hr />
-		</a>
-		))
-		}
+		<div class="list-group">
+			{
+				posts.map((post) => (
+					<a href={`/blog/${post.slug}/`} class="list-group-item list-group-item-action" aria-current="true">
+						<div class="d-flex w-100 justify-content-between">
+						  <h5 class="mb-1">{post.data.title}</h5>
+						  <small><FormattedDate date={post.data.pubDate} /></small>
+						</div>
+					</a>
+					
+				))
+			}
+		</div>
 	</main>
 	<Footer />
 </body>
