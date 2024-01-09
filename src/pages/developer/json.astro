@@ -1,0 +1,58 @@
+---
+import DefaultLayout from '../../layouts/DefaultLayout.astro';
+---
+
+<DefaultLayout title="JSON" description="JSON编辑">
+    <script src="https://cdn.jsdelivr.net/npm/jsoneditor@10.0.0/dist/jsoneditor.min.js" is:inline></script>
+    <link href="https://cdn.jsdelivr.net/npm/jsoneditor@10.0.0/dist/jsoneditor.min.css" rel="stylesheet">
+    <div id="jsoneditor" style="width: 100%; height: calc(100vh - 100px);"></div>
+    <div style="position:fixed; bottom: 50%; right: 2%; z-index: 10000;">
+        <button type="button" id="save" class="btn btn-primary">
+            保存
+        </button>
+    </div>
+    <script>
+        const container = document.getElementById("jsoneditor")
+        function getInitJSON() {
+            try {
+                let value = localStorage.getItem("json-editor") || '{}'
+                return JSON.parse(value)
+            } catch (e) {
+                return {}
+            }
+        }
+        const options = {
+            "mode": "code",
+            "search": true,
+            "indentation": 4,
+            "onChangeText": (json) => {
+                try {
+                    JSON.parse(json)
+                    localStorage.setItem("json-editor", json)
+                } catch (e) {
+
+                }
+            }
+        }
+        const editor = new JSONEditor(container, options, getInitJSON())
+        const updatedJson = editor.get()
+        console.log(bootbox,  document.getElementById("save"))
+        document.getElementById("save").addEventListener('click',  () => {
+            bootbox.prompt("请输入文件名", (fname) => {
+                if (fname == null || fname == '') {
+                    return true
+                }
+                if (fname.indexOf(".") === -1) {
+                    fname = fname + ".json"
+                } else {
+                    if (fname.split('.').pop().toLowerCase() === "json") {
+                        // Nothing to do
+                    } else {
+                        fname = fname.split('.')[0] + ".json"
+                    }
+                }
+                saveFile(JSON.stringify(editor.get()), fname)
+            })
+        })
+    </script>
+</DefaultLayout>
