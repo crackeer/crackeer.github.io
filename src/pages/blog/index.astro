@@ -6,10 +6,11 @@ import DefaultLayout from '../../layouts/DefaultLayout.astro';
 const posts: any = await getCollection('blog')
 let tagGroup = {}
 for(var i in posts) {
-	if(tagGroup[posts[i].data.tag] == undefined) {
-		tagGroup[posts[i].data.tag] = []
+	let tag = posts[i].data.tag || '未分类';
+	if(tagGroup[tag] == undefined) {
+		tagGroup[tag] = []
 	}
-	tagGroup[posts[i].data.tag].push(posts[i])
+	tagGroup[tag].push(posts[i])
 }
 const tags = Object.keys(tagGroup)
 let tagGroupList: any = []
@@ -19,7 +20,6 @@ tags.forEach(t => {
 		list : tagGroup[t],
 	})
 })
-console.log(tagGroupList)
 ---
 
 
@@ -27,7 +27,7 @@ console.log(tagGroupList)
 	<ul class="nav nav-tabs flex-column flex-sm-row" id="myTab" role="tablist">
 		{
 			tags.map((item) => {
-				return <li class="nav-item" role="presentation">
+				return <li class="nav-item" role="presentation" id={'tab' + item}>
 					<button class="nav-link"  data-bs-toggle="tab" data-bs-target={'#' + item} type="button"
 						role="tab" aria-controls={item} aria-selected="true">{item}</button>
 				</li>
@@ -55,4 +55,16 @@ console.log(tagGroupList)
 			})
 		}
 	</div>
+	<script src="/js/util.js" is:inline></script>
+
+	<script is:inline>
+		 document.addEventListener('DOMContentLoaded', (event) => {
+			setTimeout(() => {
+				let tag = getQuery('tag', '未分类')
+			alert(tag)
+			}
+			
+		 })
+		
+	</script>
 </DefaultLayout>
