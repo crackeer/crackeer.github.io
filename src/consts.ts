@@ -3,3 +3,6 @@
 
 export const SITE_TITLE = 'Write the code';
 export const SITE_DESCRIPTION = 'Welcome to my website!';
+export const CATEGORY = [
+    'life', 'blog', ''
+]

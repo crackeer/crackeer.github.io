@@ -1,41 +1,58 @@
 ---
-import BaseHead from '../../components/BaseHead.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
+import DefaultLayout from '../../layouts/DefaultLayout.astro';
 
-const posts = (await getCollection('blog')).sort(
-(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
-);
+const posts: any = await getCollection('blog')
+let tagGroup = {}
+for(var i in posts) {
+	if(tagGroup[posts[i].data.tag] == undefined) {
+		tagGroup[posts[i].data.tag] = []
+	}
+	tagGroup[posts[i].data.tag].push(posts[i])
+}
+const tags = Object.keys(tagGroup)
+let tagGroupList: any = []
+tags.forEach(t => {
+	tagGroupList.push({
+		tag : t,
+		list : tagGroup[t],
+	})
+})
+console.log(tagGroupList)
 ---
 
-<!doctype html>
-<html lang="en">
 
-<head>
-	<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-</head>
-
-<body>
-	<Header />
-	<main>
-		<div class="list-group">
-			{
-				posts.map((post) => (
-					<a href={`/blog/${post.slug}/`} class="list-group-item list-group-item-action" aria-current="true">
-						<div class="d-flex w-100 justify-content-between">
-						  <h5 class="mb-1">{post.data.title}</h5>
-						  <small><FormattedDate date={post.data.pubDate} /></small>
-						</div>
-					</a>
-					
-				))
-			}
-		</div>
-	</main>
-	<Footer />
-</body>
-
-</html>
+<DefaultLayout>
+	<ul class="nav nav-tabs flex-column flex-sm-row" id="myTab" role="tablist">
+		{
+			tags.map((item) => {
+				return <li class="nav-item" role="presentation">
+					<button class="nav-link"  data-bs-toggle="tab" data-bs-target={'#' + item} type="button"
+						role="tab" aria-controls={item} aria-selected="true">{item}</button>
+				</li>
+			})
+		}
+    </ul>
+	<div class="tab-content" id="myTabContent">
+		{
+			tagGroupList.map((item, index) => {
+				return <div class="tab-pane fade show" id={item.tag} role="tabpanel" aria-labelledby="home-tab" tabindex={index}>
+					<div class="list-group">
+						{
+							item.list.map((post) => (
+								<a href={`/blog/${post.slug}/`} class="list-group-item list-group-item-action" aria-current="true">
+									<div class="d-flex w-100 justify-content-between">
+									<h5 class="mb-1">{post.data.title}</h5>
+									<small><FormattedDate date={post.data.pubDate} /></small>
+									</div>
+								</a>
+								
+							))
+						}
+					</div>
+				</div>
+			})
+		}
+	</div>
+</DefaultLayout>
