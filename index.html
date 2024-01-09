@@ -22,7 +22,7 @@
             basePath: "/docs",
             loadNavbar: 'navbar.md',
             loadSidebar: 'sidebar.md',
-            subMaxLevel: false,
+            subMaxLevel: 3,
             repo: 'https://github.com/crackeer',
             auto2top: true,
             search: true,
@@ -39,12 +39,7 @@
                 theme: 'classic', // default
                 tabComments: true,      // default
                 tabHeadings: true       // default
-            },
-            toc: {
-                tocMaxLevel: 5,
-                target: 'h1, h2, h3, h4, h5',
-                ignoreHeaders: ['<!-- {docsify-ignore} -->', '<!-- {docsify-ignore-all} -->']
-            },
+            }
         }
     </script>
     <!-- Docsify v4 -->
@@ -64,7 +59,6 @@
     <script src="./assets/js/search.js"></script>
     <script src="./assets/js/countable.js"></script>
     <script src="./assets/js/zoom-image.min.js"></script>
-    <script src="./assets/js/docsify-plugin-toc.min.js"></script>
 
 </body>
 <style>
