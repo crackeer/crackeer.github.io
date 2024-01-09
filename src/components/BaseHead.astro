@@ -37,6 +37,7 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 
 <script>
   // Astro will bundle and process this automatically
-  import 'bootstrap/dist/js/bootstrap.bundle.min.js'
+  import bootstrap from 'bootstrap/dist/js/bootstrap.bundle.min.js'
+  window['bootstrap'] = bootstrap
 </script>
-<script src="../scripts/util.js"></script>
+<script src="/js/util.js" is:inline></script>
