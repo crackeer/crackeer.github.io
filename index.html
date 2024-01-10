@@ -59,15 +59,26 @@
     <script src="/assets/js/docsify-hide-code.min.js"></script>
 </body>
 <style>
+    :root {
+        --var-bg-color: #0066CC;
+        --content-max-width : 80em;
+        --heading-color:  var(--var-bg-color);
+        --copycode-background: var(--var-bg-color);
+        --code-inline-color: red;
+        --link-color: var(--var-bg-color);
+    }
     body {
-        --docsifytabs-border-color: #0066CC;
-        --docsifytabs-tab-highlight-color: #0066CC;
-        --sidebar-nav-link-color--active: #0066CC;
+        --docsifytabs-border-color: var(--var-bg-color);
+        --docsifytabs-tab-highlight-color: var(--var-bg-color);
+        --sidebar-nav-link-color--active: var(--var-bg-color);
     }
 
     img {
         display: block;
         margin: 0 auto;
+    }
+    table tr, table tbody {
+        border: 1px solid #CCCCCC;
     }
 </style>
 
