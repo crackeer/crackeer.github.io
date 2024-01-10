@@ -1,11 +1,8 @@
+# 前端代码相关
 
-# 一、书签
+> 如果你喜欢前端
 
-- 操作MySQL的ali-rds：https://github.com/ali-sdk/ali-rds
-- AXIOS: https://axios-http.com/docs/intro
-
-
-# 二、一些代码
+# 一些代码
 
 ## 1. 后端JS
 - <a href="/page/code.html?file=/code/nodejs/static-server.js&title=纯Node静态服务器" target="_blank">纯Node静态服务器</a>

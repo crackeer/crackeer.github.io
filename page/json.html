@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -7,29 +8,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title>JSON</title>
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="/assets/css/bootstrap3.4.min.css" />
+    <link rel="stylesheet" href="/assets/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="/assets/css/my.css" />
     <script src="/assets/js/jsoneditor9.8.js"></script>
     <link href="/assets/css/jsoneditor9.8.css" rel="stylesheet" />
-    <script src="/assets/js/jquery.js"></script>
     <script src="/assets/js/util.js"></script>
     <script src="/assets/js/filereader.js"></script>
-    <script src="/assets/js/bootstrap.min.js"></script>
-    <script src="/assets/js/bootbox.min.js"></script>
+    <script src="/assets/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="/assets/bootstrap/bootbox.js"></script>
 
 <body>
-    <div class="row" style="margin-bottom: 10px;">
-        <div class="col-md-2">
+    <div class="row justify-content-start" style="margin-bottom: 10px;">
+        <div class="col-2">
             <input type="file" id="loadDocument" value="Load" />
         </div>
-        <div class="col-md-4 col-md-offset-6">
-            <div class="link-list" style="float: right;"><a href="https://jsondiff.org/" target="_blank">JSON对比
-                </a><a href="https://app.quicktype.io/" target="_blank">JSON转编程对象
-                </a><a href="http://www.esjson.com/jsontoexcel.html" target="_blank">JSON转Excel
-                </a>
-            </div>
-        </div>
-
     </div>
 
     <div id="jsoneditor" style="width: 100%; height: calc(100vh - 100px);"></div>
@@ -64,7 +56,7 @@
         }
         const editor = new JSONEditor(container, options, getInitJSON())
         const updatedJson = editor.get()
-        $('#save').click(() => {
+        document.getElementById("save").addEventListener('click', () => {
             bootbox.prompt("请输入文件名", (fname) => {
                 if (fname == null || fname == '') {
                     return true
