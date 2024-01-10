@@ -1,41 +1,7 @@
 
-# sgajhs
+# Gopher人的世界
 
-# 一、常用站点
-
-#### 工具类
-
-| 描述 | 链接 |
-| ----| ---- |
-|验证工具 | https://github.com/gookit/validate|
-|awesome-go | https://awesome-go.com|
-|模板引擎|  http://github.com/flosch/pongo2 <br> https://github.com/unrolled/render|
-|JSON转换Go Struct | https://app.quicktype.io/ <br>https://mholt.github.io/json-to-go/ |
-|MySQL转换Go Struct | https://www.devtool.com/sql2go.html |
-|Curl请求转换成Golang | https://mholt.github.io/curl-to-go/ |
-
-#### 知识网站图谱站点
-
-* [https://draveness.me/golang/](https://draveness.me/golang/)
-* [https://github.com/qcrao/Go-Questions](https://github.com/qcrao/Go-Questions)
-* [https://github.com/cch123/golang-notes](https://github.com/cch123/golang-notes)
-* [https://www.cnblogs.com/qcrao-2018](https://www.cnblogs.com/qcrao-2018)
-* [https://xargin.com](https://xargin.com)
-* [https://www.linkinstar.wiki](https://www.linkinstar.wiki)
-
-
-# 二、代码sample
-
-- <a href="/page/code.html?file=/code/golang/http-server/main.go&title=HTTP服务器" target="_blank">HTTP服务器</a>
-- <a href="/page/code.html?file=/code/golang/mysql/mysql2sqlite3.go&title=MySQL表结构导入SQLite" target="_blank">MySQL表结构导入SQLite</a>
-- <a href="/page/code.html?file=/code/golang/mysql2sql/main.go&title=MySQL数据生成SQL" target="_blank">MySQL数据生成SQL</a>
-- <a href="/page/code.html?file=/code/golang/send-mail/main.go&title=发送邮件" target="_blank">发送邮件</a>
-- <a href="/page/code.html?file=/code/golang/wasm/main.go&title=WebAssembly" target="_blank">WebAssembly</a>
-- <a href="/page/code.html?file=/code/golang/es/main.go&title=ES查询" target="_blank">ES查询</a>
-- <a href="/page/code.html?file=/code/golang/boltdb/boltdb.go&title=BoltDB使用" target="_blank">BoltDB使用</a>
-
-
-# 三、基础知识
+# 基础知识
 
 * https://blog.csdn.net/qq_43716830/article/details/124405506
 * https://blog.csdn.net/swg0110/article/details/114242776

@@ -1,9 +1,5 @@
-# VSCode插件
 
-- Golang自动注释插件
-- AI代码补全
-- Markdown Previvew Enhanced
-- Paste Image
+# 运维之路
 
 # 树莓派
 
@@ -109,23 +105,23 @@ PRAGMA TABLE_INFO (UserInfo);
 - nextjs 静态化部署 nginx 配置
 
 ```nginx
- server {
-        listen       8080;
-        server_name  localhost;
+server {
+    listen       8080;
+    server_name  localhost;
 
-        #charset koi8-r;
-        root /root/your/path/out;
-        location ~/page/(.*)$ {
-            rewrite ^\/page\/(.*)$ /$1.html break;
-        }
-        location ~/(.*)$ {
-            if (!-e $request_filename) {
-                rewrite ^(.*)$ /$1.html break;
-            }
-            #alias /root/your/path/out/;
-        }
-
+    #charset koi8-r;
+    root /root/your/path/out;
+    location ~/page/(.*)$ {
+        rewrite ^\/page\/(.*)$ /$1.html break;
     }
+    location ~/(.*)$ {
+        if (!-e $request_filename) {
+            rewrite ^(.*)$ /$1.html break;
+        }
+        #alias /root/your/path/out/;
+    }
+
+}
 ```
 
 # Git使用
