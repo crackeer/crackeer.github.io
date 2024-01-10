@@ -9,24 +9,24 @@
     <title></title>
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="/assets/css/my.css" />
-    <link rel="stylesheet" href="/assets/higlight/styles/default.min.css" />
     <link rel="stylesheet" href="/assets/bootstrap/bootstrap.min.css" />
     <script src="/assets/js/jquery.js"></script>
     <script src="/assets/js/util.js"></script>
-    <script src="/assets/higlight/highlight.min.js"></script>
-    <script src="/assets/higlight/languages/go.min.js"></script>
-    <script src="/assets/higlight/languages/javascript.min.js"></script>
-    <script src="/assets/higlight/languages/json.min.js"></script>
-    <script src="/assets/higlight/languages/php.min.js"></script>
-    <script src="/assets/higlight/languages/rust.min.js"></script>
-    <script src="/assets/higlight/languages/sql.min.js"></script>
-    <script src="/assets/higlight/highlightjs-line-numbers.min.js"></script>
     <script src="/assets/js/copy-to-clipboard.js"></script>
 
 <body>
     <div id="container" style="width: 85%;margin: 0 auto;">
-        <h3 id="title-id" style="margin-bottom: 20px;"></h3>
-        <pre><button id="copy-btn">复制代码</button><button id="open-file" style="margin-left:10px">查看源码</button><code id="code-id"></code></pre>
+        
+        <div class="card">
+            <div class="card-header">
+                <h3 id="title-id" style="margin-bottom: 20px;"></h3>
+                <button id="copy-btn" type="button" class="btn btn-link">复制代码</button>
+            </div>
+            <div class="card-body">
+                <pre><code id="code-id"></code></pre>
+            </div>
+        </div>
+
     </div>
     <script>
         $(document).ready(function () {
@@ -41,7 +41,6 @@
                 if (response.status == 200) {
                     let data = await response.text()
                     $('#code-id').text(data)
-                    hljs.highlightAll();
                     //hljs.initLineNumbersOnLoad();
                     $('#copy-btn').click(() => {
                         copyToClipboard(data)
@@ -61,4 +60,5 @@
         tab-size: 4;
     }
 </style>
+
 </html>
