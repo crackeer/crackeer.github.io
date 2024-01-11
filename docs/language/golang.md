@@ -1,10 +1,8 @@
 
 # Gopher人的世界
 
-# 基础知识
-
+## Golang有哪些有趣的知识点
 * https://blog.csdn.net/qq_43716830/article/details/124405506
-* https://blog.csdn.net/swg0110/article/details/114242776
 
 ## new() 与 make() 的区别
 
@@ -102,11 +100,8 @@ type hchan struct {
 
 * defer执行顺序为先进后出
 
-----
 
-# 四、使用问题
-
-## 私有仓库不支持https
+## 私有仓库不支持https，如何拉取
 
 > https://www.cnblogs.com/hiwz/p/12652153.html
 

@@ -1,13 +1,11 @@
 # Let's Rust
 
-# 一些项目
+## 一些个人项目
 
 - tauri写的一个简单的markdown编辑器：https://github.com/crackeer/tauri-markdown
-- Tauri写的一个
 
-# 牛掰的库
 
-## 使用ssh2链接服务器
+## 使用ssh2登录服务器
 > https://github.com/alexcrichton/ssh2-rs
 
 - convert ssh id_rsa to PEM Format

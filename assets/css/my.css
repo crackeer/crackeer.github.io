@@ -19,24 +19,3 @@ body {
     border: 1px solid gray;
     margin: 5px auto;
 }
-
-.progress strong {
-    font-size: 16px;
-}
-
-textarea {
-    min-width: 100%;
-    max-width: 100%;
-}
-
-
-.large {
-    font-size: 17px;
-    font-weight: bold;
-}
-.red {
-    color: red;
-}
-.bold {
-    font-weight: bold;;
-}

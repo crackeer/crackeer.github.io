@@ -1,17 +1,30 @@
-# 前端代码相关
+# 前端YYDS
 
-> 如果你喜欢前端
 
-# 一些代码
+## 使用`ali-rds`操作MySQL
 
-## 1. 后端JS
-- <a href="/page/code.html?file=/code/nodejs/static-server.js&title=纯Node静态服务器" target="_blank">纯Node静态服务器</a>
-- <a href="/page/code.html?file=/code/nodejs/ali-rds.js&title=使用ali-rds" target="_blank">使用`ali-rds`操作数据</a>
-- <a href="/page/code.html?file=/code/nodejs/read-file.js&title=读取文件" target="_blank">读取文件</a>
-- <a href="/page/code.html?file=/code/nodejs/read-file.js&title=MD5" target="_blank">MD5</a>
-- <a href="/page/code.html?file=/code/nodejs/read-write-excel.js&title=读写Excel" target="_blank">读写Excel</a>
-- <a href="/page/code.html?file=/code/nodejs/puppeteer-crawl.js&title=读写Excel" target="_blank">puppeteer爬虫</a>
-- <a href="/page/code.html?file=/code/nodejs/fetch.js&title=原生fetch发送HTTP请求" target="_blank">原生fetch发送HTTP请求</a>
+[ali-rds](../code/nodejs/ali-rds.js ':include :type=code')
 
-## 2. 前端JS
-- <a href="/page/code.html?file=/code/nodejs/js-save-file.js&title=JS前端保存文件" target="_blank">JS前端保存文件</a>
+## 纯Node静态服务器
+
+[static-server](../code/nodejs/static-server.js ':include :type=code')
+
+## 读取文件
+
+[read-file](../code/nodejs/read-file.js ':include :type=code')
+
+## 读写Excel
+
+[read-write-excel.js](../code/nodejs/read-write-excel.js ':include :type=code')
+
+## puppeteer爬虫
+
+[puppeteer-crawl.js](../code/nodejs/puppeteer-crawl.js ':include :type=code')
+
+## 原生fetch发送HTTP请求
+
+[fetch.js](../code/nodejs/fetch.js ':include :type=code')
+
+## 浏览器保存文件
+
+[js-save-file.js](../code/nodejs/js-save-file.js ':include :type=code')
