@@ -14,6 +14,10 @@
 ssh-keygen -p -m PEM -f ~/.ssh/id_rsa
 ```    
 
-## rust调用C的静态链接库
+## 调用C静态链接库
 - https://blog.csdn.net/ytxwhwlb/article/details/103465066
 
+
+## 读取文件夹
+
+[simple_read_dir](./code/rust.rs ':include :type=code :fragment=simple_read_dir')
