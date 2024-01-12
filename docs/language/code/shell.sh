@@ -1,3 +1,4 @@
+/// [merge-branch]
 #!/bin/bash
 function red() {
     echo -e "\033[31m$1\033[0m"
@@ -62,3 +63,5 @@ echo ""
 
 green "Successfully"
 echo ""
+/// [merge-branch]
+

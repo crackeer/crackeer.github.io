@@ -1,7 +1,7 @@
-# 常见shell命令使用
+# shell命令使用
 
 ## shell中解析json: jq
-- jq -r .data.message，可以去掉message外层的双引号
+- `jq -r .data.message`，可以去掉message外层的双引号
 
 ## curl静默模式
 
@@ -9,9 +9,8 @@
 
 
 ## sed批量替换
-```sh
-命令格式：sed -i "s/原内容/新内容/g" `grep 原内容 -rl 所在目录`    注：千万注意这个符号【`】，是【最左上角】那个符号不是单引号
-```
+
+> 命令格式：sed -i "s/原内容/新内容/g" `grep 原内容 -rl 所在目录`    注：千万注意这个符号【`】，是【最左上角】那个符号不是单引号
 
 ## 批量改文件扩展名
 
@@ -30,6 +29,8 @@ for item in $list
 ```
 
 ## Git合并到其他分支
+
+[merge-branch](./code/shell.sh ':include :type=code :fragment=merge-branch')
 
 ## 添加system service
 
