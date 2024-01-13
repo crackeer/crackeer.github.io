@@ -3,20 +3,20 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Write the code</title>
+    <title>RD Book</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="description" content="Description">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  
+
     <!-- Themes (light + dark) -->
-   <link rel="stylesheet" href="/assets/css/theme-simple.css">
+    <link rel="stylesheet" href="/assets/css/theme-simple.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
 </head>
 
 <body>
     <div id="app"></div>
     <script>
-        window.$docsify = {
+        let docsifyConfig = {
             name: "RDBook",
             homepage: 'README.md',
             basePath: "/docs",
@@ -25,7 +25,6 @@
             subMaxLevel: 2,
             repo: 'https://github.com/crackeer',
             auto2top: true,
-            search: true,
             themeColor: '#0066CC',
             tabs: {
                 persist: true,      // default
@@ -39,7 +38,16 @@
                 height: 220 // Max height
             }
         }
+        if (window.location.hash.indexOf('#/bookmark') == 0) {
+            docsifyConfig.hideSidebar = true;
+            docsifyConfig.loadNavbar = false;
+            docsifyConfig.repo = '';
+            document.querySelector('title').innerHTML = '书签'
+        }
+
+        window.$docsify = docsifyConfig
     </script>
+
     <!-- Docsify v4 -->
     <script src="/assets/js/docsify@4.js"></script>
     <script src="/assets/js/prism-go.min.js"></script>
@@ -54,27 +62,29 @@
     <script src="/assets/js/prism-docker.min.js"></script>
     <script src="/assets/js/docsify-tabs@1.js"></script>
     <script src="/assets/js/docsify-copy-code.js"></script>
-    <script src="/assets/js/search.js"></script>
     <script src="/assets/js/zoom-image.min.js"></script>
     <script src="/assets/js/docsify-hide-code.min.js"></script>
 </body>
 <style>
     :root {
         --var-bg-color: #0066CC;
-        --content-max-width : 85%;
-        --heading-color:  var(--var-bg-color);
+        --content-max-width: 85%;
+        --heading-color: var(--var-bg-color);
         --copycode-background: var(--var-bg-color);
         --code-inline-color: red;
         --code-inline-background: white;
         --link-color: var(--var-bg-color);
         --link-text-decoration-color--hover: gray;
     }
+
     a {
-        text-decoration: none!important;
+        text-decoration: none !important;
     }
+
     a:hover {
-        color: red!important;
+        color: red !important;
     }
+
     body {
         --docsifytabs-border-color: var(--var-bg-color);
         --docsifytabs-tab-highlight-color: var(--var-bg-color);
@@ -85,7 +95,9 @@
         display: block;
         margin: 0 auto;
     }
-    table tr, table tbody {
+
+    table tr,
+    table tbody {
         border: 1px solid #CCCCCC;
     }
 </style>
