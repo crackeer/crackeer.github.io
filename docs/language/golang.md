@@ -1,7 +1,7 @@
 
 # Gopher人的世界
 
-## Golang有哪些有趣的知识点
+## 有趣的知识点
 * https://blog.csdn.net/qq_43716830/article/details/124405506
 
 ## new() 与 make() 的区别
@@ -77,9 +77,6 @@ type hchan struct {
 * [GO SCHEDULER](https://www.dazhuanlan.com/2019/12/12/5df121e8a157b/)
 * [Golang调度器源码分析](http://ga0.github.io/golang/2015/09/20/golang-runtime-scheduler.html)
 
-## map打印为什么是无序的？
-
-> 根据随机数，选择一个桶位置作为起始点进行遍历迭代，因此每次重新 for range map，你见到的结果都是不一样的。那是因为它的起始位置根本就不固定
 
 ## map的底层实现
 
@@ -105,7 +102,7 @@ type hchan struct {
 
 > https://www.cnblogs.com/hiwz/p/12652153.html
 
-## Gorm使用sqlite不需要开启CGO
+## Gorm使用sqlite(纯GO)
 
 > https://github.com/go-gorm/sqlite
 

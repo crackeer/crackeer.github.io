@@ -1,4 +1,47 @@
-#### 进程和线程的定义和区别
+# QA问答
+
+            
+## Lua学一下
+
+- lua教程：https://www.runoob.com/lua/lua-tutorial.html
+- Lua中时间戳：https://blog.csdn.net/auspark/article/details/103027234
+
+
+## Caddy配置使用
+
+> 文档：https://caddyserver.com/docs/
+- 一份文档
+
+[caddy.json](./code/caddy.json ':include :type=code json')
+
+## Nginx配置
+
+### nextjs静态化部署 nginx 配置
+
+```nginx
+server {
+    listen       8080;
+    server_name  localhost;
+
+    #charset koi8-r;
+    root /root/your/path/out;
+    location ~/page/(.*)$ {
+        rewrite ^\/page\/(.*)$ /$1.html break;
+    }
+    location ~/(.*)$ {
+        if (!-e $request_filename) {
+            rewrite ^(.*)$ /$1.html break;
+        }
+        #alias /root/your/path/out/;
+    }
+
+}
+```
+
+## 删除git中大文件+记录
+- https://blog.csdn.net/HappyRocking/article/details/89313501
+
+## 进程`VS`线程
 
 **进程：** 进程是系统分配资源和调度的基本单位，也就是说进程可以单独运行一段程序。
 **线程：** 线程是cpu调度和分派的最小基本单位。

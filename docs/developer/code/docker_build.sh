@@ -11,6 +11,5 @@ if [ $sysOS = "Darwin" ]; then
 		docker build --build-arg APP_ID_ARG="${APP_ID}" --build-arg BUILD_ENV=product-local  -t "${APP_ID}":"local" .
 	fi
 else
-  echo '2'
 	docker build --build-arg APP_ID_ARG="${APP_ID}" --build-arg BUILD_ENV=product-local  -t "${APP_ID}":"local" .
 fi
