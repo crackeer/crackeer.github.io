@@ -29,4 +29,4 @@
 
 ### BBS
 
-[武汉·过早客](https://www.guozaoke.com/) `/` [水木社区](https://www.newsmth.net/)
+[武汉·过早客](https://www.guozaoke.com/) `/` [水木社区](https://www.newsmth.net/) `/` [V2EX](https://v2ex.com/)

@@ -1,21 +1,42 @@
-# shkjash
+# 算法题目，爱不起来
 
-# 一、参考文档
+## 参考文档
 
 - https://labuladong.gitee.io/algo/zhun-bei-g-8db77/
 
-# 二、二叉树
+## 二叉树
 
-- <a href="/page/code.html?file=/code/algo/tree/build_tree.go&title=二叉树构建" target="_blank">二叉树构建</a>
-- <a href="/page/code.html?file=/code/algo/tree/print_tree.go&title=二叉树层序遍历" target="_blank">层序遍历</a>
-- <a href="/page/code.html?file=/code/algo/tree/pre_traverse.go&title=二叉树前序遍历" target="_blank">前序遍历</a>
-- <a href="/page/code.html?file=/code/algo/tree/middle_traverse.go&title=二叉树中序遍历" target="_blank">中序遍历</a>
-- <a href="/page/code.html?file=/code/algo/tree/back_traverse.go&title=二叉树后序遍历" target="_blank">后序遍历</a>
+- 二叉树构建
 
-# 三、链表
+[build_tree](./code/tree.go ':include :type=code :fragment=build_tree')
 
-- <a href="/page/code.html?file=/code/algo/linklist/reverse.go&title=翻转链表：递归/非递归" target="_blank">翻转链表：递归 / 非递归</a>
-- <a href="/page/code.html?file=/code/algo/linklist/reverse_k.go&title=K个一组翻转链表" target="_blank">K 个一组翻转链表</a>
+- 层序遍历
+
+[print_tree](./code/tree.go ':include :type=code :fragment=print_tree')
+
+- 前序遍历
+
+[pre_traverse](./code/tree.go ':include :type=code :fragment=pre_traverse')
+
+- 中序遍历
+
+[middle_traverse](./code/tree.go ':include :type=code :fragment=middle_traverse')
+
+- 后序遍历
+
+[back_traverse](./code/tree.go ':include :type=code :fragment=back_traverse')
+
+
+## 链表
+
+- 翻转链表
+
+[reverse_linklist](./code/linklist.go ':include :type=code :fragment=reverse_linklist')
+
+- K个一组翻转链表
+
+[reverse_linklist_k](./code/linklist.go ':include :type=code :fragment=reverse_linklist_k')
+
 
 # 四、动态规划
 
