@@ -26,6 +26,7 @@
             repo: 'https://github.com/crackeer',
             auto2top: true,
             themeColor: '#0066CC',
+            autoHeader: true,
             tabs: {
                 persist: true,      // default
                 sync: true,      // default
@@ -38,11 +39,23 @@
                 height: 220 // Max height
             }
         }
-        if (window.location.hash.indexOf('#/bookmark') == 0) {
+        if (window.location.hash.indexOf('#/simple') == 0) {
+            let hashQuery = null
+            let parts = window.location.hash.split('?')
+            if(parts.length > 1) {
+                hashQuery = parts[1]
+            }
             docsifyConfig.hideSidebar = true;
             docsifyConfig.loadNavbar = false;
             docsifyConfig.repo = '';
-            document.querySelector('title').innerHTML = '书签'
+            docsifyConfig.auto2top = false;
+            docsifyConfig.plugins = [function setTitle(hook, vm) {
+                hook.doneEach(function () {
+                    document.querySelector('title').innerHTML = document.querySelector('h1').innerText
+                    //document.querySelector('h1').remove()
+                })
+            }];
+            //document.querySelector('title').innerHTML = '书签'
         }
 
         window.$docsify = docsifyConfig
