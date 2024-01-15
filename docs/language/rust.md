@@ -21,3 +21,11 @@ ssh-keygen -p -m PEM -f ~/.ssh/id_rsa
 ## 读取文件夹
 
 [simple_read_dir](./code/rust.rs ':include :type=code :fragment=simple_read_dir')
+
+## Tauri使用问题
+
+### release版本可以检查元素
+
+```
+tauri = { version = "1.0.0-rc.8", features = ["api-all", "devtools"] }
+```
