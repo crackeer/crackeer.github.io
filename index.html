@@ -48,14 +48,11 @@
             docsifyConfig.hideSidebar = true;
             docsifyConfig.loadNavbar = false;
             docsifyConfig.repo = '';
-            docsifyConfig.auto2top = false;
             docsifyConfig.plugins = [function setTitle(hook, vm) {
                 hook.doneEach(function () {
                     document.querySelector('title').innerHTML = document.querySelector('h1').innerText
-                    //document.querySelector('h1').remove()
                 })
             }];
-            //document.querySelector('title').innerHTML = '书签'
         }
 
         window.$docsify = docsifyConfig
