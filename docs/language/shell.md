@@ -5,14 +5,18 @@
 
 ## curl静默模式
 
-- curl -s 静默模式，可不展示请求进度
+- `curl -s` 静默模式，可不展示请求进度
 
 
 ## sed批量替换
 
-> 命令格式：sed -i "s/原内容/新内容/g" `grep 原内容 -rl 所在目录`    注：千万注意这个符号【`】，是【最左上角】那个符号不是单引号
+```sh
+sed -i "s/原内容/新内容/g" `grep 原内容 -rl 所在目录`
+``` 
 
-## 批量改文件扩展名
+**注：千万注意这个符号【`】，是【最左上角】那个符号不是单引号**
+
+## 批量修改文件扩展名
 
 ```sh
 #!/bin/bash
@@ -28,7 +32,7 @@ for item in $list
     done
 ```
 
-## Git合并到其他分支
+## Git合并分支
 
 [merge-branch](./code/shell.sh ':include :type=code :fragment=merge-branch')
 
@@ -51,30 +55,6 @@ PrivateTmp=true
 WantedBy=multi-user.target
 ```
 
-## clashX设置白名单
-
-打开终端，在新建一个文件
-```sh
-vim ~/.config/clash/proxyIgnoreList.plist
-```
-文件内容可以从官方下载。不方便下载的也可以直接复制我下面的文件内容，改一下就好
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<array>
-    <string>192.168.0.0/16</string>
-    <string>10.0.0.0/8</string>
-
-    <!--上面的不要删，在下面添加你想要忽略的域名-->
-    <string>*.lc.com</string>
-    <string>*-lc.com</string>
-    <string>*-local.com</string>
-    <string>*-.local.com</string>
-</array>
-</plist>
-```
 
 ## shell中字符串分割
 

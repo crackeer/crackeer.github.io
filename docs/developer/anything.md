@@ -57,3 +57,29 @@ server {
 7. 同一个进程下，一个线程的挂掉，会导致整个进程的挂掉，而进程之间不会相互影响
 8. 总的来说：我们都知道程序不能单独运行，只有将它放入内存中，分配资源才能运行，程序是指令的集合，而进程是程序的一次执行活动，属于动态概念
 9. 我们可以打个比方:进程相当于某一个大型项目，世界上可能有人同时在做这个项目，有其独特的方式；而线程就相当于这个项目下的一些程序员，多个程序员去完成这一个项目肯定要比一个人完成快的多，也就是能在同一时间操作。
+
+
+## clashX设置白名单
+
+打开终端，在新建一个文件
+```sh
+vim ~/.config/clash/proxyIgnoreList.plist
+```
+文件内容可以从官方下载。不方便下载的也可以直接复制我下面的文件内容，改一下就好
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+    <string>192.168.0.0/16</string>
+    <string>10.0.0.0/8</string>
+
+    <!--上面的不要删，在下面添加你想要忽略的域名-->
+    <string>*.lc.com</string>
+    <string>*-lc.com</string>
+    <string>*-local.com</string>
+    <string>*-.local.com</string>
+</array>
+</plist>
+```
