@@ -45,7 +45,8 @@
             if(parts.length > 1) {
                 hashQuery = parts[1]
             }
-            docsifyConfig.hideSidebar = true;
+            docsifyConfig.loadSidebar = false ;
+            delete docsifyConfig.name
             docsifyConfig.loadNavbar = false;
             docsifyConfig.repo = '';
             docsifyConfig.plugins = [function setTitle(hook, vm) {
@@ -107,7 +108,7 @@
     img:not(.emoji) {
         margin: 0 auto;
         display: block;
-        width: 45%;
+        width: 50%;
     }
 
     table tr,
