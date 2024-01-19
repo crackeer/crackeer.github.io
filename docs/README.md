@@ -27,3 +27,4 @@
 
 - [docsify折腾之路](/note/docsify.md)
 - [Steve Jobs's words](/note/from-steve-jobs.md)
+- [practice yourself](/note/practice.md)
