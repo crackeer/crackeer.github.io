@@ -42,10 +42,10 @@
         if (window.location.hash.indexOf('#/simple') == 0) {
             let hashQuery = null
             let parts = window.location.hash.split('?')
-            if(parts.length > 1) {
+            if (parts.length > 1) {
                 hashQuery = parts[1]
             }
-            docsifyConfig.loadSidebar = false ;
+            docsifyConfig.loadSidebar = false;
             delete docsifyConfig.name
             docsifyConfig.loadNavbar = false;
             docsifyConfig.repo = '';
@@ -77,9 +77,19 @@
     <script src="/assets/docsify/docsify-hide-code.min.js"></script>
 </body>
 <style>
+    @media screen and (max-width: 500px) {
+        :root {
+            --content-max-width: 100%;
+        }
+    }
+    @media screen and (min-width: 500px) {
+        :root {
+            --content-max-width: 85%;
+        }
+    }
+
     :root {
         --var-bg-color: #0066CC;
-        --content-max-width: 85%;
         --heading-color: var(--var-bg-color);
         --copycode-background: var(--var-bg-color);
         --code-inline-color: red;

@@ -17,6 +17,10 @@ ssh-keygen -p -m PEM -f ~/.ssh/id_rsa
 ## 调用C静态链接库
 - https://blog.csdn.net/ytxwhwlb/article/details/103465066
 
+## 检测USB
+
+[check-usb](./code/rust.rs ':include :type=code :fragment=check-usb')
+
 
 ## 读取文件夹
 
