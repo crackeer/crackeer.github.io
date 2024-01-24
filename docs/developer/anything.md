@@ -83,3 +83,13 @@ vim ~/.config/clash/proxyIgnoreList.plist
 </array>
 </plist>
 ```
+
+## zip分包 / 合并
+
+```sh
+# 分
+zip -s 100m myfolder.zip myfolder
+# 合
+zip -s 0 myfolder.zip --out unsplit.zip
+```
+
