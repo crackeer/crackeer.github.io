@@ -8,18 +8,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title></title>
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="/assets/css/my.css" />
     <link rel="stylesheet" href="/assets/bootstrap/bootstrap.min.css" />
-    <script src="/assets/js/jquery.js"></script>
+    <script src="/assets/js/vue.global.js"></script>
+    <script src="/assets/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="/assets/js/util.js"></script>
-    <script src="/assets/js/copy-to-clipboard.js"></script>
 
 <body>
+
+    
     <div id="container" style="width: 85%;margin: 0 auto;">
         
         <div class="card">
             <div class="card-header">
-                <h3 id="title-id" style="margin-bottom: 20px;"></h3>
+
+                sss
+                <h3 id="title-id" style="margin-bottom: 20px;">SS</h3>
                 <button id="copy-btn" type="button" class="btn btn-link">复制代码</button>
             </div>
             <div class="card-body">
@@ -28,37 +31,6 @@
         </div>
 
     </div>
-    <script>
-        $(document).ready(function () {
-            let file = getQuery('file', '')
-            let title = getQuery('title', '文件：' + file)
-            $('#title-id').html(title)
-            $('title').html(title)
-            if (file.length < 1) {
-                return
-            }
-            fetch(file).then(async response => {
-                if (response.status == 200) {
-                    let data = await response.text()
-                    $('#code-id').text(data)
-                    //hljs.initLineNumbersOnLoad();
-                    $('#copy-btn').click(() => {
-                        copyToClipboard(data)
-                        alert("复制成功")
-                    })
-                    $('#open-file').click(() => {
-                        window.open(file, '_blank')
-                    })
-                }
-
-            })
-        })
-    </script>
 </body>
-<style>
-    * {
-        tab-size: 4;
-    }
-</style>
 
 </html>

@@ -2,7 +2,7 @@
 
 ### 常用工具
 
-[常用色彩搭配](http://tool.c7sky.com/webcolor/) `/` [创建好看的代码图片](https://ray.so/) `/` [redis命令参考](http://doc.redisfans.com/) `/` [docsify](https://docsify.js.org/) `/` [Git奇技淫巧](https://github.com/521xueweihan/git-tips) `/` [一些开发者工具](https://dev.com.cn/tools) `/` [路过图床](https://imgse.com/) `/` [抓鱼鸭](https://www.zhuayuya.com/) `/` [寻找特殊字符](https://copychar.cc/) `/` [牛掰工具箱](https://10015.io/) `/` [数字计算器](https://numpad.io/docs) `/` [免费SVG生成](https://iconce.com/) `/` [github的IP查询](https://sites.ipaddress.com/www.github.com/)
+[常用色彩搭配](http://tool.c7sky.com/webcolor/) `/` [创建好看的代码图片](https://ray.so/) `/` [redis命令参考](http://doc.redisfans.com/) `/` [docsify](https://docsify.js.org/) `/` [Git奇技淫巧](https://github.com/521xueweihan/git-tips) `/` [一些开发者工具](https://dev.com.cn/tools) `/` [路过图床](https://imgse.com/) `/` [抓鱼鸭](https://www.zhuayuya.com/) `/` [寻找特殊字符](https://copychar.cc/) `/` [牛掰工具箱](https://10015.io/) `/` [数字计算器](https://numpad.io/docs) `/` [免费SVG生成](https://iconce.com/) `/` [github的IP查询](https://sites.ipaddress.com/www.github.com/) `/` [NetBSD](https://www.netbsd.org/)
 
 
 ### JSON工具
@@ -13,7 +13,7 @@
 
 [文心一言](https://yiyan.baidu.com/) `/` [free2gpt](https://chato.free2gpt.xyz/) `/` [Google@Gemini](https://geminiprochat.com/) `/` [ChatGPT大全](https://codenews.cc/ai) `/` [微软copilot](https://copilot.microsoft.com/) `/` [Coze](https://www.coze.com/)
 
-### Golang利器.长知识啊
+### Golang.长知识啊
 
 [awesome-go](https://awesome-go.com) `/` [SQL转结构体](https://www.devtool.com/sql2go.html) `/` [curl请求转go代码](https://mholt.github.io/curl-to-go/) `/` [模板引擎pongo2](http://github.com/flosch/pongo2) `/` [模板引擎render](https://github.com/unrolled/render) `/` [data验证](https://github.com/gookit/validate) `/` [Go语言设计与实现](https://draveness.me/golang/) `/` [Go程序员面试笔试宝典](https://github.com/qcrao/Go-Questions) `/` [源码分析 + 知识点](https://github.com/cch123/golang-notes) `/` [Go语言中文网](https://studygolang.com/)
 
