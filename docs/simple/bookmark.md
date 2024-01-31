@@ -19,7 +19,7 @@
 
 ### 有趣的个人博客
 
-[No Headback](https://xargin.com) `/` [阮一峰博客](https://www.ruanyifeng.com/) `/` [TW93](https://tw93.fun/) `/` [一个设计者](https://paulstamatiou.com/)
+[No Headback](https://xargin.com) `/` [阮一峰博客](https://www.ruanyifeng.com/) `/` [TW93](https://tw93.fun/) `/` [一个设计者](https://paulstamatiou.com/) `/` [missuo](https://missuo.me/)
 
 ### 前端.UI.
 
