@@ -13,7 +13,7 @@
     --var-bg-color: #0066CC;
     --heading-color: var(--var-bg-color);
     --copycode-background: var(--var-bg-color);
-    --code-inline-color: red;
+    --code-inline-color: red!important;
     --code-inline-background: white;
     --link-color: var(--var-bg-color);
     --link-text-decoration-color--hover: gray;
