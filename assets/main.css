@@ -1,25 +1,25 @@
 @media screen and (max-width: 500px) {
     :root {
-        --content-max-width: 100%;
+        --content-max-width: 100%!important;
     }
 }
 @media screen and (min-width: 500px) {
     :root {
-        --content-max-width: 85%;
+        --content-max-width: 85%!important;
     }
 }
 
 :root {
-    --var-bg-color: #0066CC;
+    --var-bg-color: #0066CC!important;
     --heading-color: var(--var-bg-color);
     --copycode-background: var(--var-bg-color);
     --code-inline-color: red!important;
     --code-inline-background: white!important;
     --link-color: var(--var-bg-color);
-    --link-text-decoration-color--hover: gray;
-    --sidebar-nav-strong-margin: 0px;
-    --sidebar-nav-strong-padding: 10px 0px 8px 0px;
-    --sidebar-nav-strong-font-size: 16px;
+    --link-text-decoration-color--hover: gray!important;
+    --sidebar-nav-strong-margin: 0px!important;
+    --sidebar-nav-strong-padding: 10px 0px 8px 0px!important;
+    --sidebar-nav-strong-font-size: 16px!important;
 }
 
 a {
@@ -44,5 +44,5 @@ img:not(.emoji) {
 
 table tr,
 table tbody {
-    border: 1px solid #CCCCCC;
+    border: 1px solid #CCCCCC!important;
 }
