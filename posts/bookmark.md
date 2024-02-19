@@ -28,7 +28,7 @@
 
 ### Rust.长知识啊
 
-[语言圣经](https://course.rs/about-book.html) `/` [Rust标准库](https://doc.rust-lang.org/std/index.html) `/` [TAURI.APP](https://tauri.app/zh-cn/) `/` [AwesomeApp](https://awesomeapp.org/) `/` [Rust语言中文社区](https://rustcc.cn/)
+[语言圣经](https://course.rs/about-book.html) `/` [Rust标准库](https://doc.rust-lang.org/std/index.html) `/` [TAURI.APP](https://tauri.app/zh-cn/) `/` [AwesomeApp](https://awesomeapp.org/) `/` [Rust语言中文社区](https://rustcc.cn/) `/` [Rust Library](https://docs.rs/)
 
 
 ### BBS

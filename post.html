@@ -11,21 +11,16 @@
     <!-- Themes (light + dark) -->
     <link rel="stylesheet" href="/assets/main.css">
     <link rel="stylesheet" href="/assets/docsify/theme-simple.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
 </head>
 
 <body>
     <div id="app"></div>
     <script>
         let docsifyConfig = {
-            name: "RDBook",
             homepage: 'README.md',
-            basePath: "/docs",
-            loadNavbar: 'navbar.md',
-            loadSidebar: 'sidebar.md',
-            subMaxLevel: 2,
-            repo: 'https://github.com/crackeer',
-            auto2top: true,
+            basePath: "/posts",
+            loadNavbar: false,
+            loadSidebar: false,
             themeColor: '#0066CC',
             autoHeader: true,
             tabs: {
@@ -40,7 +35,11 @@
                 height: 220 // Max height
             }
         }
-
+        docsifyConfig.plugins = [function setTitle(hook, vm) {
+            hook.doneEach(function () {
+                document.querySelector('title').innerHTML = document.querySelector('h1').innerText
+            })
+        }];
         window.$docsify = docsifyConfig
     </script>
 
@@ -62,4 +61,5 @@
     <script src="/assets/docsify/docsify-hide-code.min.js"></script>
     <script src="/assets/docsify/docsify-image-caption.min.js"></script>
 </body>
+
 </html>
