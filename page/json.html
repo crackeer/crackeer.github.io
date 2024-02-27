@@ -9,7 +9,6 @@
     <title>JSON</title>
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="/assets/bootstrap/bootstrap.min.css" />
-    <link rel="stylesheet" href="/assets/css/page.css" />
     <script src="/assets/jsoneditor/jsoneditor9.8.js"></script>
     <link href="/assets/jsoneditor/jsoneditor9.8.css" rel="stylesheet" />
     <script src="/assets/js/util.js"></script>
@@ -20,14 +19,26 @@
 
 <body>
     <div class="row justify-content-start" style="margin-bottom: 10px;">
+        <div class="col-1">
+            <button class="btn btn-primary" id="choose">选择</button>
+        </div>
         <div class="col-4">
-            <input type="file" id="loadDocument" value="Load" class="form-control"/>
+            <input type="file" id="loadDocument" value="Load" class="form-control" />
         </div>
     </div>
-
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">JSON数据</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="list-group" id="list-group-id">
+            </ul>
+        </div>
+    </div>
     <div id="jsoneditor" style="width: 100%; height: calc(100vh - 100px);"></div>
     <div style="position:fixed; bottom: 50%; right: 2%; z-index: 10000;">
-        <button type="button" id="save" class="btn btn-primary">
+        <button type="button" id="save2" class="btn btn-primary">
             <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
             保存
         </button>
@@ -57,22 +68,47 @@
         }
         const editor = new JSONEditor(container, options, getInitJSON())
         const updatedJson = editor.get()
-        document.getElementById("save").addEventListener('click', () => {
-            bootbox.prompt("请输入文件名", (fname) => {
-                if (fname == null || fname == '') {
-                    return true
-                }
-                if (fname.indexOf(".") === -1) {
-                    fname = fname + ".json"
-                } else {
-                    if (fname.split('.').pop().toLowerCase() === "json") {
-                        // Nothing to do
-                    } else {
-                        fname = fname.split('.')[0] + ".json"
+        const canvas = new bootstrap.Offcanvas('#offcanvasExample')
+        let currentName = ""
+        document.getElementById("save2").addEventListener('click', () => {
+            if(currentName.length === 0) {
+                bootbox.prompt("请输入名称", (fname) => {
+                    if (fname == null || fname == '') {
+                        return true
                     }
+                    localStorage.setItem("JSON-" + fname, JSON.stringify(editor.get()))
+                })
+            } else {
+                localStorage.setItem("JSON-" + currentName, JSON.stringify(editor.get()))
+            }
+           
+        })
+        document.getElementById("choose").addEventListener("click", () => {
+            let list = []
+            for (var key in localStorage) {
+                if (key.indexOf("JSON-") === 0) {
+                    let name = key.replace("JSON-", "")
+                    list.push(name)
                 }
-                saveFile(JSON.stringify(editor.get()), fname)
-            })
+            }
+            
+            canvas.show()
+            let eleList = []
+            for(var i in list) {
+                eleList.push('<a href="javascript:;" class="list-group-item list-group-item-action">' + list[i]+'</a>')
+            }
+            document.getElementById("list-group-id").innerHTML = eleList.join("")
+            console.log(list)
+        })
+        document.getElementById("list-group-id").addEventListener("click", (el) => {
+            canvas.hide()
+            let content = localStorage.getItem('JSON-' + el.target.textContent)
+            try {
+                let data = JSON.parse(content)
+                editor.set(data)
+            } catch (e) {
+            }
+            canvas.hide()
         })
         // Load a JSON document
         FileReaderJS.setupInput(document.getElementById('loadDocument'), {
@@ -83,6 +119,8 @@
                 }
             }
         })
+
+
     </script>
 </body>
 <style type="text/css">
