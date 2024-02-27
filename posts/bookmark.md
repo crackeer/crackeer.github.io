@@ -11,7 +11,8 @@
 
 ### ChatGPT
 
-[文心一言](https://yiyan.baidu.com/) `/` [free2gpt](https://chato.free2gpt.xyz/) `/` [Google@Gemini](https://geminiprochat.com/) `/` [ChatGPT大全](https://codenews.cc/ai) `/` [微软copilot](https://copilot.microsoft.com/) `/` [Coze](https://www.coze.com/)
+[文心一言](https://yiyan.baidu.com/) `/` [free2gpt](https://chato.free2gpt.xyz/)  `/` [ChatGPT大全](https://codenews.cc/ai) `/` [微软copilot](https://copilot.microsoft.com/) `/` [Coze](https://www.coze.com/)
+`/` [Start Chatgot](https://start.chatgot.io/)
 
 ### Golang.长知识啊
 
@@ -19,7 +20,7 @@
 
 ### 有趣的个人博客
 
-[No Headback](https://xargin.com) `/` [阮一峰博客](https://www.ruanyifeng.com/) `/` [TW93](https://tw93.fun/) `/` [一个设计者](https://paulstamatiou.com/)
+[No Headback](https://xargin.com) `/` [阮一峰博客](https://www.ruanyifeng.com/) `/` [TW93](https://tw93.fun/) `/` [一个设计者](https://paulstamatiou.com/) `/` [missuo](https://missuo.me/)
 
 ### 前端.UI.
 
@@ -27,7 +28,7 @@
 
 ### Rust.长知识啊
 
-[语言圣经](https://course.rs/about-book.html) `/` [Rust标准库](https://doc.rust-lang.org/std/index.html) `/` [TAURI.APP](https://tauri.app/zh-cn/) `/` [AwesomeApp](https://awesomeapp.org/) `/` [Rust语言中文社区](https://rustcc.cn/)
+[语言圣经](https://course.rs/about-book.html) `/` [Rust标准库](https://doc.rust-lang.org/std/index.html) `/` [TAURI.APP](https://tauri.app/zh-cn/) `/` [AwesomeApp](https://awesomeapp.org/) `/` [Rust语言中文社区](https://rustcc.cn/) `/` [Rust Library](https://docs.rs/)
 
 
 ### BBS
