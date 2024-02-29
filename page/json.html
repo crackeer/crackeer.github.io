@@ -2,30 +2,22 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="description" content="Description">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title>JSON</title>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="/assets/bootstrap/bootstrap.min.css" />
-    <script src="/assets/jsoneditor/jsoneditor9.8.js"></script>
-    <link href="/assets/jsoneditor/jsoneditor9.8.css" rel="stylesheet" />
-    <script src="/assets/js/util.js"></script>
-    <script src="/assets/js/filereader.js"></script>
-    <script src="/assets/js/jquery.js"></script>
-    <script src="/assets/bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="/assets/bootstrap/bootbox.js"></script>
+    <script src="/assets/framework.js"></script>
+</head>
 
-<body>
+<body></body>
+<template id="template">
     <div class="row justify-content-start" style="margin-bottom: 10px;">
-        <div class="col-1">
-            <button class="btn btn-primary" id="choose">选择</button>
-        </div>
-        <div class="col-4">
-            <input type="file" id="loadDocument" value="Load" class="form-control" />
+        <div class="col-10">
+            <button class="btn btn-primary btn-sm" @click="showJSONList">选择JSON</button>
+            <span v-if="currentName.length > 0" style="margin-left: 20px; margin-right: 20px; display: inline-block;">
+                当前JSON：{{currentName}}
+            </span>
+            <button class="btn btn-danger btn-sm" @click="showJSONList"  v-if="currentName.length > 0" >删除</button>
         </div>
     </div>
+    
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
         <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasExampleLabel">JSON数据</h5>
@@ -33,101 +25,108 @@
         </div>
         <div class="offcanvas-body">
             <ul class="list-group" id="list-group-id">
+                <template v-for="item in jsonList">
+                    <a href="javascript:;"
+                        class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                        @click="this.setJSON(item)">
+                        {{item}}
+                        <span class="badge bg-primary rounded-pill btn">14</span>
+                    </a>
+                </template>
             </ul>
         </div>
     </div>
     <div id="jsoneditor" style="width: 100%; height: calc(100vh - 100px);"></div>
     <div style="position:fixed; bottom: 50%; right: 2%; z-index: 10000;">
-        <button type="button" id="save2" class="btn btn-primary">
+        <button type="button" @click="this.saveJSON2" class="btn btn-primary">
             <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
             保存
         </button>
     </div>
-    <script>
-        const container = document.getElementById("jsoneditor")
-        function getInitJSON() {
-            try {
-                let value = localStorage.getItem("json-editor") || '{}'
-                return JSON.parse(value)
-            } catch (e) {
-                return {}
-            }
+</template>
+
+<script>
+    function getInitJSON() {
+        try {
+            let value = localStorage.getItem("json-editor") || '{}'
+            return JSON.parse(value)
+        } catch (e) {
+            return {}
         }
-        const options = {
-            "mode": "code",
-            "search": true,
-            "indentation": 4,
-            "onChangeText": (json) => {
-                try {
-                    JSON.parse(json)
-                    localStorage.setItem("json-editor", json)
-                } catch (e) {
-
-                }
-            }
-        }
-        const editor = new JSONEditor(container, options, getInitJSON())
-        const updatedJson = editor.get()
-        const canvas = new bootstrap.Offcanvas('#offcanvasExample')
-        let currentName = ""
-        document.getElementById("save2").addEventListener('click', () => {
-            if(currentName.length === 0) {
-                bootbox.prompt("请输入名称", (fname) => {
-                    if (fname == null || fname == '') {
-                        return true
-                    }
-                    localStorage.setItem("JSON-" + fname, JSON.stringify(editor.get()))
-                })
-            } else {
-                localStorage.setItem("JSON-" + currentName, JSON.stringify(editor.get()))
-            }
-           
-        })
-        document.getElementById("choose").addEventListener("click", () => {
-            let list = []
-            for (var key in localStorage) {
-                if (key.indexOf("JSON-") === 0) {
-                    let name = key.replace("JSON-", "")
-                    list.push(name)
-                }
-            }
-            
-            canvas.show()
-            let eleList = []
-            for(var i in list) {
-                eleList.push('<a href="javascript:;" class="list-group-item list-group-item-action">' + list[i]+'</a>')
-            }
-            document.getElementById("list-group-id").innerHTML = eleList.join("")
-            console.log(list)
-        })
-        document.getElementById("list-group-id").addEventListener("click", (el) => {
-            canvas.hide()
-            let content = localStorage.getItem('JSON-' + el.target.textContent)
-            try {
-                let data = JSON.parse(content)
-                editor.set(data)
-            } catch (e) {
-            }
-            canvas.hide()
-        })
-        // Load a JSON document
-        FileReaderJS.setupInput(document.getElementById('loadDocument'), {
-            readAsDefault: 'Text',
-            on: {
-                load: function (event, file) {
-                    editor.setText(event.target.result)
-                }
-            }
-        })
-
-
-    </script>
-</body>
-<style type="text/css">
-    body {
-        padding: 20px 7%;
-        font-size: 15px;
     }
-</style>
+    window.VueObject = {
+        data() {
+            return {
+                jsonList: [],
+                currentName: '',
+            }
+        },
+        template: '#template',
+        canvas: null,
+        editor: null,
+        async mounted() {
+            await this.initGetJSON()
+            this.canvas = new bootstrap.Offcanvas('#offcanvasExample')
+        },
+        methods: {
+            async initGetJSON() {
+                const container = document.getElementById("jsoneditor")
+                const options = {
+                    "mode": "code",
+                    "search": true,
+                    "indentation": 4,
+                    "onChangeText": (json) => {
+                        try {
+                            JSON.parse(json)
+                            localStorage.setItem("json-editor", json)
+                        } catch (e) {
+
+                        }
+                    }
+                }
+                this.editor = new JSONEditor(container, options, getInitJSON())
+            },
+            async saveJSON2() {
+                if (this.currentName.length === 0) {
+                    bootbox.prompt("请输入名称", (fname) => {
+                        if (fname == null || fname == '') {
+                            return true
+                        }
+                        localStorage.setItem("JSON-" + fname, JSON.stringify(this.editor.get()))
+                        this.currentName = fname
+                    })
+                } else {
+                    localStorage.setItem("JSON-" + this.currentName, JSON.stringify(this.editor.get()))
+                }
+            },
+            async setJSON(item) {
+                let content = localStorage.getItem('JSON-' + item)
+                try {
+                    let data = JSON.parse(content)
+                    this.editor.set(data)
+                    this.currentName = item
+                } catch (e) {
+                }
+                this.canvas.hide()
+            },
+            async deleteJSON(item) {
+                alert('Delete JSON')
+
+            },
+            async showJSONList() {
+                let list = []
+                for (var key in localStorage) {
+                    if (key.indexOf("JSON-") === 0) {
+                        let name = key.replace("JSON-", "")
+                        list.push(name)
+                    }
+                }
+
+                this.canvas.show()
+                this.jsonList = list
+            }
+        }
+    }
+</script>
 
 </html>
