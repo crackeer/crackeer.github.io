@@ -11,7 +11,8 @@ const JS_FILES = [
     '/assets/js/dayjs.min.js',
     '/assets/js/util.js',
     '/assets/js/filereader.js',
-    '/assets/jsoneditor/jsoneditor9.8.js'
+    '/assets/jsoneditor/jsoneditor9.8.js',
+    '/assets/js/json-to-go.js',
 ]
 
 const DIV_APP_HTML = `<div id="app">
