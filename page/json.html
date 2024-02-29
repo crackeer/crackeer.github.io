@@ -38,6 +38,7 @@
         <button type="button" @click="this.saveJSON2" class="btn btn-outline-primary">保存</button>
         <button type="button" @click="this.deleteJSON" class="btn btn-outline-danger">删除</button>
         <button type="button" @click="this.json2Go" class="btn btn-outline-primary">转Go Struct</button>
+        <button type="button" @click="this.json2String" class="btn btn-outline-primary">转字符串</button>
     </div>
 </template>
 
@@ -127,6 +128,9 @@
                 });
 
                 dialog.modal('show');
+            },
+            async json2String() {
+               this.editor.set(JSON.stringify(this.editor.get()))
             },
             async showJSONList() {
                 let list = []
