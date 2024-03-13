@@ -37,6 +37,6 @@ tauri = { version = "1.0.0-rc.8", features = ["api-all", "devtools"] }
 ## 更新rust版本:`rustup update`,速度很慢
 
 需要设置proxy
-RUSTUP_DIST_SERVER=https://rsproxy.cn
-RUSTUP_UPDATE_ROOT=https://rsproxy.cn/rustup
+- RUSTUP_DIST_SERVER=https://rsproxy.cn
+- RUSTUP_UPDATE_ROOT=https://rsproxy.cn/rustup
 
