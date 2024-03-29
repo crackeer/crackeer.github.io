@@ -12,7 +12,7 @@
 ### ChatGPT
 
 [文心一言](https://yiyan.baidu.com/) `/` [free2gpt](https://chato.free2gpt.xyz/)  `/` [ChatGPT大全](https://codenews.cc/ai) `/` [微软copilot](https://copilot.microsoft.com/) `/` [Coze](https://www.coze.com/)
-`/` [Start Chatgot](https://start.chatgot.io/) `/` [Perplexity](https://www.perplexity.ai/)
+`/` [Start Chatgot](https://start.chatgot.io/) `/` [Perplexity](https://www.perplexity.ai/) `/` [huggingface](https://huggingface.co/)
 
 ### Golang.长知识啊
 
