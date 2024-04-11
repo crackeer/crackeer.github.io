@@ -34,12 +34,17 @@ server {
         }
         #alias /root/your/path/out/;
     }
-
 }
 ```
 
 ## 删除git中大文件+记录
 - https://blog.csdn.net/HappyRocking/article/details/89313501
+
+```bash
+git rev-list --all | xargs -rL1 git ls-tree -r --long | sort -uk3 | sort -rnk4 | head -10
+git filter-branch --tree-filter "rm -f {filepath}" -- --all
+git push -f --all
+```
 
 ## 进程`VS`线程
 
@@ -61,10 +66,12 @@ server {
 
 ## clashX设置白名单
 
-打开终端，在新建一个文件
+- 打开终端，在新建一个文件
+
 ```sh
 vim ~/.config/clash/proxyIgnoreList.plist
 ```
+
 文件内容可以从官方下载。不方便下载的也可以直接复制我下面的文件内容，改一下就好
 
 ```xml

@@ -1,5 +1,4 @@
 # SQLite冲啊
-> sqlite是我喜欢的数据库啊
 
 
 ## SQLite使用
