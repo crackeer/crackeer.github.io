@@ -37,6 +37,20 @@ server {
 }
 ```
 
+## nginx设置跨域
+
+```conf
+add_header 'Access-Control-Allow-Origin' "$http_origin";
+add_header 'Access-Control-Allow-Headers' 'accept,os,accesstoken,content-Type,X-Requested-With,Authorization,apptype,appkey,devid,token,uid,versioncode,versionname,mfg,x-request-id,x-request-uid';
+add_header 'Access-Control-Max-Age' '2592000';
+add_header 'Access-Control-Allow-Methods' 'GET, PUT, OPTIONS, POST, DELETE';
+add_header 'Access-Control-Allow-Credentials' 'true';
+add_header 'X-Content-Type-Options' 'nosniff';
+add_header 'X-XSS-Protection' '1; mode=block';
+add_header 'X-Frame-Options' 'SAMEORIGIN';
+```
+
+
 ## 删除git中大文件+记录
 - https://blog.csdn.net/HappyRocking/article/details/89313501
 
