@@ -1,12 +1,19 @@
 # shell命令使用
 
-## shell中解析json: jq
+## shell中解析json: `jq`
 - `jq -r .data.message`，可以去掉message外层的双引号
 
 ## curl静默模式
 
 - `curl -s` 静默模式，可不展示请求进度
 
+## for循环执行
+
+```sh
+for i in aaa bbb ccc; do
+  generate_json $i
+done
+```
 
 ## sed批量替换
 
