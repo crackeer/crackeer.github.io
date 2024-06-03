@@ -67,3 +67,7 @@ SQL 的执行顺序： `from` — `where` – `group by` — `having` — `selec
 > https://code84.com/753862.html
 
 - 行锁必须要索引才能实现，否则会自动锁全表
+
+## MySQL修改Database名字
+
+- https://phoenixnap.com/kb/how-to-rename-a-mysql-database
