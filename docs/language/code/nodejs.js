@@ -5,16 +5,16 @@ const onlineDB = rds({
     port: '3306',
     user: 'username',
     password: 'password',
-    database: 'database', 
+    database: 'database',
 })
 var select = async function() {
-   let data = await onlineDB.select("table_name", {
-       where : {
-        "task_id" : '37675849834616860',
-       },
-       columns: ['author', 'title'],
-       orders: [['id', 'desc']],
-       limit : 3,
+    let data = await onlineDB.select("table_name", {
+        where: {
+            "task_id": '37675849834616860',
+        },
+        columns: ['author', 'title'],
+        orders: [['id', 'desc']],
+        limit: 3,
     })
     console.log(data)
 }
@@ -25,17 +25,17 @@ var execSQL = async function() {
 // update
 var updateData = async function() {
     await onlineDB.update("table_name", {
-        config : "Some Config"
-        status : 5,
-        name : "your name",
+        config: "Some Config"
+        status: 5,
+        name: "your name",
     }, {
-        where : {
-            id : someID
+        where: {
+            id: someID
         }
     })
 }
 db.delete('table_name', {
-    id : 1022
+    id: 1022
 })
 /// [ali-rds]
 
@@ -43,11 +43,11 @@ db.delete('table_name', {
 /// [read-file]
 var fs = require("fs")
 module.exports = {
-    readFileAsJSON : function(fileName) {
+    readFileAsJSON: function(fileName) {
         let data = fs.readFileSync(fileName)
         return JSON.parse(data.toString())
     },
-    readFileAsString : function(fileName) {
+    readFileAsString: function(fileName) {
         let data = fs.readFileSync(fileName)
         return data.toString()
     }
@@ -58,50 +58,50 @@ module.exports = {
 /// [excel-lib]
 var xlsx = require('node-xlsx');
 module.exports = {
-	readFileColumn : function(fileName, columnIndex) {
-	    var sheets = xlsx.parse(fileName);//获取到所有sheets
-	    let obj = {}
-	    let list = []
-	    for(var rowId in sheets[0]['data']){
-	        if(rowId > 0) {
-	            var value =sheets[0]['data'][rowId][columnIndex];
-	            if(obj[value] == undefined) {
-	                obj[value] = true
-	                list.push(value)
-	            }
-	        }
-	        
-	    }
-	    return list
-	},
-	readFile : function(fileName) {
-	    var sheets = xlsx.parse(fileName);//获取到所有sheets
-	    let obj = {}
-	    let list = []
-	    for(var rowId in sheets[0]['data']){
-	        if(rowId > 0) {
-	            var value =sheets[0]['data'][rowId]
-	            if(value.length > 0) {
-	            	list.push(value)
-	            }
-	        }
-	    }
-	    return list
-	}
+    readFileColumn: function(fileName, columnIndex) {
+        var sheets = xlsx.parse(fileName);//获取到所有sheets
+        let obj = {}
+        let list = []
+        for (var rowId in sheets[0]['data']) {
+            if (rowId > 0) {
+                var value = sheets[0]['data'][rowId][columnIndex];
+                if (obj[value] == undefined) {
+                    obj[value] = true
+                    list.push(value)
+                }
+            }
+
+        }
+        return list
+    },
+    readFile: function(fileName) {
+        var sheets = xlsx.parse(fileName);//获取到所有sheets
+        let obj = {}
+        let list = []
+        for (var rowId in sheets[0]['data']) {
+            if (rowId > 0) {
+                var value = sheets[0]['data'][rowId]
+                if (value.length > 0) {
+                    list.push(value)
+                }
+            }
+        }
+        return list
+    }
 }
 
 // 写Excel
 var writeExcel = async () => {
     let xlsxData = []
     xlsxData.push({
-        "name" : 'sheet1',
-        "data" : [
+        "name": 'sheet1',
+        "data": [
             ["abbb", "sss", "sss"]
         ]
     })
     xlsxData.push({
-        "name" : 'sheet2',
-        "data" : [
+        "name": 'sheet2',
+        "data": [
             ["abbb", "sss", "sss"]
         ]
     })
@@ -152,3 +152,20 @@ async function doUploadFile(file) {
     })
 }
 /// [fetch]
+
+
+/// [axios-bigint]
+// import = json-bigint-browser.min.js
+axios.defaults.transformResponse = [function(data) {
+    try {
+        let result = JSONbig.parse(data)
+        console.log(result)
+        return result
+    } catch (err) {
+        console.log(err)
+        return {
+            data
+        }
+    }
+}]
+/// [axios-bigint]
