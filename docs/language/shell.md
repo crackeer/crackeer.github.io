@@ -19,7 +19,7 @@ done
 
 ```sh
 sed -i "s/原内容/新内容/g" `grep 原内容 -rl 所在目录`
-``` 
+```
 
 **注：千万注意这个符号【`】，是【最左上角】那个符号不是单引号**
 
@@ -49,7 +49,7 @@ for item in $list
 [Unit]
 Description=XXXX
 Documentation=http://nginx.org/en/docs/
- 
+
 [Service]
 Type=simple
 PIDFile=/run/xxx.pid
@@ -57,7 +57,7 @@ ExecStart=/root/.xxx.sh start
 ExecReload=/bin/kill -s HUP $MAINPID
 ExecStop=/bin/kill -s QUIT $MAINPID
 PrivateTmp=true
- 
+
 [Install]
 WantedBy=multi-user.target
 ```
@@ -70,12 +70,12 @@ WantedBy=multi-user.target
 
 ```sh
 #!/bin/bash
-string="hello,shell,split,test"  
-array=(${string//,/ }) 
+string="hello,shell,split,test"
+array=(${string//,/ })
 for var in ${array[@]}
 do
    echo $var
-done 
+done
 
 ```
 
@@ -83,7 +83,7 @@ done
 
 ```sh
 #!/bin/bash
-string="hello,shell,split,test"  
+string="hello,shell,split,test"
 #对IFS变量 进行替换处理
 OLD_IFS="$IFS"
 IFS=","
@@ -100,14 +100,14 @@ done
 
 ```sh
 #!/bin/bash
- 
-string="hello,shell,split,test"  
-array=(`echo $string | tr ',' ' '` )  
- 
+
+string="hello,shell,split,test"
+array=(`echo $string | tr ',' ' '` )
+
 for var in ${array[@]}
 do
    echo $var
-done 
+done
 
 ```
 
@@ -116,13 +116,13 @@ done
 > https://www.cnblogs.com/linux985/p/14866985.html
 
 ```sh
-OLD_IFS="$IFS" 
-IFS="," 
-arr=($a) 
-IFS="$OLD_IFS" 
-for s in ${arr[@]} 
-do 
-    echo "$s" 
+OLD_IFS="$IFS"
+IFS=","
+arr=($a)
+IFS="$OLD_IFS"
+for s in ${arr[@]}
+do
+    echo "$s"
 done
 ```
 
@@ -130,6 +130,9 @@ done
 
 ```sh
  ssh -vT git@github.com
- ```
+```
 
-
+## 获取脚本所在路径
+```sh
+ROOT=$(dirname $(readlink -f "$0"))
+```
