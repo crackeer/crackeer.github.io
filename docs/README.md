@@ -1,9 +1,9 @@
-## 介绍
+# 介绍
 
 一个热爱编程、热爱生活的人，:mailbox:seeku2u@outlook.com
 
 
-## Works
+# Works
 <!-- tabs:start -->
 
 #### **Golang**
@@ -23,7 +23,7 @@
 
 <!-- tabs:end -->
 
-## Note
+# Note
 
 - [docsify折腾之路](/note/docsify.md)
 - [Steve Jobs's words](/note/from-steve-jobs.md)
