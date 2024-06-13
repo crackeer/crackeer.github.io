@@ -1,5 +1,3 @@
-# Let's Rust
-
 ## 一些个人项目
 
 - tauri写的一个简单的markdown编辑器：https://github.com/crackeer/tauri-markdown

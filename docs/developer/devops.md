@@ -1,6 +1,4 @@
-# shell命令使用
-
-## shell中解析json: `jq`
+## jq解析json
 - `jq -r .data.message`，可以去掉message外层的双引号
 
 ## curl静默模式
@@ -136,3 +134,18 @@ done
 ```sh
 ROOT=$(dirname $(readlink -f "$0"))
 ```
+
+
+## Docker清理
+
+- https://post.smzdm.com/p/an3l7zg7/
+
+## Docker使用
+
+- 一份Dockerfile参考
+
+[dockerfile](./code/dockerfile ':include :type=code dockerfile')
+
+- 镜像跨平台编译
+
+[docker-build](./code/docker_build.sh ':include :type=code')

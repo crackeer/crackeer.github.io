@@ -1,5 +1,3 @@
-# MySQL
-
 ## 删除数据之后碎片整理
 > https://blog.csdn.net/m0_54853503/article/details/126075896
 

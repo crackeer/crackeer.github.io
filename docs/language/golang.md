@@ -1,6 +1,3 @@
-
-# Gopher人的世界
-
 ## 有趣的知识点
 * https://blog.csdn.net/qq_43716830/article/details/124405506
 
@@ -114,3 +111,7 @@ import (
 
 db, err := gorm.Open(sqlite.Open("gorm.db"), &gorm.Config{})
 ```
+
+## go http请求代理
+
+- https://www.php.cn/faq/535203.html
