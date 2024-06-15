@@ -26,3 +26,13 @@
 ## axios的bigint
 
 [axios-bigint.js](./code/nodejs.js ':include :type=code :fragment=axios-bigint')
+
+## 两行css让table头吸顶
+
+```css
+thead {
+  position: sticky;
+  top: 0;
+  background: #f8f8f8;
+}
+```

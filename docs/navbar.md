@@ -2,7 +2,7 @@
 * [书签](/bookmark.md)
 * [Golang](/language/golang.md)
 * [Rust](/language/rust.md)
-* [NodeJS](/language/nodejs.md)
+* [前端](/language/nodejs.md)
 * [运维](/developer/devops.md)
 * [经验](/developer/anything.md)
   * [SQLite](/developer/sqlite.md)
