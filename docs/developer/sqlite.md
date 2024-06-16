@@ -1,5 +1,6 @@
-# SQLite冲啊
+## SQLite速查表
 
+> https://geektutu.com/post/cheat-sheet-sqlite.html
 
 ## SQLite使用
 
