@@ -1,4 +1,5 @@
 ## jq解析json
+
 - `jq -r .data.message`，可以去掉message外层的双引号
 
 ## curl静默模式

@@ -1,8 +1,3 @@
-
-# 树莓派
-
-> 个人的微型电脑，可以折腾着玩儿
-
 ## 设置静态IP
 - https://www.cnblogs.com/lfri/p/12115211.html
 
