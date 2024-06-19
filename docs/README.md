@@ -13,7 +13,7 @@
 - [纯Go版的业务网关，解决各类签名问题](https://github.com/crackeer/goaway)
 - [将MySQL常见查询服务转为HTTP服务](https://github.com/crackeer/mysql2http)
 - [caddy扩展，增加fileserver文件增删能力](https://github.com/crackeer/caddy-upload2dir)
-- [web端：markdown/书签/代码管理，前后端分离](https://github.com/crackeer/markdown-web)
+- [go+vue+bootstrap3](https://github.com/crackeer/go-simple-web)
 
 #### **Rust**
 
@@ -21,7 +21,7 @@
 
 #### **Javascript**
 
-- [NextJS简版的admin模板](https://github.com/crackeer/nextjs-framework)
+- [NextJS+AntDesign5后台模板](https://github.com/crackeer/nextjs-antd-template)
 
 <!-- tabs:end -->
 
