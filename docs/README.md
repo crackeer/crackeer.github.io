@@ -1,89 +1,99 @@
-## 介绍
+## 常用工具
 
-:boy: 1993年 `/` 男 `/` 湖北 `/` 2011长安大学 · 软件工程
+- [常用色彩搭配](http://tool.c7sky.com/webcolor/)
+- [创建好看的代码图片](https://ray.so/)
+- [redis命令参考](http://doc.redisfans.com/)
+- [docsify](https://docsify.js.org/)
+- [Git奇技淫巧](https://github.com/521xueweihan/git-tips)
+- [一些开发者工具](https://dev.com.cn/tools)
+- [路过图床](https://imgse.com/)
+- [抓鱼鸭](https://www.zhuayuya.com/)
+- [寻找特殊字符](https://copychar.cc/)
+- [牛掰工具箱](https://10015.io/)
+- [数字计算器](https://numpad.io/docs)
+- [免费SVG生成](https://iconce.com/)
+- [github的IP查询](https://sites.ipaddress.com/www.github.com/)
+- [NetBSD](https://www.netbsd.org/)
+- [APK下载](https://en.aptoide.com/)
+- [Zed编辑器](https://zed.dev/)
+- [HelloGithub](https://hellogithub.com/periodical)
 
-:mailbox: 15611103288 `/` seeku2u@outlook.com
+## JSON工具
 
+- [JSON对比](https://jsondiff.org/)
+- [JSON转代码(go)](https://app.quicktype.io)
+- [JSON转Excel](http://www.esjson.com/jsontoexcel.html)
+- [JSON转Go结构体](https://mholt.github.io/json-to-go/)
+- [json在线编辑器](https://crackeer.github.io/page/json.html)
+- [JSON格式化/验证/编辑](https://www.jsont.run/)
+- [JSON在线解析](https://www.json.cn/)
+- [JSON转](https://tableconvert.com/zh-cn/json-to-markdown)
 
-## Works
-<!-- tabs:start -->
+## ChatGPT
 
-#### **Golang**
+- [文心一言](https://yiyan.baidu.com/)
+- [free2gpt](https://chato.free2gpt.xyz/) 
+- [ChatGPT大全](https://codenews.cc/ai)
+- [微软copilot](https://copilot.microsoft.com/)
+- [Coze](https://www.coze.com/)
+- [Start Chatgot](https://start.chatgot.io/)
+- [Perplexity](https://www.perplexity.ai/)
+- [huggingface](https://huggingface.co/)
 
-- [纯Go版的业务网关，解决各类签名问题](https://github.com/crackeer/goaway)
-- [将MySQL常见查询服务转为HTTP服务](https://github.com/crackeer/mysql2http)
-- [caddy扩展，增加fileserver文件增删能力](https://github.com/crackeer/caddy-upload2dir)
-- [go+vue+bootstrap3](https://github.com/crackeer/go-simple-web)
+## Golang
 
-#### **Rust**
+- [awesome-go](https://awesome-go.com)
+- [SQL转结构体](https://www.devtool.com/sql2go.html)
+- [curl请求转go代码](https://mholt.github.io/curl-to-go/)
+- [模板引擎pongo2](http://github.com/flosch/pongo2)
+- [模板引擎render](https://github.com/unrolled/render)
+- [data验证](https://github.com/gookit/validate)
+- [Go语言设计与实现](https://draveness.me/golang/)
+- [Go程序员面试笔试宝典](https://github.com/qcrao/Go-Questions)
+- [源码分析 + 知识点](https://github.com/cch123/golang-notes)
+- [Go语言中文网](https://studygolang.com/)
+- [Run Go Code](https://go.dev/play/)
 
-- [学习Rust+Tauri](https://github.com/crackeer/tauri-tool)
+## Rust
 
-#### **Javascript**
-
-- [NextJS+AntDesign5后台模板](https://github.com/crackeer/nextjs-antd-template)
-
-<!-- tabs:end -->
-
-## 工作经历
-
-<!-- tabs:start -->
-
-#### **贝壳 · 如视 / Golang / 4年**
-
-**2020.07 - 今**
-
-> 负责基础组件APPGateway的设计、开发、
-> 参与现有项目维护，不断提升服务性能
-> 参与调研新业务产品需求的技术方案，确立最优方案，并实施落地
-
-**项目1：作者 · APPGateway · golang / 动态路由 / 统一验签 / 缓存 / IP频控**
-
-- 支撑业务：如视开放平台OpenAPI、内部统一网关
-- 路由数量：注册路由1000+，注册服务200+，内部API调用
-- 业务量：日请求量2亿次，Max QPS：3000
-
-**项目2：作者 · 任务调度平台 · golang / 任务编排 / 消息**
-
-- 支撑业务：未来家AI设计方案产出、VR生产流程、本地化部署基础服务
-- 任务量：任务类型40+，日处理任务量2w+
-- 特点1：OpenAPI任务创建、查询、任务统计、Callback、任务重试
-- 特点2：一定程度的任务编排能力、消息通知订阅
-
-#### **微博 · 广告 / PHP · Golang / 2年**
-
-**2018.04 ~ 2020.07**
-
-> 介绍：`微博广告业abtest平台，提高广告投放效率
-- 技术栈：php-lavavel，Golang/Gin，GROM
-- 后端重构，php迁移Golang，重写接口100+
-- 实验放量精细化，最大化降低由于实验给广告投放带来的经济损失
-
-
-#### **赶集 · 斗米 / PHP / 2年**
-
-**2015.07 ~ 2018.04**
-
-> 介绍：房产无线 / 斗米招聘（独立分拆）
-- 技术栈：php、lavavel，MySQL、Redis
-- 维护房产无线端业务正常运行+
-- 商户招聘管理后台商业化
-
-<!-- tabs:end -->
+- [语言圣经](https://course.rs/about-book.html)
+- [Rust标准库](https://doc.rust-lang.org/std/index.html)
+- [TAURI.APP](https://tauri.app/zh-cn/)
+- [AwesomeApp](https://awesomeapp.org/)
+- [Rust语言中文社区](https://rustcc.cn/)
+- [Rust Library](https://docs.rs/)
+- [发布自己的crate](https://zhuanlan.zhihu.com/p/477390034)
 
 
-## 专业技能
+## NodeJS.前端.UI
 
-- Golang 4年工作经验，有大流量、高并发服务实战经验
-- 有大型系统的重构经验、以及语言迁移经验
-- 熟悉Golang标准库，以及常见的性能优化
-- 熟悉Gin / GORM / Kafka / Bleve等优秀开源库使用
-- 熟悉MySQL、Redis的使用，并了解相关运行原理和调优机制，实战经验丰富
-- 熟悉kafka消息队列，有实际业务应用经验
+- [bootstrap@v3](https://v3.bootcss.com/)
+- [字节跳动@arco.design](https://arco.design/)
+- [阿里@ant.design](https://ant.design/index-cn)
+- [Astro](https://astro.build/)
+- [一个使用Rust的博客构建工具](https://rspress.dev/)
+- [hugo播客构建工具](https://gohugo.io/)
+- [markdoc挺好看的样子](https://markdoc.dev/)
+- [字节的markdown编辑器](https://github.com/bytedance/bytemd)
+- [微软的代码编辑器](https://microsoft.github.io/monaco-editor/)
+- [NextJS官网](https://www.nextjs.cn/)
 
-## Note
+## 有趣博客
 
-- [docsify折腾之路](/note/docsify.md)
-- [Steve Jobs's words](/note/from-steve-jobs.md)
-- [practice yourself](/note/practice.md)
-- [how to make money](/note/make-money.md)
+- [No Headback](https://xargin.com)
+- [阮一峰博客](https://www.ruanyifeng.com/)
+- [TW93](https://tw93.fun/)
+- [一个设计者](https://paulstamatiou.com/)
+- [missuo](https://missuo.me/)
+
+## BBS
+
+- [武汉·过早客](https://www.guozaoke.com/)
+- [水木社区](https://www.newsmth.net/)
+- [V2EX](https://v2ex.com/)
+
+
+## English
+
+- [How to set up web based ssh](https://linuxiac.com/how-to-set-up-web-based-ssh/)
+- [Movie](https://www.watching.zone/)

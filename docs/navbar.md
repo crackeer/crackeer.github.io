@@ -1,5 +1,4 @@
-* [首页](/README.md)
-* [书签](/bookmark.md)
+* [书签](/README.md)
 * [Golang](/language/golang.md)
 * [Rust](/language/rust.md)
 * [前端](/language/nodejs.md)
