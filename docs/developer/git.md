@@ -6,3 +6,4 @@ git rev-list --all | xargs -rL1 git ls-tree -r --long | sort -uk3 | sort -rnk4 |
 git filter-branch --tree-filter "rm -f {filepath}" -- --all
 git push -f --all
 ```
+

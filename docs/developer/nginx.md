@@ -1,4 +1,4 @@
-## nextjs静态化部署 nginx 配置
+## NextJS静态化部署
 
 ```nginx
 server {

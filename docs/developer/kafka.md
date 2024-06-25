@@ -78,8 +78,6 @@ kafka 中的每个 partition 中的消息在写入时都是有序的，而且单
 
 所以对于 Rebalance 来说，Coordinator 起着至关重要的作用
 
-##
-
 ## kafka 如何实现高吞吐
 
 - 顺序读写；
@@ -92,11 +90,7 @@ kafka 中的每个 partition 中的消息在写入时都是有序的，而且单
 
 > [Kafka](https://www.iteblog.com/archives/tag/kafka/)通过多副本复制技术，实现 kafka 集群的高可用和稳定性。每个 partition 都会有多个数据副本，每个副本分别存在于不同的 broker。所有的数据副本中，有一个数据副本为 Leader，其他的数据副本为 follower。在 kafka 集群内部，所有的数据副本皆采用自动化的方式进行管理，并且确保所有的数据副本的数据皆保持同步状态。不论是 producer 端还是 consumer 端发往 partition 的请求，皆通过 leader 数据副本所在的 broker 进行处理。当 broker 发生故障时，对于 leader 数据副本在该 broker 的所有 partition 将会变得暂时不可用。Kafka 将会自动在其他数据副本中选择出一个 leader，用于接收客户端的请求。这个过程由 kafka controller 节点 broker 自动完成，主要是从 Zookeeper 读取和修改受影响 partition 的一些元数据信息。在当前的 kafka 版本实现中，对于 zookeeper 的所有操作都是由 kafka controller 来完成的（serially 的方式）。
 
-
-
 > 在通常情况下，当一个 broker 有计划地停止服务时，那么 controller 会在服务停止之前，将该 broker 上的所有 leader 一个个地移走。由于单个 leader 的移动时间大约只需要花费几毫秒，因此从客户层面看，有计划的服务停机只会导致系统在很小时间窗口中不可用。（注：在有计划地停机时，系统每一个时间窗口只会转移一个 leader，其他 leader 皆处于可用状态。）
-
-
 
 > 然而，当 broker 非计划地停止服务时（例如，kill -9 方式)，系统的不可用时间窗口将会与受影响的 partition 数量有关。假如，一个 2 节点的 kafka 集群中存在 2000 个 partition，每个 partition 拥有 2 个数据副本。当其中一个 broker 非计划地宕机，所有 1000 个 partition 同时变得不可用。假设每一个 partition 恢复时间是 5ms，那么 1000 个 partition 的恢复时间将会花费 5 秒钟。因此，在这种情况下，用户将会观察到系统存在 5 秒钟的不可用时间窗口。
 

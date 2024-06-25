@@ -24,13 +24,11 @@
 
 > https://zhuanlan.zhihu.com/p/488771839
 
-## B+树怎样的
-
 ## MySQL 事务隔离级别
 
 > https://www.cnblogs.com/wyaokai/p/10921323.html
 
-### MVCC 多版本并发控制
+## MVCC 多版本并发控制
 
 > https://www.cnblogs.com/Jason-Born/p/7878401.html
 

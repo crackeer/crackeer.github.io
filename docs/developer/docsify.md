@@ -1,7 +1,6 @@
 # Docsify
 
-大道至简，第一次看到这个完全由前端渲染的文档生成工具，就喜欢上了，配合Github Pages，简直完美
-这是它的官网：https://docsify.js.org/#/
+大道至简，第一次看到这个完全由前端渲染的文档生成工具，就喜欢上了，配合Github Pages，简直完美,这是它的官网：https://docsify.js.org/#/
 
 ## 一、用到的JS+CSS列表如下
 

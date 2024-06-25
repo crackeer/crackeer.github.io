@@ -40,4 +40,4 @@ if [ $temp -gt 39000 ] ; then
 else
     echo 1 > /sys/class/gpio/gpio23/value 
 fi
-``
+```

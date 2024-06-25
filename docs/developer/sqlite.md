@@ -1,10 +1,9 @@
 ## SQLite速查表
 
 > https://geektutu.com/post/cheat-sheet-sqlite.html
+> SQLite教程：https://www.runoob.com/sqlite/sqlite-tutorial.html
 
 ## SQLite使用
-
-> SQLite教程：https://www.runoob.com/sqlite/sqlite-tutorial.html
 
 - 删除Table
 
@@ -31,6 +30,4 @@ ALTER TABLE UserInfo ADD COLUMN Sex Text NOT NULL;
 PRAGMA TABLE_INFO (UserInfo);
 ```
 
-- 删除表字段
-
-> https://blog.csdn.net/gyymen/article/details/53534267
+- 删除表字段:https://blog.csdn.net/gyymen/article/details/53534267
