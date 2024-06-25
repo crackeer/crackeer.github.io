@@ -96,4 +96,11 @@
 ## English
 
 - [How to set up web based ssh](https://linuxiac.com/how-to-set-up-web-based-ssh/)
-- [Movie](https://www.watching.zone/)
+- [英语Movie](https://www.watching.zone/)
+- [不太灵影视](https://www.2bt0.com/)
+- [i have no tv 记录片](https://ihavenotv.com/)
+- [Sidewalk+Garden](https://zachklein.com/Sidewalk+Garden)
+
+
+
+
