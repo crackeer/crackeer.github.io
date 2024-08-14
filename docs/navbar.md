@@ -1,7 +1,6 @@
 * [书签](/bookmark.md)
 * [Golang](/language/golang.md)
 * [Rust](/language/rust.md)
-* [前端](/language/nodejs.md)
 * [经验](/developer/devops.md)
   * [Caddy](/developer/caddy.md)
   * [Nginx](/developer/nginx.md)
