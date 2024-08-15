@@ -2,7 +2,6 @@
 * [Golang](/language/golang.md)
 * [Rust](/language/rust.md)
 * [经验](/developer/devops.md)
-  * [SQLite](/developer/sqlite.md)
   * [Redis](/developer/redis.md)
   * [MySQL](/developer/mysql.md)
   * [Kafka](/developer/kafka.md)
