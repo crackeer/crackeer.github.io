@@ -11,4 +11,11 @@
 **在线使用地址**：[https://jstool.pages.dev/json](https://jstool.pages.dev/json)
 
 
+## 【rust】tauri写的一个简单的rkdown编辑器
+
+**功能简介**
+
+- markdown编辑器，支持图片上传
+
+**在线使用地址**：https://github.com/crackeer/tauri-markdown
 
