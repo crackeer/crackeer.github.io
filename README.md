@@ -48,3 +48,7 @@
 
 **github地址**：https://github.com/crackeer/tauri-markdown
 
+## 【rust】远程ssh管理文件
+
+**github地址**： https://github.com/crackeer/ssh-server-manager
+
