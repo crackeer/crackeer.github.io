@@ -2,32 +2,8 @@
 
 :boy: 1993年 `/` 男 `/` 湖北 `/` 2011长安大学 · 软件工程
 
-:mailbox: 15611103288 `/` seeku2u@outlook.com
+:mailbox:  seeku2u@outlook.com
 
-
-## Works
-<!-- tabs:start -->
-
-#### **Golang**
-
-- [纯Go版的业务网关，解决各类签名问题](https://github.com/crackeer/goaway)
-- [将MySQL常见查询服务转为HTTP服务](https://github.com/crackeer/mysql2http)
-- [caddy扩展，增加fileserver文件增删能力](https://github.com/crackeer/caddy-upload2dir)
-- [go+vue+bootstrap3](https://github.com/crackeer/go-simple-web)
-
-#### **Rust**
-
-- [学习Rust+Tauri](https://github.com/crackeer/tauri-tool)
-
-#### **Javascript**
-
-- [NextJS+AntDesign5后台模板](https://github.com/crackeer/nextjs-antd-template)
-
-<!-- tabs:end -->
-
-## 工作经历
-
-<!-- tabs:start -->
 
 #### **贝壳 · 如视 / Golang / 4年**
 
@@ -80,7 +56,3 @@
 - 熟悉Gin / GORM / Kafka / Bleve等优秀开源库使用
 - 熟悉MySQL、Redis的使用，并了解相关运行原理和调优机制，实战经验丰富
 - 熟悉kafka消息队列，有实际业务应用经验
-
-## Note
-
-- [docsify折腾之路](/note/docsify.md)

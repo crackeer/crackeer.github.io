@@ -1,6 +1,0 @@
-* [书签](/bookmark.md)
-* [经验](/developer/devops.md)
-  * [Redis](/developer/redis.md)
-  * [MySQL](/developer/mysql.md)
-  * [Kafka](/developer/kafka.md)
-  * [算法](/developer/algo.md)
