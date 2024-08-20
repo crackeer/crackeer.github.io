@@ -1,34 +1,4 @@
 
-## 参考文档
-
-- https://labuladong.gitee.io/algo/zhun-bei-g-8db77/
-
-## 二叉树
-
-<!-- tabs:start -->
-
-#### **二叉树构建**
-
-[build_tree](./code/tree.go ':include :type=code :fragment=build_tree')
-
-#### **层序遍历**
-
-[print_tree](./code/tree.go ':include :type=code :fragment=print_tree')
-
-#### **前序遍历**
-
-[pre_traverse](./code/tree.go ':include :type=code :fragment=pre_traverse')
-
-#### **中序遍历**
-
-[middle_traverse](./code/tree.go ':include :type=code :fragment=middle_traverse')
-
-#### **后序遍历**
-
-[back_traverse](./code/tree.go ':include :type=code :fragment=back_traverse')
-
-<!-- tabs:end -->
-
 
 ## 链表
 

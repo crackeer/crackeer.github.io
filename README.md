@@ -1,4 +1,6 @@
-## 【Golang】app-gateway服务网关
+# Golang
+
+## 1. app-gateway服务网关
 
 **功能简介**
 - 业务网关，解决各种API服务的签名问题
@@ -7,7 +9,7 @@
 
 **github地址**：https://github.com/crackeer/goaway
 
-## 【Golang】将MySQL转为HTTP服务
+## 2.将MySQL转为HTTP服务
 
 **github地址**：https://github.com/crackeer/mysql2http
 
@@ -15,7 +17,7 @@
 
 **github地址**：https://github.com/crackeer/caddy-upload2dir
 
-## 【Golang】使用`go`+`vue2.0`+`bootstrap3`快速构建页面
+## 3. 使用`go`+`vue2.0`+`bootstrap3`快速构建页面
 
 **功能简介**
 
@@ -24,7 +26,8 @@
 
 **github地址**：https://github.com/crackeer/go-simple-web
 
-## 【Web】JSON编辑器
+# JavaScript
+## 1. web版JSON编辑器
 
 **功能简介**
 
@@ -36,11 +39,12 @@
 
 **在线使用地址**：[https://jstool.pages.dev/json](https://jstool.pages.dev/json)
 
-## 【NextJS】NextJS+AntDesign5后台模板
+## 2.NextJS+AntDesign5后台模板
 
 **github地址**：https://github.com/crackeer/nextjs-antd-template
 
-## 【rust】tauri写的一个简单的rkdown编辑器
+# Rust
+## 1. tauri写的一个简单的markdown编辑器
 
 **功能简介**
 
@@ -48,7 +52,7 @@
 
 **github地址**：https://github.com/crackeer/tauri-markdown
 
-## 【rust】远程ssh管理文件
+## 2. 远程ssh管理文件
 
 **github地址**： https://github.com/crackeer/ssh-server-manager
 
