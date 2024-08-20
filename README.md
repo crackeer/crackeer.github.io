@@ -13,11 +13,11 @@
 
 **github地址**：https://github.com/crackeer/mysql2http
 
-## 【Golang】caddy扩展，增加fileserver文件增删能力
+## 3. caddy扩展，增加file server文件增删能力
 
 **github地址**：https://github.com/crackeer/caddy-upload2dir
 
-## 3. 使用`go`+`vue2.0`+`bootstrap3`快速构建页面
+## 4. 使用`go`+`vue2.0`+`bootstrap3`快速构建页面
 
 **功能简介**
 
