@@ -46,3 +46,7 @@ table tr,
 table tbody {
     border: 1px solid #CCCCCC!important;
 }
+
+.content li {
+    padding: 0 0 7px 0!important;
+}

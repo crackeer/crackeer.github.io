@@ -26,7 +26,12 @@
 
 **github地址**：https://github.com/crackeer/go-simple-web
 
+## 5. caddy扩展，增加数据库（MySQL/SQLite）CURD能力
+
+**github地址**：https://github.com/crackeer/caddy-database
+
 # JavaScript
+
 ## 1. web版JSON编辑器
 
 **功能简介**
@@ -44,6 +49,7 @@
 **github地址**：https://github.com/crackeer/nextjs-antd-template
 
 # Rust
+
 ## 1. tauri写的一个简单的markdown编辑器
 
 **功能简介**
@@ -55,4 +61,12 @@
 ## 2. 远程ssh管理文件
 
 **github地址**： https://github.com/crackeer/ssh-server-manager
+
+## 3. 纯rust写的业务网关
+
+**功能简介**
+
+- 功能参照`golang/app-gateway服务网关`
+
+**github地址**：https://github.com/crackeer/rust-gateway
 
