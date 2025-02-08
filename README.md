@@ -2,12 +2,12 @@
 
 ## 1. app-gateway服务网关
 
-- 功能介绍
-  - 业务网关，解决各种API服务的签名问题
-  - 自定义路由到其他API
-  - 自定义拦截器，用于鉴权
+**功能介绍**
+- 业务网关，解决各种API服务的签名问题
+- 自定义路由到其他API
+- 自定义拦截器，用于鉴权
 
-- github地址：https://github.com/crackeer/goaway
+**github地址：** https://github.com/crackeer/goaway
 
 ## 2.将MySQL转为HTTP服务
 
@@ -30,30 +30,15 @@
 
 **github地址**：https://github.com/crackeer/caddy-database
 
-# JavaScript
-
-## 1. web版JSON编辑器
-
-**功能简介**
-
-- 校验JSON格式是否正确
-- JSON转Golang的struct
-- 保存到本地
-- 复制到剪贴板
-- JSON转义
-
-**在线使用地址**：[https://jstool.pages.dev/json](https://jstool.pages.dev/json)
-
-## 2.NextJS+AntDesign5后台模板
-
-**github地址**：https://github.com/crackeer/nextjs-antd-template
 
 # Rust
 
 ## 1. JSON编辑器
 
-- github地址：https://github.com/crackeer/tauri-json
-- 相关截图
+**github地址：** https://github.com/crackeer/tauri-json
+**相关截图**
+
+![](images/2025-02-08-08-12-03.png)
 
 ## 2. 远程ssh管理文件
 
