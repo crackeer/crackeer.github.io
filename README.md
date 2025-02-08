@@ -2,12 +2,12 @@
 
 ## 1. app-gateway服务网关
 
-**功能简介**
-- 业务网关，解决各种API服务的签名问题
-- 自定义路由到其他API
-- 自定义拦截器，用于鉴权
+- 功能介绍
+  - 业务网关，解决各种API服务的签名问题
+  - 自定义路由到其他API
+  - 自定义拦截器，用于鉴权
 
-**github地址**：https://github.com/crackeer/goaway
+- github地址：https://github.com/crackeer/goaway
 
 ## 2.将MySQL转为HTTP服务
 
@@ -50,13 +50,10 @@
 
 # Rust
 
-## 1. tauri写的一个简单的markdown编辑器
+## 1. JSON编辑器
 
-**功能简介**
-
-- markdown编辑器，支持图片上传
-
-**github地址**：https://github.com/crackeer/tauri-markdown
+- github地址：https://github.com/crackeer/tauri-json
+- 相关截图
 
 ## 2. 远程ssh管理文件
 
