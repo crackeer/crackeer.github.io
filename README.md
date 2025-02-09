@@ -1,6 +1,6 @@
 # Golang
 
-## 1. app-gateway服务网关
+## 1. app-gateway
 
 **功能介绍**
 - 业务网关，解决各种API服务的签名问题
@@ -9,26 +9,23 @@
 
 **github地址：** https://github.com/crackeer/goaway
 
-## 2.将MySQL转为HTTP服务
+## 2.MySQL转HTTP
+
+**功能简介**
+- 提供HTTP接口，用于查询MySQL
 
 **github地址**：https://github.com/crackeer/mysql2http
 
-## 3. caddy扩展，增加file server文件增删能力
 
-**github地址**：https://github.com/crackeer/caddy-upload2dir
-
-## 4. 使用`go`+`vue2.0`+`bootstrap3`快速构建页面
+## 3. go-simple-web
 
 **功能简介**
 
+- gin/vue2.0/bootstrap3
 - 前后端分离，前端页面无需build
 - 通用的页面导航，只需要专注写页面
 
 **github地址**：https://github.com/crackeer/go-simple-web
-
-## 5. caddy扩展，增加数据库（MySQL/SQLite）CURD能力
-
-**github地址**：https://github.com/crackeer/caddy-database
 
 
 # Rust
@@ -36,15 +33,14 @@
 ## 1. JSON编辑器
 
 **github地址：** https://github.com/crackeer/tauri-json
+
 **相关截图**
 
-![](images/2025-02-08-08-12-03.png)
+![2025-02-08-08-15-40.png](https://i.ejiaimg.cn/220/2025/02/09/67a7ef250e860.png)
 
-## 2. 远程ssh管理文件
 
-**github地址**： https://github.com/crackeer/ssh-server-manager
 
-## 3. 纯rust写的业务网关
+## 2. rust-gateway
 
 **功能简介**
 
