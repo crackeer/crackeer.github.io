@@ -2,4 +2,4 @@
 
 ## Rust
 
-- [rust/lazy-static.md](使用azy-static修改获取全局变量)
+- [使用lazy-static修改获取全局变量](rust/lazy-static.md)
