@@ -1,15 +1,11 @@
 # 热站
 
-- [JSON编辑](/json)
-- [二维码生成](/qrcode)
-- [运行JS代码](/jsrun)
-- [Shell编程](/shell)
 - [Github](https://github.com/)
 - [HelloGithub月技术周刊](https://hellogithub.com/periodical)
-- [阮一峰博客](https://www.ruanyifeng.com/ red)
+- [阮一峰博客](https://www.ruanyifeng.com/)
 - [免费图床ossking](https://www.ossking.com/)
 - [icebeer](https://www.icebeer.top/)
-- [记录](https://lhblog.pages.dev/ red)
+- [记录](https://lhblog.pages.dev/)
 - [xda-developers](https://www.xda-developers.com/)
 
 # 工具&AI
@@ -29,7 +25,7 @@
 - [程序员好用的画图工具](https://honzaap.github.io/Systemizer/)
 - [YT视频下载](https://youtube.iiilab.com/)
 - [rawweb探索独立站点](https://rawweb.org/)
-- [美化截图](https://xnapper.com/app red)
+- [美化截图](https://xnapper.com/app)
 - [Markdown转海报](https://readpo.com/en/poster)
 - [电影截图](https://film-grab.com/)
 
@@ -44,7 +40,7 @@
 - [awesome-go.com](https://awesome-go.com/)
 - [JSON对比工具](https://jsondiff.org/)
 - [JSON互转Excel](http://www.esjson.com/jsontoexcel.html)
-- [wails客户端Golang](https://wails.io/ red)
+- [wails客户端Golang](https://wails.io/)
 
 # Rust
 
@@ -62,10 +58,10 @@
 - [信息差—独立开发者出海周刊](https://gapis.money/)
 - [技术极简主义：一切皆用Postgres](https://www.modb.pro/db/1759393455994392576)
 - [高质量Music下载](https://tools.liumingye.cn/music/#/)
-- [凡人修仙传](https://vidhub3.top/vodplay/48144-1-1.html red)
-- [镇魂街](https://vidhub1.cc/vodplay/254485-1-1.html red)
+- [凡人修仙传](https://vidhub3.top/vodplay/48144-1-1.html)
+- [镇魂街](https://vidhub1.cc/vodplay/254485-1-1.html)
 - [豆瓣啊](https://douban.com/)
-- [v2ex](https://v2ex.com/ red)
+- [v2ex](https://v2ex.com/)
 - [过早客](https://www.guozaoke.com/)
 - [迪卡](https://dizkaz.com/)
 - [值得一读的技术博客](https://daily-blog.chlinlearn.top/blogs/1)
