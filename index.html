@@ -19,6 +19,7 @@
       loadSidebar: 'sidebar.md',
       subMaxLevel: 1,
       auto2top: true,
+      autoHeader: true,
       alias: {
         '/.*/_sidebar.md': '/_sidebar.md',
       },
@@ -34,38 +35,87 @@
         theme: 'classic', // default
         tabComments: true,      // default
         tabHeadings: true       // default
+      },
+      themeColor: '#0066CC',
+      hideCode: { // 代码隐藏配置
+        scroll: false, // Enable scrolling
+        height: 500 // Max height，超过该高度，则隐藏
       }
     }
   </script>
   <!-- Docsify v4 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify@^5.0.0-rc"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify@^5.0.0-rc/dist/plugins/search.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-go.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-textile.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-ini.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-javascript.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-rust.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-toml.min.js"></script>
+  <script src="./_static/docsify@^5.0.0-rc"></script>
+  <script src="./_static/search.min.js"></script>
+  <script src="./_static/prism-go.min.js"></script>
+  <script src="./_static/prism-json.min.js"></script>
+  <script src="./_static/prism-textile.min.js"></script>
+  <script src="./_static/prism-ini.min.js"></script>
+  <script src="./_static/prism-php.min.js"></script>
+  <script src="./_static/prism-javascript.min.js"></script>
+  <script src="./_static/prism-rust.min.js"></script>
+  <script src="./_static/prism-toml.min.js"></script>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
-  <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <script src="./_static/docsify-tabs.js"></script>
+  <script src="./_static/docsify-copy-code.js"></script>
+  <script src="./_static/hide-code.js"></script>
+  <script src="./_static/docsify-pagination.min.js"></script>
+  <script src="./_static/countable.js"></script>
+  <script src="./_static/zoom-image.min.js"></script>
 </body>
 <style>
-  body {
-    --docsifytabs-border-color: #42b983;
-    --docsifytabs-tab-highlight-color: 42b983;
+  @media screen and (max-width: 500px) {
+    :root {
+      --content-max-width: 100% !important;
+    }
   }
 
-  img {
-    display: block;
+  @media screen and (min-width: 500px) {
+    :root {
+      --content-max-width: 85% !important;
+    }
+  }
+
+  :root {
+    --var-bg-color: #0066CC !important;
+    --heading-color: var(--var-bg-color);
+    --copycode-background: var(--var-bg-color);
+    --code-inline-color: red !important;
+    --code-inline-background: white !important;
+    --link-color: var(--var-bg-color);
+    --link-text-decoration-color--hover: gray !important;
+    --sidebar-nav-strong-margin: 0px !important;
+    --sidebar-nav-strong-padding: 10px 0px 8px 0px !important;
+    --sidebar-nav-strong-font-size: 16px !important;
+  }
+
+  a {
+    text-decoration: none !important;
+  }
+
+  a:hover {
+    color: red !important;
+  }
+
+  body {
+    --docsifytabs-border-color: var(--var-bg-color);
+    --docsifytabs-tab-highlight-color: var(--var-bg-color);
+    --sidebar-nav-link-color--active: var(--var-bg-color);
+  }
+
+  img:not(.emoji) {
     margin: 0 auto;
+    display: block;
     width: 50%;
+  }
+
+  table tr,
+  table tbody {
+    border: 1px solid #CCCCCC !important;
+  }
+
+  .content li {
+    padding: 0 0 7px 0 !important;
   }
 </style>
 

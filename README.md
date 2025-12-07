@@ -11,3 +11,12 @@
 ## Shell
 
 ## Golang
+
+# devOps
+
+- [MySQL备份](/devops/backup-mysql.sh)
+
+# Javascript
+
+- [一段js代码抽取中文](/js/extract-json.md)
+
