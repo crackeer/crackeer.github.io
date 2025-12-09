@@ -12,7 +12,7 @@
 
 ## Golang
 
-# devOps
+# DevOps
 
 - [MySQL备份](/devops/backup-mysql.sh)
 
