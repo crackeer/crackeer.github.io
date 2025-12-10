@@ -24,7 +24,6 @@ function containsChinese(str) {
     return reg.test(str);  
 }
 
-
 var extractChineseFields = (data, prefix) => {
     let retData = {}
     if (typeof data == 'object' && data.length == undefined) {
