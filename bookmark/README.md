@@ -9,6 +9,7 @@
 
 # 工具&AI
 
+&nbsp;&nbsp;&nbsp;[千问](https://www.qianwen.com/)
 &nbsp;&nbsp;&nbsp;[让工具回归工具](https://www.30aitool.com/)
 &nbsp;&nbsp;&nbsp;[流光卡片](https://fireflycard.shushiai.com/)
 &nbsp;&nbsp;&nbsp;[PDF文件转换](https://www.aconvert.com/cn/)
