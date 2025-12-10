@@ -15,12 +15,14 @@
   <div id="app"></div>
   <script>
     window.$docsify = {
+      name: "首页",
       search: 'auto',
-      loadSidebar: 'sidebar.md',
+      loadSidebar: false,
       loadNavbar: 'navbar.md',
-      subMaxLevel: 1,
+      subMaxLevel: 2,
+      sidebarDisplayLevel: 2,
       auto2top: true,
-      autoHeader: true,
+      autoHeader: false,
       repo: 'https://github.com/crackeer',
       count: {
         countable: true,
@@ -35,11 +37,33 @@
         tabComments: true,      // default
         tabHeadings: true       // default
       },
-      themeColor: '#0066CC',
       hideCode: { // 代码隐藏配置
         scroll: false, // Enable scrolling
         height: 500 // Max height，超过该高度，则隐藏
-      }
+      },
+      plugins: [
+        function (hook) {
+          hook.ready(function () {
+            // 初始加载
+            updateTitleFromH1();
+
+            // 监听路由变化
+            hook.afterEach(function (html, next) {
+              setTimeout(updateTitleFromH1, 0);
+              next(html);
+            });
+          });
+
+          function updateTitleFromH1() {
+            setTimeout(() => {
+              const h1 = document.querySelector('.markdown-section h1');
+              if (h1) {
+                document.title = h1.textContent;
+              }
+            }, 50);
+          }
+        }
+      ]
     }
   </script>
   <!-- Docsify v4 -->
@@ -53,7 +77,6 @@
   <script src="./_static/prism-javascript.min.js"></script>
   <script src="./_static/prism-rust.min.js"></script>
   <script src="./_static/prism-toml.min.js"></script>
-
 
   <script src="./_static/docsify-tabs.js"></script>
   <script src="./_static/docsify-copy-code.js"></script>
@@ -116,6 +139,9 @@
   .content li {
     padding: 0 0 7px 0 !important;
   }
+     .sidebar-nav h1 {
+      display: none;
+    }
 </style>
 
 </html>

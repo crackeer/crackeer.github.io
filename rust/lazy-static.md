@@ -1,4 +1,4 @@
-# 使用azy-static修改获取全局变量
+# 使用lazy-static修改获取全局变量
 
 ## Cargo.toml
 
