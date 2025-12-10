@@ -1,3 +1,13 @@
+# 作品
+
+| 语言         | github地址                                | 简介                                |
+| ------------ | ----------------------------------------- | ----------------------------------- |
+| Go           | https://github.com/crackeer/goaway        | 业务网关，API服务的签名、缓存、频控 |
+| Go           | https://github.com/crackeer/mysql2http    | MySQL转HTTP服务                     |
+| Go / Vue     | https://github.com/crackeer/go-simple-web | gin / vue2.0 / bootstrap            |
+| Rust / React | https://github.com/crackeer/tauri-json    | Tauri版的JSON编辑器                 |
+| Rust         | https://github.com/crackeer/rust-gateway  | rust版的业务网关                    |
+
 # 经历
 
 ## 贝壳 · 如视 / **2020.07 - 今**
@@ -28,12 +38,3 @@
 
 ## 赶集 · 斗米 / PHP / 2025.07 - 2018.04
 
-# 作品
-
-| 语言         | github地址                                | 简介                                |
-| ------------ | ----------------------------------------- | ----------------------------------- |
-| Go           | https://github.com/crackeer/goaway        | 业务网关，API服务的签名、缓存、频控 |
-| Go           | https://github.com/crackeer/mysql2http    | MySQL转HTTP服务                     |
-| Go / Vue     | https://github.com/crackeer/go-simple-web | gin / vue2.0 / bootstrap            |
-| Rust / React | https://github.com/crackeer/tauri-json    | Tauri版的JSON编辑器                 |
-| Rust         | https://github.com/crackeer/rust-gateway  | rust版的业务网关                    |
