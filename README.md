@@ -1,7 +1,7 @@
 
 # DevOps
 
-- [MySQL备份](/devops/backup-mysql.sh)
+- [MySQL备份](/devops/backup-mysql.md)
 - [K33管理集群](/k3s/k3s-dashboard.md)
 
 ## Rust
@@ -12,3 +12,4 @@
 # Javascript
 
 - [一段js代码抽取中文](/js/extract-json.md)
+- [静态资源跨域检测](/js/monitor-resource-load.md)
