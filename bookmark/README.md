@@ -1,6 +1,6 @@
 # 热站
 
-&nbsp;&nbsp;&nbsp;[Github](https://github.com/)
+[Github](https://github.com/)
 &nbsp;&nbsp;&nbsp;[HelloGithub月技术周刊](https://hellogithub.com/periodical)
 &nbsp;&nbsp;&nbsp;[阮一峰博客](https://www.ruanyifeng.com/)
 &nbsp;&nbsp;&nbsp;[免费图床ossking](https://www.ossking.com/)
@@ -10,7 +10,7 @@
 
 # 工具&AI
 
-&nbsp;&nbsp;&nbsp;[千问](https://www.qianwen.com/)
+[千问](https://www.qianwen.com/)
 &nbsp;&nbsp;&nbsp;[让工具回归工具](https://www.30aitool.com/)
 &nbsp;&nbsp;&nbsp;[流光卡片](https://fireflycard.shushiai.com/)
 &nbsp;&nbsp;&nbsp;[PDF文件转换](https://www.aconvert.com/cn/)
@@ -32,10 +32,13 @@
 
 # golang / JSON
 
-&nbsp;&nbsp;&nbsp;[curl请求转成golang代码](https://mholt.github.io/curl-to-go/)&nbsp;&nbsp;&nbsp;[SQL转Go的结构体](https://www.devtool.com/sql2go.html)&nbsp;&nbsp;&nbsp;[JSON转Go的结构体](https://mholt.github.io/json-to-go/)
+[curl请求转成golang代码](https://mholt.github.io/curl-to-go/)
+&nbsp;&nbsp;&nbsp;[SQL转Go的结构体](https://www.devtool.com/sql2go.html)
+&nbsp;&nbsp;&nbsp;[JSON转Go的结构体](https://mholt.github.io/json-to-go/)
 &nbsp;&nbsp;&nbsp;[在线运行Golang代码](https://go.dev/play/)
 &nbsp;&nbsp;&nbsp;[shockerli/go-awesome](https://github.com/shockerli/go-awesome)
-&nbsp;&nbsp;&nbsp;[yinggaozhen/awesome-go-cn](https://github.com/yinggaozhen/awesome-go-cn)
+&nbsp;&nbsp;&nbsp;[yinggaozhen/awesome-go-cn]
+&nbsp;&nbsp;&nbsp;(https://github.com/yinggaozhen/awesome-go-cn)
 &nbsp;&nbsp;&nbsp;[awesome-go.com](https://awesome-go.com/)
 &nbsp;&nbsp;&nbsp;[JSON对比工具](https://jsondiff.org/)
 &nbsp;&nbsp;&nbsp;[JSON互转Excel](http://www.esjson.com/jsontoexcel.html)
@@ -43,19 +46,19 @@
 
 # Rust
 
-&nbsp;&nbsp;&nbsp;[tauri-app](https://tauri.app/develop/)
+[tauri-app](https://tauri.app/develop/)
 &nbsp;&nbsp;&nbsp;[rust-language](https://doc.rust-lang.org/book/ch03-01-variables-and-mutability.html)
 &nbsp;&nbsp;&nbsp;[next-js](https://nextjs.org/)
 &nbsp;&nbsp;&nbsp;[ant-design](https://ant.design/)
 
 # 前端
 
-&nbsp;&nbsp;&nbsp;[tanstack](https://tanstack.com/)
+[tanstack](https://tanstack.com/)
 &nbsp;&nbsp;&nbsp;[FormRender](https://xrender.fun)
 
 # 个人网站 / 社区
 
-&nbsp;&nbsp;&nbsp;[No Headback](https://xargin.com)
+[No Headback](https://xargin.com)
 &nbsp;&nbsp;&nbsp;[TW93,有趣](https://tw93.fun/)
 &nbsp;&nbsp;&nbsp;[一个设计者的个人站点](https://paulstamatiou.com/)
 &nbsp;&nbsp;&nbsp;[missuo](https://missuo.me/)
@@ -74,3 +77,13 @@
 &nbsp;&nbsp;&nbsp;[beesdc](https://www.beesdc.com/)
 &nbsp;&nbsp;&nbsp;[localtonet](https://localtonet.com/)
 &nbsp;&nbsp;&nbsp;[NatApp](https://natapp.cn/)
+
+
+
+# 软件推荐
+
+- K3s-Dashboard：https://github.com/kubernetes-sigs/headlamp
+- Lens集群管理PC端软件：https://lenshq.io/
+- 文件共享FileTransferGo：https://github.com/MatrixSeven/file-transfer-go
+- 多合一S3、FTP、Webdav、Samba文件浏览：https://www.filestash.app/
+- MacOS免费清理Mole：https://github.com/tw93/Mole
