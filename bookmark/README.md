@@ -11,7 +11,6 @@
 # 工具&AI
 
 - 千问 ：https://www.qianwen.com/
-
 - 让工具回归工具 ：https://www.30aitool.com/
 - 流光卡片 ：https://fireflycard.shushiai.com/
 - PDF文件转换 ：https://www.aconvert.com/cn/
@@ -32,7 +31,7 @@
 
 # golang / JSON
 
-[curl请求转成golang代码 ：https://mholt.github.io/curl-to-go/
+- curl请求转成golang代码 ：https://mholt.github.io/curl-to-go/
 - SQL转Go的结构体 ：https://www.devtool.com/sql2go.html
 - JSON转Go的结构体 ：https://mholt.github.io/json-to-go/
 - 在线运行Golang代码 ：https://go.dev/play/
