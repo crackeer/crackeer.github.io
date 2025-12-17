@@ -81,3 +81,4 @@
 - 文件共享FileTransferGo：https://github.com/MatrixSeven/file-transfer-go
 - 多合一S3、FTP、Webdav、Samba文件浏览：https://www.filestash.app/
 - MacOS免费清理Mole：https://github.com/tw93/Mole
+- MacOS上的免费IP扫描工具：https://angryip.org/
