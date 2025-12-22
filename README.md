@@ -1,3 +1,17 @@
+# 拥抱AI
+
+## 问答
+
+- 千问 ：[https://www.qianwen.com/](https://www.qianwen.com/)
+- Kimi：[https://www.kimi.com/](https://www.kimi.com/)
+- Deepseek：[https://www.deepseek.com/](https://www.deepseek.com/)
+- 元宝：https://yuanbao.tencent.com/
+
+## IDE
+
+- 字节跳动Trae：https://www.trae.cn/
+- 亚马逊Kiro：https://kiro.dev/
+- 阿里巴巴Qoder：https://qoder.com/
 
 # DevOps
 
