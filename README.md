@@ -18,6 +18,7 @@
 - [MySQL备份](/devops/backup-mysql.md)
 - [K33管理集群](/k3s/k3s-dashboard.md)
 - [docker镜像打包添加proxy](/devops/docker-build-proxy.md)
+- [一些常用的compose.yml](/docker/compose-files.md)
 
 # Rust
 
