@@ -3,7 +3,6 @@
 - Github ：https://github.com/
 - HelleGithub月技术周刊：https://hellogithub.com/periodical
 - 阮一峰博客 ：https://www.ruanyifeng.com/
-- 免费图床ossking ：https://www.ossking.com/
 - icebeer ：https://www.icebeer.top/
 - 记录 ：https://lhblog.pages.dev/
 - xda-developers ：https://www.xda-developers.com/
