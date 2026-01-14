@@ -84,3 +84,41 @@ services:
     restart: always
 ```
 
+# MySQL8
+
+## docker-composer.yml
+
+```yam
+version: "3.9"
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql8
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: MySQL-ROOT-PASSWORD
+      MYSQL_USER: rushi 
+      MYSQL_PASSWORD: RUSHI-PASSWORD
+    ports:
+      - "3306:3306"
+    volumes:
+      - /data1/mysql/data:/var/lib/mysql
+      - /data1/mysql/conf:/etc/mysql/conf.d
+    command: >
+      --default-authentication-plugin=mysql_native_password
+```
+
+## my.conf
+
+```conf
+# /data1/mysql/conf/my.conf
+[mysqld]
+character-set-server=utf8mb4
+collation-server=utf8mb4_unicode_ci
+default-time-zone='+08:00'
+secure-file-priv=/var/lib/mysql
+sql_mode=''
+max_connections=512
+default_authentication_plugin=mysql_native_password
+```
+
