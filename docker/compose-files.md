@@ -122,3 +122,24 @@ max_connections=512
 default_authentication_plugin=mysql_native_password
 ```
 
+
+# 运行ollama
+
+```shell
+
+# docker client version >= 19.03
+docker run -d \
+  -v /data1/ollama_models:/root/.ollama \
+  -p 11434:11434 \
+  --gpus=all \
+  --name ollama \
+  ollama/ollama
+
+# docker client version < 19.03
+docker run -d \
+  -v /data1/ollama_models:/root/.ollama \
+  -p 11434:11434 \
+  -e NVIDIA_VISIBLE_DEVICES=all \
+  --name ollama \
+  ollama/ollama
+```
