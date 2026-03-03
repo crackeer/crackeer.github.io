@@ -1,11 +1,13 @@
-# 拥抱AI
 
-## 问答
+## 拥抱AI
 
 - 千问 ：[https://www.qianwen.com/](https://www.qianwen.com/)
 - Kimi：[https://www.kimi.com/](https://www.kimi.com/)
 - Deepseek：[https://www.deepseek.com/](https://www.deepseek.com/)
 - 元宝：https://yuanbao.tencent.com/
+- 豆包：https://www.doubao.com/chat/
+- Gemini：https://gemini.google.com/app
+- 文心一言：https://yiyan.baidu.com/
 
 ## IDE
 
@@ -18,7 +20,8 @@
 - [MySQL备份](/devops/backup-mysql.md)
 - [K33管理集群](/k3s/k3s-dashboard.md)
 - [docker镜像打包添加proxy](/devops/docker-build-proxy.md)
-- [一些常用的compose.yml](/docker/compose-files.md)
+- [一些常用的docker-compose.yml](/docker/compose-files.md)
+- [机柜生成](http://rack.szqp.site/)
 
 # Rust
 
