@@ -14,6 +14,9 @@
 - 字节跳动Trae：https://www.trae.cn/
 - 亚马逊Kiro：https://kiro.dev/
 - 阿里巴巴Qoder：https://qoder.com/
+- VsCode：https://code.visualstudio.com/
+- OpenCode：https://opencode.ai/zh
+- Cursor：https://cursor.com/
 
 # DevOps
 
