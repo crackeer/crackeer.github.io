@@ -18,7 +18,7 @@
 - OpenCode：https://opencode.ai/zh
 - Cursor：https://cursor.com/
 
-# DevOps
+## DevOps
 
 - [MySQL备份](/devops/backup-mysql.md)
 - [K33管理集群](/k3s/k3s-dashboard.md)
