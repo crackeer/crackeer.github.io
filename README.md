@@ -23,19 +23,6 @@
 - [一些常用的docker-compose.yml](/docker/compose-files.md)
 - [机柜生成](http://rack.szqp.site/)
 - [k3s中创建定时任务重启deploy](/k3s/cronjob-restart-deploy.md)
-# Rust
-
-- [使用lazy-static修改获取全局变量](rust/lazy-static.md)
-- [Linux终端环境下进行802-1x网络认证](/devops/linux-network-802.md)
-
-# Javascript
-
-- [一段js代码抽取中文](/js/extract-json.md)
-- [静态资源跨域检测](/js/monitor-resource-load.md)
-
-# Golang
-
-- [Golang常见面试题](/golang/interview.md)
 
 # 热站
 
@@ -68,6 +55,7 @@
 
 # golang / JSON
 
+- [Golang常见面试题](/golang/interview.md)
 - curl请求转成golang代码 ：https://mholt.github.io/curl-to-go/
 - SQL转Go的结构体 ：https://www.devtool.com/sql2go.html
 - JSON转Go的结构体 ：https://mholt.github.io/json-to-go/
@@ -80,11 +68,15 @@
 
 # Rust
 
+- [使用lazy-static修改获取全局变量](rust/lazy-static.md)
+- [Linux终端环境下进行802-1x网络认证](/devops/linux-network-802.md)
 - tauri-app ：https://tauri.app/develop/
 - rust-language ：https://doc.rust-lang.org/book/ch03-01-variables-and-mutability.html
 
 # 前端
 
+- [一段js代码抽取中文](/js/extract-json.md)
+- [静态资源跨域检测](/js/monitor-resource-load.md)
 - tanstack ：https://tanstack.com/
 - FormRender ：https://xrender.fun
 - next-js ：https://nextjs.org/
