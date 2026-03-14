@@ -2,7 +2,7 @@
 
 > 使用cronjob，直接执行kubectl操作
 
-```yml
+```yaml
 apiVersion: v1
 kind: ServiceAccount
 metadata:

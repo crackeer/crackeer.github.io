@@ -1,6 +1,6 @@
 # filestash
 
-```yml
+```yaml
 version: '2'
 services:
   app:
@@ -41,7 +41,7 @@ volumes:
 
 # FTP服务
 
-```yml
+```yaml
 services:
   ftp-server:
     image: fauria/vsftpd:latest
@@ -161,7 +161,7 @@ password2
 
 # Minio
 
-```yml
+```yaml
 version: '3.8'
 services:
   minio:
