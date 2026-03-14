@@ -22,7 +22,7 @@
 - [docker镜像打包添加proxy](/devops/docker-build-proxy.md)
 - [一些常用的docker-compose.yml](/docker/compose-files.md)
 - [机柜生成](http://rack.szqp.site/)
-
+- [k3s中创建定时任务重启deploy](/k3s/cronjob-restart-deploy.md)
 # Rust
 
 - [使用lazy-static修改获取全局变量](rust/lazy-static.md)
