@@ -66,7 +66,7 @@ services:
 
 ## run-vsftpd.sh
 
-```shell
+```bash
 #!/bin/bash
 
 # If no env var for FTP_USER has been specified, use 'admin':
@@ -205,7 +205,7 @@ services:
 
 ## my.conf
 
-```conf
+```ini
 # /data1/mysql/conf/my.conf
 [mysqld]
 character-set-server=utf8mb4
