@@ -26,6 +26,7 @@
 - [一些常用的docker-compose.yml](/docker/compose-files.md)
 - [机柜生成](http://rack.szqp.site/)
 - [k3s中创建定时任务重启deploy](/k3s/cronjob-restart-deploy.md)
+- [k3s中定时备份集群](/k3s/cronjob-backup-kube.md)
 
 # 热站
 
