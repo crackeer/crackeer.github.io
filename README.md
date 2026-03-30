@@ -2,12 +2,10 @@
 # 拥抱AI
 
 - 千问 ：[https://www.qianwen.com/](https://www.qianwen.com/)
-- Kimi：[https://www.kimi.com/](https://www.kimi.com/)
 - Deepseek：[https://www.deepseek.com/](https://www.deepseek.com/)
 - 元宝：https://yuanbao.tencent.com/
 - 豆包：https://www.doubao.com/chat/
 - Gemini：https://gemini.google.com/app
-- 文心一言：https://yiyan.baidu.com/
 
 # IDE
 
