@@ -1,5 +1,5 @@
 
-## 拥抱AI
+# 拥抱AI
 
 - 千问 ：[https://www.qianwen.com/](https://www.qianwen.com/)
 - Kimi：[https://www.kimi.com/](https://www.kimi.com/)
@@ -9,7 +9,7 @@
 - Gemini：https://gemini.google.com/app
 - 文心一言：https://yiyan.baidu.com/
 
-## IDE
+# IDE
 
 - 字节跳动Trae：https://www.trae.cn/
 - 亚马逊Kiro：https://kiro.dev/
@@ -18,13 +18,12 @@
 - OpenCode：https://opencode.ai/zh
 - Cursor：https://cursor.com/
 
-## DevOps
+# DevOps
 
 - [MySQL备份](/devops/backup-mysql.md)
 - [K33管理集群](/k3s/k3s-dashboard.md)
 - [docker镜像打包添加proxy](/devops/docker-build-proxy.md)
 - [一些常用的docker-compose.yml](/docker/compose-files.md)
-- [机柜生成](http://rack.szqp.site/)
 - [k3s中创建定时任务重启deploy](/k3s/cronjob-restart-deploy.md)
 - [k3s中定时备份集群](/k3s/cronjob-backup-kube.md)
 
