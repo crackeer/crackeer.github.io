@@ -16,14 +16,15 @@
 - OpenCode：https://opencode.ai/zh
 - Cursor：https://cursor.com/
 
-# DevOps
+# DevOps&Shell
 
 - [MySQL备份](/devops/backup-mysql.md)
-- [K33管理集群](/k3s/k3s-dashboard.md)
+- [K33管理集群软件](/k3s/k3s-dashboard.md)
 - [docker镜像打包添加proxy](/devops/docker-build-proxy.md)
-- [一些常用的docker-compose.yml](/docker/compose-files.md)
+- [常用的docker-compose.yml](/docker/compose-files.md)
 - [k3s中创建定时任务重启deploy](/k3s/cronjob-restart-deploy.md)
 - [k3s中定时备份集群](/k3s/cronjob-backup-kube.md)
+- [nginx:生成代理配置](/shell/batch-generate-nginx-proxy.md)
 
 # 热站
 
