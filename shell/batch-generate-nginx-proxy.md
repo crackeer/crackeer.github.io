@@ -62,3 +62,38 @@ for item in ${streamHost[@]}; do
     sed -i "s/TARGET_PORT/$target_port/g" /etc/nginx/stream.d/$host_name-$listen_port.conf
 done
 ```
+
+# 直接生成nginx配置文件
+
+```bash
+#!/bin/bash
+httpConf=$(cat << 'EOF'
+server {
+    listen 80;
+    server_name HOSTNAME;
+
+    location / {
+        proxy_pass http://HOSTNAME;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+}
+EOF
+)
+
+if [ $# -lt 1 ]; then
+    echo "Usage: $0 <host_name1> <host_name2> ..."
+    exit 1
+fi
+
+for name in $@; do
+    echo "$httpConf" > /etc/nginx/conf.d/$name.conf
+    sed -i "s/HOSTNAME/$name/g" /etc/nginx/conf.d/$name.conf 
+    echo "Host: $name"
+    echo "generated config: /etc/nginx/conf.d/$name.conf"
+    echo "-----------------"
+    cat /etc/nginx/conf.d/$name.conf
+done
+
+
+```
