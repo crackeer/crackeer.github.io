@@ -77,7 +77,6 @@
 
 # 前端
 
-- [一段js代码抽取中文](/js/extract-json.md)
 - [静态资源跨域检测](/js/monitor-resource-load.md)
 
 | 名称 | 链接 |
