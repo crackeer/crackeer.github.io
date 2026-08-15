@@ -1,23 +1,10 @@
-# 拥抱AI
+# AI Agent
 
 | 名称 | 链接 |
 |------|------|
-| 千问 | [https://www.qianwen.com/](https://www.qianwen.com/) |
-| Deepseek | [https://www.deepseek.com/](https://www.deepseek.com/) |
-| 元宝 | [https://yuanbao.tencent.com/](https://yuanbao.tencent.com/) |
-| 豆包 | [https://www.doubao.com/chat/](https://www.doubao.com/chat/) |
-| Gemini | [https://gemini.google.com/app](https://gemini.google.com/app) |
-
-# IDE
-
-| 名称 | 链接 |
-|------|------|
-| 字节跳动Trae | [https://www.trae.cn/](https://www.trae.cn/) |
-| 亚马逊Kiro | [https://kiro.dev/](https://kiro.dev/) |
-| 阿里巴巴Qoder | [https://qoder.com/](https://qoder.com/) |
-| VsCode | [https://code.visualstudio.com/](https://code.visualstudio.com/) |
-| OpenCode | [https://opencode.ai/zh](https://opencode.ai/zh) |
-| Cursor | [https://cursor.com/](https://cursor.com/) |
+| OpenClacky | [https://github.com/clacky-ai/openclacky](https://github.com/clacky-ai/openclacky) |
+| OpenChamber | [https://github.com/openchamber/openchamber](https://github.com/openchamber/openchamber) |
+| Deer Flow | [https://github.com/bytedance/deer-flow](https://github.com/bytedance/deer-flow) |
 
 # DevOps&Shell
 
