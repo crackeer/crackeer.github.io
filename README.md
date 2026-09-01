@@ -5,6 +5,9 @@
 | OpenClacky | [https://github.com/clacky-ai/openclacky](https://github.com/clacky-ai/openclacky) |
 | OpenChamber | [https://github.com/openchamber/openchamber](https://github.com/openchamber/openchamber) |
 | Deer Flow | [https://github.com/bytedance/deer-flow](https://github.com/bytedance/deer-flow) |
+| Bloome.im | https://bloome.im/ |
+| OpenCode | https://opencode.ai/ |
+| OpenChamber | https://github.com/openchamber/openchamber |
 
 # DevOps&Shell
 
